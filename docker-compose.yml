@@ -1,0 +1,33 @@
+version: "3.1"
+
+services:
+  wordpress:
+    image: arm64v8/wordpress
+    container_name: app
+    restart: on-failure
+    user: "www-data:www-data"
+    ports:
+      - "8080:80"
+    environment:
+      WORDPRESS_DB_HOST: db
+      WORDPRESS_DB_USER: shark
+      WORDPRESS_DB_PASSWORD: "shark"
+      WORDPRESS_DB_NAME: rogenilanthree
+    volumes:
+      - ./site:/var/www/html
+
+  db:
+    image: arm64v8/mysql:lts
+    container_name: db
+    restart: on-failure
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_DATABASE: rogenilanthree
+      MYSQL_USER: shark
+      MYSQL_PASSWORD: "shark"
+      MYSQL_RANDOM_ROOT_PASSWORD: "1"
+    volumes:
+      - ./db:/var/lib/mysql
+
+# GENERATED ROOT PASSWORD: Z5C2NJlrp49QcK5iivYuiynOx3WPbXBv
