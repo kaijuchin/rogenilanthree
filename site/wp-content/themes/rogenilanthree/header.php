@@ -29,12 +29,12 @@
 					<a href="#" class="mx-8 my-4 text-gray-700 hover:text-red-500">Home</a>
 					<div class="hidden md:block relative group">
 						<a href="#" class="mx-8 my-2.5 pb-4 text-gray-700 hover:text-red-500">Products</a>
-						<div class="dropdown block pointer-events-none group-hover:pointer-events-auto hover:pointer-events-auto group-hover:block <?= do_shortcode('[nav_dropdown_items_class]'); ?>">
+						<div class="w-full md:w-[768px] lg:w-[840px] xl:w-[1000px]  dropdown block pointer-events-none group-hover:pointer-events-auto hover:pointer-events-auto group-hover:block <?= do_shortcode('[nav_dropdown_items_class]'); ?>">
 							<!-- Office Furniture Section -->
 							<div class="flex w-[72rem]">
 								<!-- Image -->
 								<div class="hidden md:block flex-none">
-									<img src="https://www.richoceanchina.com/wp-content/themes/rogenilantwo/assets/images/Sliding_Window_Residential_504_3.jpg" alt="Office Furniture" class="w-48 h-48 object-cover rounded-lg p-6">
+									<img src="https://www.richoceanchina.com/wp-content/themes/rogenilantwo/assets/images/Sliding_Window_Residential_504_3.jpg" alt="Office Furniture" class="md:w-[12rem] lg:w-[14rem] xl:w-[16rem] md:h-[12rem] lg:h-[14rem] xl:h-[16rem] object-cover rounded-lg p-6">
 								</div>
 								<div class="flex flex-col">
 									<!-- Icon and Title -->
@@ -43,7 +43,7 @@
 										<p class="pl-[1rem] text-[1.2rem]">Windows</p>
 									</div>
 									<!-- List of Items -->
-									<div class="flex flex-wrap w-[60rem] p-4 gap-y-[.75rem] text-[0.8125rem] text-zinc-500">
+									<div class="flex flex-wrap w-full md:w-[34rem] lg:w-[38rem] xl:w-[46rem] p-4 gap-y-[.75rem] text-[0.8125rem] text-zinc-500">
 										<?php foreach (WINDOWS_SYSTEMS as $item): ?>
 											<span class="w-1/4">
                                             <a class="hover:text-red-600" href=""><?= $item['name']; ?></a>
@@ -55,7 +55,7 @@
 							<div class="flex w-[72rem]">
 								<!-- Image -->
 								<div class="flex-none">
-									<img src="https://www.richoceanchina.com/wp-content/themes/rogenilantwo/assets/images/folding-doors.webp" alt="Office Furniture" class="w-48 h-48 object-cover rounded-lg p-6">
+									<img src="https://www.richoceanchina.com/wp-content/themes/rogenilantwo/assets/images/folding-doors.webp" alt="Office Furniture" class="md:w-[12rem] lg:w-[14rem] xl:w-[16rem] md:h-[12rem] lg:h-[14rem] xl:h-[16rem] object-cover rounded-lg p-6">
 								</div>
 								<div class="flex flex-col">
 									<!-- Icon and Title -->
@@ -64,7 +64,7 @@
 										<p class="pl-[1rem] text-[1.2rem]">Doors</p>
 									</div>
 									<!-- List of Items -->
-									<div class="flex flex-wrap w-[60rem] p-4 gap-y-[.75rem] text-[0.8125rem] text-zinc-500">
+                                    <div class="flex flex-wrap w-full md:w-[34rem] lg:w-[38rem] xl:w-[46rem] p-4 gap-y-[.75rem] text-[0.8125rem] text-zinc-500">
 										<?php foreach (DOORS_SYSTEMS as $item): ?>
 											<span class="w-1/4">
                                             <a class="hover:text-red-600" href=""><?= $item['name']; ?></a>
@@ -76,7 +76,7 @@
 							<div class="flex w-[72rem]">
 								<!-- Image -->
 								<div class="flex-none">
-									<img src="https://www.richoceanchina.com/wp-content/themes/rogenilantwo/assets/images/skylight.webp" alt="Office Furniture" class="w-48 h-48 object-cover rounded-lg p-6">
+									<img src="https://www.richoceanchina.com/wp-content/themes/rogenilantwo/assets/images/skylight.webp" alt="Office Furniture" class="md:w-[12rem] lg:w-[14rem] xl:w-[16rem] md:h-[12rem] lg:h-[14rem] xl:h-[16rem] object-cover rounded-lg p-6">
 								</div>
 								<div class="flex flex-col">
 									<!-- Icon and Title -->
@@ -85,7 +85,7 @@
 										<p class="pl-[1rem] text-[1.2rem]">More Products</p>
 									</div>
 									<!-- List of Items -->
-									<div class="flex flex-wrap w-[60rem] p-4 gap-y-[.75rem] text-[0.8125rem] text-zinc-500">
+                                    <div class="flex flex-wrap w-full md:w-[34rem] lg:w-[38rem] xl:w-[46rem] p-4 gap-y-[.75rem] text-[0.8125rem] text-zinc-500">
 										<?php foreach (MORE_PRODUCTS as $item): ?>
 											<span class="w-1/4">
                                             <a class="hover:text-red-600" href=""><?= $item['name']; ?></a>
