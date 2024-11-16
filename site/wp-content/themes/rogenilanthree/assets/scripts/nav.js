@@ -1,6 +1,7 @@
 // JavaScript to toggle mobile navbar
 document.getElementById('navbar-toggle').addEventListener('click', function () {
     let navbarLinks = document.getElementById('navbar-links');
+    console.log(navbarLinks.classList);
     if (navbarLinks.classList.contains('hidden')) {
         navbarLinks.classList.remove('hidden');
         navbarLinks.classList.add('flex');

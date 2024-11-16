@@ -38,6 +38,8 @@ function my_theme_enqueue_styles(): void
     wp_deregister_script('jquery');
     wp_enqueue_style('parent-style', get_template_directory_uri() . '/style.css');
     wp_enqueue_script('jquery', 'https://code.jquery.com/jquery-3.6.0.min.js', [], '3.6.0', true);
+	wp_enqueue_script('tailwindcss', 'https://cdn.tailwindcss.com', [], '1.0.0');
+	wp_enqueue_script('nav', get_template_directory_uri() . '/assets/scripts/nav.js', [], '1.0.0', true);
 }
 
 add_action('wp_enqueue_scripts', 'my_theme_enqueue_styles');

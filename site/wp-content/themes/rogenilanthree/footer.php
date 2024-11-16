@@ -37,11 +37,28 @@
     </div>
     <!-- Footer Bottom -->
     <div class="border-t border-gray-800 mt-8 pt-8 text-center">
-        <p class="text-sm">COPYRIGHT 2012 - 2023 All Rights Reserved By Richocean</p>
-        <div class="flex justify-center space-x-4 mt-4">
-            <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook"></i></a>
-            <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-youtube"></i></a>
-            <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-linkedin"></i></a>
+        <h2 class="text-xl font-semibold mb-4">FOLLOW US</h2>
+        <div class="flex justify-center space-x-6">
+            <!-- LinkedIn Icon -->
+            <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                <i class="fab fa-linkedin-in text-2xl"></i>
+            </a>
+            <!-- Twitter Icon -->
+            <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                <i class="fab fa-twitter text-2xl"></i>
+            </a>
+            <!-- Facebook Icon -->
+            <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                <i class="fab fa-facebook-f text-2xl"></i>
+            </a>
+            <!-- YouTube Icon -->
+            <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                <i class="fab fa-youtube text-2xl"></i>
+            </a>
+            <!-- Instagram Icon -->
+            <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                <i class="fab fa-instagram text-2xl"></i>
+            </a>
         </div>
     </div>
 </footer>
