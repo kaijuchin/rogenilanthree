@@ -42,63 +42,63 @@
     <section class="p-8 bg-gray-50">
         <div class="container mx-auto text-center">
             <h2 class="text-xl font-semibold text-gray-500 mb-2">Designed for Comfort, Built for Success</h2>
-            <h1 class="text-4xl font-bold text-gray-800 mb-10">Discover Our Premier Furniture Collection</h1>
+            <h1 class="text-4xl font-bold text-gray-800 mb-10">Products</h1>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                 <!-- Meeting Room Furniture Card -->
                 <div class="bg-white rounded-lg shadow-lg p-6 flex flex-col items-center">
-                    <img src="http://www.rogenilan.com/upload/images/360_360/1646980923461464.jpg" alt="Meeting Room Furniture" class="w-full h-48 object-cover mb-4">
+                    <img src="http://www.rogenilan.com/upload/images/360_360/1646980923461464.jpg" alt="Meeting Room Furniture" class="w-full h-full object-cover mb-4">
                     <h3 class="text-lg font-bold text-gray-800 mb-2">Meeting Room Furniture</h3>
                     <p class="text-gray-500 mb-4">Ideal for smaller, more intimate discussions.</p>
-                    <a href="#" class="inline-block bg-orange-500 text-white px-6 py-3 rounded-full hover:bg-orange-600 transition duration-300">Request Quote →</a>
+                    <a href="#" class="inline-block bg-orange-500 text-white px-6 py-3 rounded-full hover:bg-orange-600 transition duration-300">Read More</a>
                 </div>
                 <!-- Lounge Area Furniture Card -->
                 <div class="bg-white rounded-lg shadow-lg p-6 flex flex-col items-center">
-                    <img src="http://www.rogenilan.com/upload/images/360_360/1646980923461464.jpg" alt="Lounge Area Furniture" class="w-full h-48 object-cover mb-4">
+                    <img src="http://www.rogenilan.com/upload/images/360_360/1646980923461464.jpg" alt="Lounge Area Furniture" class="w-full h-full object-cover mb-4">
                     <h3 class="text-lg font-bold text-gray-800 mb-2">Lounge Area Furniture</h3>
                     <p class="text-gray-500 mb-4">Designed for posture support and day-long comfort.</p>
-                    <a href="#" class="inline-block bg-orange-500 text-white px-6 py-3 rounded-full hover:bg-orange-600 transition duration-300">Request Quote →</a>
+                    <a href="#" class="inline-block bg-orange-500 text-white px-6 py-3 rounded-full hover:bg-orange-600 transition duration-300">Read More</a>
                 </div>
                 <!-- Reception Area Furniture Card -->
                 <div class="bg-white rounded-lg shadow-lg p-6 flex flex-col items-center">
-                    <img src="http://www.rogenilan.com/upload/images/360_360/1646980923461464.jpg" alt="Reception Area Furniture" class="w-full h-48 object-cover mb-4">
+                    <img src="http://www.rogenilan.com/upload/images/360_360/1646980923461464.jpg" alt="Reception Area Furniture" class="w-full h-full object-cover mb-4">
                     <h3 class="text-lg font-bold text-gray-800 mb-2">Reception Area Furniture</h3>
                     <p class="text-gray-500 mb-4">Access high-quality reception setups at unbeatable prices.</p>
-                    <a href="#" class="inline-block bg-orange-500 text-white px-6 py-3 rounded-full hover:bg-orange-600 transition duration-300">Request Quote →</a>
+                    <a href="#" class="inline-block bg-orange-500 text-white px-6 py-3 rounded-full hover:bg-orange-600 transition duration-300">Read More</a>
                 </div>
                 <!-- Storage Furniture Card -->
                 <div class="bg-white rounded-lg shadow-lg p-6 flex flex-col items-center">
-                    <img src="http://www.rogenilan.com/upload/images/360_360/1646980923461464.jpg" alt="Storage Furniture" class="w-full h-48 object-cover mb-4">
+                    <img src="http://www.rogenilan.com/upload/images/360_360/1646980923461464.jpg" alt="Storage Furniture" class="w-full h-full object-cover mb-4">
                     <h3 class="text-lg font-bold text-gray-800 mb-2">Storage Furniture</h3>
                     <p class="text-gray-500 mb-4">Secure and spacious, ideal for organizing office supplies.</p>
-                    <a href="#" class="inline-block bg-orange-500 text-white px-6 py-3 rounded-full hover:bg-orange-600 transition duration-300">Request Quote →</a>
+                    <a href="#" class="inline-block bg-orange-500 text-white px-6 py-3 rounded-full hover:bg-orange-600 transition duration-300">Read More</a>
                 </div>
                 <!-- Meeting Room Furniture Card -->
                 <div class="bg-white rounded-lg shadow-lg p-6 flex flex-col items-center">
-                    <img src="http://www.rogenilan.com/upload/images/360_360/1646980923461464.jpg" alt="Meeting Room Furniture" class="w-full h-48 object-cover mb-4">
+                    <img src="http://www.rogenilan.com/upload/images/360_360/1646980923461464.jpg" alt="Meeting Room Furniture" class="w-full h-full object-cover mb-4">
                     <h3 class="text-lg font-bold text-gray-800 mb-2">Meeting Room Furniture</h3>
                     <p class="text-gray-500 mb-4">Ideal for smaller, more intimate discussions.</p>
-                    <a href="#" class="inline-block bg-orange-500 text-white px-6 py-3 rounded-full hover:bg-orange-600 transition duration-300">Request Quote →</a>
+                    <a href="#" class="inline-block bg-orange-500 text-white px-6 py-3 rounded-full hover:bg-orange-600 transition duration-300">Read More</a>
                 </div>
                 <!-- Lounge Area Furniture Card -->
                 <div class="bg-white rounded-lg shadow-lg p-6 flex flex-col items-center">
-                    <img src="http://www.rogenilan.com/upload/images/360_360/1646980923461464.jpg" alt="Lounge Area Furniture" class="w-full h-48 object-cover mb-4">
+                    <img src="http://www.rogenilan.com/upload/images/360_360/1646980923461464.jpg" alt="Lounge Area Furniture" class="w-full h-full object-cover mb-4">
                     <h3 class="text-lg font-bold text-gray-800 mb-2">Lounge Area Furniture</h3>
                     <p class="text-gray-500 mb-4">Designed for posture support and day-long comfort.</p>
-                    <a href="#" class="inline-block bg-orange-500 text-white px-6 py-3 rounded-full hover:bg-orange-600 transition duration-300">Request Quote →</a>
+                    <a href="#" class="inline-block bg-orange-500 text-white px-6 py-3 rounded-full hover:bg-orange-600 transition duration-300">Read More</a>
                 </div>
                 <!-- Reception Area Furniture Card -->
                 <div class="bg-white rounded-lg shadow-lg p-6 flex flex-col items-center">
-                    <img src="http://www.rogenilan.com/upload/images/360_360/1646980923461464.jpg" alt="Reception Area Furniture" class="w-full h-48 object-cover mb-4">
+                    <img src="http://www.rogenilan.com/upload/images/360_360/1646980923461464.jpg" alt="Reception Area Furniture" class="w-full h-full object-cover mb-4">
                     <h3 class="text-lg font-bold text-gray-800 mb-2">Reception Area Furniture</h3>
                     <p class="text-gray-500 mb-4">Access high-quality reception setups at unbeatable prices.</p>
-                    <a href="#" class="inline-block bg-orange-500 text-white px-6 py-3 rounded-full hover:bg-orange-600 transition duration-300">Request Quote →</a>
+                    <a href="#" class="inline-block bg-orange-500 text-white px-6 py-3 rounded-full hover:bg-orange-600 transition duration-300">Read More</a>
                 </div>
                 <!-- Storage Furniture Card -->
                 <div class="bg-white rounded-lg shadow-lg p-6 flex flex-col items-center">
-                    <img src="http://www.rogenilan.com/upload/images/360_360/1646980923461464.jpg" alt="Storage Furniture" class="w-full h-48 object-cover mb-4">
+                    <img src="http://www.rogenilan.com/upload/images/360_360/1646980923461464.jpg" alt="Storage Furniture" class="w-full h-full object-cover mb-4">
                     <h3 class="text-lg font-bold text-gray-800 mb-2">Storage Furniture</h3>
                     <p class="text-gray-500 mb-4">Secure and spacious, ideal for organizing office supplies.</p>
-                    <a href="#" class="inline-block bg-orange-500 text-white px-6 py-3 rounded-full hover:bg-orange-600 transition duration-300">Request Quote →</a>
+                    <a href="#" class="inline-block bg-orange-500 text-white px-6 py-3 rounded-full hover:bg-orange-600 transition duration-300">Read More</a>
                 </div>
             </div>
         </div>
@@ -186,7 +186,76 @@
                  alt="Furniture Sketch" class="w-full h-auto rounded shadow-lg">
         </div>
     </section>
-    <section class="py-8">
+    <section class="container mx-auto p-12 lg:flex lg:items-center lg:justify-between">
+        <div class="container">
+            <div class="lb_xgt">
+                <dl class="lbtxt wow slideInUp animated" style="visibility: visible; animation-name: slideInUp;">
+                    <dt>Welcome to be our dealer</dt>
+                    <dd style="padding-top:20px;">Richocean experts are experienced in working with architects,
+                        builders and
+                        homeowners to ensure your vision becomes a reality.
+                    </dd>
+                    <dd>We offer more flexible and affordable solutions than franchising. Come and expand your
+                        business or
+                        start a new one with us.
+                    </dd>
+                </dl>
+                <p><img src="https://www.richoceanchina.com/wp-content/themes/rogenilantwo/skin/images/dtu_01.png"></p>
+                <div class="bd">
+                    <div class="carousel-container">
+                        <ul class="picList">
+                            <li class="clone">
+                                <div class="pic"><img src="https://www.richoceanchina.com/wp-content/themes/rogenilantwo/skin/images/dianpu5.jpg">
+                                </div>
+                            </li>
+                            <li>
+                                <div class="pic"><img src="https://www.richoceanchina.com/wp-content/themes/rogenilantwo/skin/images/dianpu1.jpg">
+                                </div>
+                            </li>
+                            <li>
+                                <div class="pic"><img src="https://www.richoceanchina.com/wp-content/themes/rogenilantwo/skin/images/dianpu2.jpg">
+                                </div>
+                            </li>
+                            <li>
+                                <div class="pic"><img src="https://www.richoceanchina.com/wp-content/themes/rogenilantwo/skin/images/dianpu3.jpg">
+                                </div>
+                            </li>
+                            <li>
+                                <div class="pic"><img src="https://www.richoceanchina.com/wp-content/themes/rogenilantwo/skin/images/dianpu4.jpg">
+                                </div>
+                            </li>
+                            <li>
+                                <div class="pic"><img src="https://www.richoceanchina.com/wp-content/themes/rogenilantwo/skin/images/dianpu5.jpg">
+                                </div>
+                            </li>
+                            <li class="clone">
+                                <div class="pic"><img src="https://www.richoceanchina.com/wp-content/themes/rogenilantwo/skin/images/dianpu1.jpg">
+                                </div>
+                            </li>
+                            <!-- Add more clones if needed -->
+                        </ul>
+                    </div>
+                </div>
+
+                <h3>Through Collaborations And Partnerships, We Amplify Our Impact.</h3>
+                <div class="yqlj">
+                    <ul>
+                        <li><img src="https://www.richoceanchina.com/wp-content/themes/rogenilantwo/skin/images/yqlj_01.jpg"></li>
+                        <li><img src="https://www.richoceanchina.com/wp-content/themes/rogenilantwo/skin/images/yqlj_02.jpg"></li>
+                        <li><img src="https://www.richoceanchina.com/wp-content/themes/rogenilantwo/skin/images/yqlj_03.jpg"></li>
+                        <li><img src="https://www.richoceanchina.com/wp-content/themes/rogenilantwo/skin/images/yqlj_04.jpg"></li>
+                        <li><img src="https://www.richoceanchina.com/wp-content/themes/rogenilantwo/skin/images/yqlj_05.jpg"></li>
+                        <li><img src="https://www.richoceanchina.com/wp-content/themes/rogenilantwo/skin/images/yqlj_06.jpg"></li>
+                        <li><img src="https://www.richoceanchina.com/wp-content/themes/rogenilantwo/skin/images/yqlj_07.jpg"></li>
+                        <li><img src="https://www.richoceanchina.com/wp-content/themes/rogenilantwo/skin/images/yqlj_08.jpg"></li>
+                        <li><img src="https://www.richoceanchina.com/wp-content/themes/rogenilantwo/skin/images/yqlj_09.jpg"></li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <section class="p-8">
         <div class="container mx-auto text-center">
             <h2 class="text-4xl font-bold mb-4">What Projects Can We Take?</h2>
             <p class="text-gray-500 mb-8">Testing in accordance to NFRC / AS2047 / ISO9001 / CE</p>
