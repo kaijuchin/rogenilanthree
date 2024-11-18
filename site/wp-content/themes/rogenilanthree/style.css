@@ -169,3 +169,12 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
         max-width: 100px;
     }
 }
+
+/* Breadcrumb */
+.breadcrumbs {
+    color: #007aff;
+}
+
+.breadcrumbs a, .breadcrumbs span {
+    padding: 0 1rem;
+}

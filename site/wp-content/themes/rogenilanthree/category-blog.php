@@ -24,6 +24,7 @@
     <div class="container mx-auto">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
 			<?php
+			$posts_per_page = get_option( 'posts_per_page' );
 			$category_slugs = [ 'blog' ];
 			$category_ids   = [];
 			foreach ( $category_slugs as $slug ) {
@@ -34,20 +35,24 @@
 			}
 			$paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
 			$query = new WP_Query( [
-				'posts_per_page' => 10,
+				'posts_per_page' => $posts_per_page,
 				'category__in'   => $category_ids,
 				'paged'          => $paged
 			] );
             if ($query->have_posts()): while ($query->have_posts()): $query->the_post(); ?>
+            <?php
+	            $post_thumbnail_url = get_the_post_thumbnail_url( get_the_ID(), 'medium' );
+	            $post_title         = get_the_title();
+	            $permalink          = get_permalink();
+            ?>
             <!-- Chair Card 1 -->
             <div class="bg-white rounded-lg shadow-lg overflow-hidden border">
-                <img src="https://www.richoceanchina.com/wp-content/themes/rogenilantwo/getattachment/8aea1c07-495d-4f2c-8121-020ceb45094e/aluk-s140-interior-angle-2-updated.jpg?height=500&resizemode=force"
+                <img src="<?= $post_thumbnail_url ?: 'https://www.richoceanchina.com/wp-content/themes/rogenilantwo/getattachment/8aea1c07-495d-4f2c-8121-020ceb45094e/aluk-s140-interior-angle-2-updated.jpg?height=500&resizemode=force'; ?>"
                      alt="Boke Furniture ErgoFlex Adjustable Ergonomic Office Chair - Grey"
                      class="w-full h-48 object-cover">
                 <div class="p-4">
-                    <h3 class="text-lg font-bold text-gray-800 mb-2">Boke Furniture ErgoFlex Adjustable Ergonomic Office
-                        Chair – Grey</h3>
-                    <a href="#"
+                    <h3 class="text-lg font-bold text-gray-800 mb-2"><?= $post_title ?></h3>
+                    <a href="<?= $permalink ?>"
                        class="inline-block mt-4 bg-red-600 text-white px-6 py-2 rounded-md font-bold hover:bg-red-700 transition duration-300">Read
                         more</a>
                 </div>
@@ -58,28 +63,25 @@
         <div class="flex justify-center items-center space-x-2">
 
 	        <?php
-	        $total_pages  = ceil( $query->found_posts / 10 ); // Assuming '10' is the posts_per_page value, adjust if different
+	        $total_pages  = ceil( $query->found_posts / $posts_per_page ); // Assuming '10' is the posts_per_page value, adjust if different
 	        $current_page = $paged;
 
 	        // Only display pagination if there's more than one page
 	        if ( $total_pages > 1 ):
 		        echo '<div class="flex justify-center items-center space-x-2">';
 		        if ( $current_page > 1 ):
-			        echo '<button class="w-8 h-8 text-gray-600 border rounded-md hover:bg-gray-200" onclick="location.href=\'' . get_pagenum_link( max( 1, $current_page - 1 ) ) . '\';">' . __( 'Previous', 'textdomain' ) . '</button>';
+			        echo '<button class="w-8 h-8 text-gray-600 border rounded-md hover:bg-gray-200" onclick="location.href=\'' . get_pagenum_link( max( 1, $current_page - 1 ) ) . '\';">' . __( '<', 'textdomain' ) . '</button>';
 		        endif;
 		        for ( $i = 1; $i <= $total_pages; $i ++ ):
 			        echo '<button class="w-8 h-8 ' . ( $i == $current_page ? 'bg-red-600 text-white' : 'text-gray-600' ) . ' border rounded-md hover:bg-gray-200"'
 			             . ' onclick="location.href=\'' . get_pagenum_link( $i ) . '\';">' . $i . '</button>';
 		        endfor;
 		        if ( $current_page < $total_pages ):
-			        echo '<button class="w-8 h-8 text-gray-600 border rounded-md hover:bg-gray-200" onclick="location.href=\'' . get_pagenum_link( min( $total_pages, $current_page + 1 ) ) . '\';">' . __( 'Next', 'textdomain' ) . '</button>';
+			        echo '<button class="w-8 h-8 text-gray-600 border rounded-md hover:bg-gray-200" onclick="location.href=\'' . get_pagenum_link( min( $total_pages, $current_page + 1 ) ) . '\';">' . __( '>', 'textdomain' ) . '</button>';
 		        endif;
 		        echo '</div>';
 	        endif;
 	        ?>
-<!--            <button class="w-8 h-8 text-gray-600 border rounded-md hover:bg-gray-200">1</button>-->
-<!--            <button class="w-8 h-8 text-gray-600 border rounded-md hover:bg-gray-200">2</button>-->
-<!--            <button class="w-8 h-8 text-gray-600 border rounded-md hover:bg-gray-200">→</button>-->
         </div>
     </div>
 </section>

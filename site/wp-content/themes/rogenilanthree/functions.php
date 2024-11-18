@@ -64,7 +64,7 @@ add_shortcode('nav_dropdown_items_class', 'nav_dropdown_items_class');
 
 //底部悬浮联系弹窗
 
-function footer_contact_form_shortcode() {
+function footer_contact_form_shortcode(): false|string {
 	ob_start();
 	?>
 	<div id="floating-button" onclick="toggleFooterContactForm()"><i class="flaticon-sheet"></i></div>
@@ -102,3 +102,47 @@ function footer_contact_form_shortcode() {
 }
 
 add_shortcode( 'footer_contact_form', 'footer_contact_form_shortcode' );
+
+function custom_breadcrumbs() {
+	// 首页链接
+	$home_link = home_url('/');
+	$breadcrumbs = '<a href="' . $home_link . '">Home</a>';
+
+	// 检查是否为首页
+	if ( is_home() || is_front_page() ) {
+		echo '<div class="breadcrumbs">' . $breadcrumbs . '</div>';
+		return;
+	}
+
+	// 获取其他页面的层级
+	if ( is_single() ) {
+		// 获取分类信息
+		$category = get_the_category();
+		if ( $category ) {
+			$breadcrumbs .= ' › <a href="' . get_category_link( $category[0]->term_id ) . '">' . $category[0]->name . '</a>';
+		}
+		$breadcrumbs .= ' › <span>' . get_the_title() . '</span>';
+	} elseif ( is_page() ) {
+		if ( $post = get_post( get_the_ID() ) ) {
+			if ( $post->post_parent ) {
+				$parent_link = get_permalink( $post->post_parent );
+				$parent_title = get_the_title( $post->post_parent );
+				$breadcrumbs .= ' › <a href="' . $parent_link . '">' . $parent_title . '</a>';
+			}
+		}
+		$breadcrumbs .= ' › ' . get_the_title();
+	} elseif ( is_category() ) {
+		$breadcrumbs .= ' › ' . single_cat_title( '', false );
+	} elseif ( is_tag() ) {
+		$breadcrumbs .= ' › ' . single_tag_title( '', false );
+	} elseif ( is_archive() ) {
+		$breadcrumbs .= ' › ' . post_type_archive_title( '', false );
+	} elseif ( is_search() ) {
+		$breadcrumbs .= ' › Search Result：' . get_search_query();
+	} elseif ( is_404() ) {
+		$breadcrumbs .= ' › Page Not Found';
+	}
+
+	// 输出面包屑导航
+	echo '<div class="breadcrumbs">' . $breadcrumbs . '</div>';
+}
