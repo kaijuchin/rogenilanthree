@@ -109,7 +109,7 @@
                     </div>
                     <div id="m-windows" class="md:hidden relative group text-center w-full">
                         <a id="m-windows-toggle" href="#" class="block mx-8 my-4 text-gray-700 hover:text-red-500">Windows
-                            <span class="sub-arrow"><i class="fas fa-chevron-down"></i></span></a>
+                            <span class="sub-arrow"><i class="fas fa-chevron-left"></i></span></a>
                         <div id="m-windows-dropdown" class="hidden w-full bg-gray-700/[.05]">
 							<?php foreach ( WINDOWS_SYSTEMS as $item ): ?>
                                 <a href="#"
