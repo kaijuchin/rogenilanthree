@@ -50,7 +50,7 @@
                                     <div class="flex flex-wrap w-full md:w-[34rem] lg:w-[38rem] xl:w-[46rem] p-4 gap-y-[.75rem] text-[0.8125rem] text-zinc-500">
 										<?php foreach ( WINDOWS_SYSTEMS as $item ): ?>
                                             <span class="w-1/4">
-                                            <a class="hover:text-red-600" href=""><?= $item['name']; ?></a>
+                                            <a class="hover:text-red-600" href="<?= get_category_link( get_cat_ID( $item['name'] ) ); ?>"><?= $item['name']; ?></a>
                                         </span>
 										<?php endforeach; ?>
                                     </div>
@@ -74,7 +74,7 @@
                                     <div class="flex flex-wrap w-full md:w-[34rem] lg:w-[38rem] xl:w-[46rem] p-4 gap-y-[.75rem] text-[0.8125rem] text-zinc-500">
 										<?php foreach ( DOORS_SYSTEMS as $item ): ?>
                                             <span class="w-1/4">
-                                            <a class="hover:text-red-600" href=""><?= $item['name']; ?></a>
+                                            <a class="hover:text-red-600" href="<?= get_category_link( get_cat_ID( $item['name'] ) ); ?>"><?= $item['name']; ?></a>
                                         </span>
 										<?php endforeach; ?>
                                     </div>
@@ -99,7 +99,7 @@
                                     <div class="flex flex-wrap w-full md:w-[34rem] lg:w-[38rem] xl:w-[46rem] p-4 gap-y-[.75rem] text-[0.8125rem] text-zinc-500">
 										<?php foreach ( MORE_PRODUCTS as $item ): ?>
                                             <span class="w-1/4">
-                                            <a class="hover:text-red-600" href=""><?= $item['name']; ?></a>
+                                            <a class="hover:text-red-600" href="<?= get_category_link( get_cat_ID( $item['name'] ) ); ?>"><?= $item['name']; ?></a>
                                         </span>
 										<?php endforeach; ?>
                                     </div>
@@ -107,17 +107,34 @@
                             </div>
                         </div>
                     </div>
+                    <!-- Mobile Navbar links -->
                     <div id="m-windows" class="md:hidden relative group text-center w-full">
                         <a id="m-windows-toggle" href="#" class="block mx-8 my-4 text-gray-700 hover:text-red-500">Windows
                             <span class="sub-arrow"><i class="fas fa-chevron-left"></i></span></a>
                         <div id="m-windows-dropdown" class="hidden w-full bg-gray-700/[.05]">
 							<?php foreach ( WINDOWS_SYSTEMS as $item ): ?>
-                                <a href="#"
+                                <a href="<?= get_category_link( get_cat_ID( $item['name'] ) ); ?>"
                                    class="<?= do_shortcode( '[nav_dropdown_items_class name=item]' ); ?>"><?= $item['name']; ?></a>
 							<?php endforeach; ?>
                         </div>
+                        <a id="m-doors-toggle" href="#" class="block mx-8 my-4 text-gray-700 hover:text-red-500">Doors
+                            <span class="sub-arrow"><i class="fas fa-chevron-left"></i></span></a>
+                        <div id="m-windows-dropdown" class="hidden w-full bg-gray-700/[.05]">
+		                    <?php foreach ( DOORS_SYSTEMS as $item ): ?>
+                                <a href="<?= get_category_link( get_cat_ID( $item['name'] ) ); ?>"
+                                   class="<?= do_shortcode( '[nav_dropdown_items_class name=item]' ); ?>"><?= $item['name']; ?></a>
+		                    <?php endforeach; ?>
+                        </div>
+                        <a id="m-more-products-toggle" href="#" class="block mx-8 my-4 text-gray-700 hover:text-red-500">Doors
+                            <span class="sub-arrow"><i class="fas fa-chevron-left"></i></span></a>
+                        <div id="m-windows-dropdown" class="hidden w-full bg-gray-700/[.05]">
+		                    <?php foreach ( MORE_PRODUCTS as $item ): ?>
+                                <a href="<?= get_category_link( get_cat_ID( $item['name'] ) ); ?>"
+                                   class="<?= do_shortcode( '[nav_dropdown_items_class name=item]' ); ?>"><?= $item['name']; ?></a>
+		                    <?php endforeach; ?>
+                        </div>
                     </div>
-                    <a href="<?php echo get_category_link( get_cat_ID( 'Blog' ) ); ?>"
+                    <a href="<?= get_category_link( get_cat_ID( 'Blog' ) ); ?>"
                        class="mx-8 my-4 text-gray-700 hover:text-red-600">Blog</a>
                     <div class="hidden md:block relative group">
                         <a href="#" class="mx-8 my-4 text-gray-700 hover:text-red-500">About</a>

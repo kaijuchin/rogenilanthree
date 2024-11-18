@@ -24,6 +24,33 @@ document.getElementById('m-windows-toggle').addEventListener('click', function (
         toggleIcon.className.add('fa-chevron-left');
     }
 })
+document.getElementById('m-doors-toggle').addEventListener('click', function () {
+    let dropdown = document.querySelector('#m-doors-dropdown');
+    let toggleIcon = document.querySelector('#m-doors-toggle > span > i');
+    if (dropdown.classList.contains('hidden')) {
+        dropdown.classList.remove('hidden');
+        toggleIcon.className.remove('fa-chevron-left');
+        toggleIcon.className.add('fa-chevron-down');
+    } else {
+        dropdown.classList.add('hidden');
+        toggleIcon.className.remove('fa-chevron-down');
+        toggleIcon.className.add('fa-chevron-left');
+    }
+})
+
+document.getElementById('m-more-products-toggle').addEventListener('click', function () {
+    let dropdown = document.querySelector('#m-more-products-dropdown');
+    let toggleIcon = document.querySelector('#m-more-products-toggle > span > i');
+    if (dropdown.classList.contains('hidden')) {
+        dropdown.classList.remove('hidden');
+        toggleIcon.className.remove('fa-chevron-left');
+        toggleIcon.className.add('fa-chevron-down');
+    } else {
+        dropdown.classList.add('hidden');
+        toggleIcon.className.remove('fa-chevron-down');
+        toggleIcon.className.add('fa-chevron-left');
+    }
+})
 
 document.getElementById('m-about-toggle').addEventListener('click', function () {
     let dropdown = document.getElementById('m-about-dropdown');
