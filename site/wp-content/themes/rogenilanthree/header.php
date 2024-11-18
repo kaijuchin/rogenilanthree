@@ -117,7 +117,8 @@
 							<?php endforeach; ?>
                         </div>
                     </div>
-                    <a href="#" class="mx-8 my-4 text-gray-700 hover:text-red-600">Blog</a>
+                    <a href="<?php echo get_category_link( get_cat_ID( 'Blog' ) ); ?>"
+                       class="mx-8 my-4 text-gray-700 hover:text-red-600">Blog</a>
                     <div class="hidden md:block relative group">
                         <a href="#" class="mx-8 my-4 text-gray-700 hover:text-red-500">About</a>
                         <div class="<?= do_shortcode( '[nav_dropdown_items_class]' ); ?> min-w-48">

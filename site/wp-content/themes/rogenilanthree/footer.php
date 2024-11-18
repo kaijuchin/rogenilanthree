@@ -63,6 +63,7 @@
     </div>
 </footer>
 <?php echo do_shortcode('[footer_contact_form]'); ?>
+<?php wp_footer(); ?>
 <script src="<?= get_theme_file_uri('/assets/scripts/nav.js'); ?>"></script>
 <script>
 

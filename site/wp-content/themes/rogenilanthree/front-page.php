@@ -320,7 +320,7 @@
             </div>
         </div>
     </section>
-    <section class="py-16 bg-gray-50">
+    <section class="p-8 bg-gray-50">
         <div class="container mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <!-- Contact Information Section -->
             <div class="text-left">
