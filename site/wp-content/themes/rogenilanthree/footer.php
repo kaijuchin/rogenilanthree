@@ -3,7 +3,7 @@
         <!-- Contact Section -->
         <div>
             <img src="<?= get_theme_file_uri('/assets/images/richocean-white-logo.png'); ?>" alt="" class="mb-4 w-56">
-            <p class="text-sm">0086-15813395645</p>
+            <p class="text-sm">17607086086</p>
             <p class="text-sm"><a href="mailto:Kai@rogenilan.com ">Kai@rogenilan.com </a></p>
             <p class="text-sm">Marketing Center at 23/F, Weiye International Building, Dali Town, Foshan City, Guangdong Province, China</p>
         </div>
@@ -12,7 +12,8 @@
             <h3 class="text-red-500 mb-4">WINDOWS</h3>
             <ul class="space-y-2">
                 <?php foreach (WINDOWS_SYSTEMS as $item): ?>
-                <li><?= $item['name']; ?></li>
+                <li><a href="<?= get_category_link( get_category_by_slug( $item['slug'] ) ); ?>" class="text-gray-400 hover:text-white transition duration-300">
+                        <?= $item['name']; ?></a></li>
                 <?php endforeach; ?>
             </ul>
         </div>
@@ -21,7 +22,8 @@
             <h3 class="text-red-500 mb-4">DOORS</h3>
             <ul class="space-y-2">
 			    <?php foreach (DOORS_SYSTEMS as $item): ?>
-                    <li><?= $item['name']; ?></li>
+                    <li><a href="<?= get_category_link( get_category_by_slug( $item['slug'] ) ); ?>" class="text-gray-400 hover:text-white transition duration-300">
+						    <?= $item['name']; ?></a></li>
 			    <?php endforeach; ?>
             </ul>
         </div>
@@ -30,7 +32,8 @@
             <h3 class="text-red-500 mb-4">More Products</h3>
             <ul class="space-y-2">
 			    <?php foreach (MORE_PRODUCTS as $item): ?>
-                    <li><?= $item['name']; ?></li>
+                    <li><a href="<?= get_category_link( get_category_by_slug( $item['slug'] ) ); ?>" class="text-gray-400 hover:text-white transition duration-300">
+						    <?= $item['name']; ?></a></li>
 			    <?php endforeach; ?>
             </ul>
         </div>
