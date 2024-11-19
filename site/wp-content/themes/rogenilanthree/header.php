@@ -26,7 +26,8 @@
                 </div>
                 <!-- Navbar links -->
                 <div id="navbar-links" class="hidden md:flex items-center md:ml-32 z-10">
-                    <a href="#" class="mx-8 my-4 text-gray-700 hover:text-red-500">Home</a>
+
+                    <a href="<?= home_url() ?>" class="mx-8 my-4 text-gray-700 hover:text-red-500">Home</a>
                     <div class="hidden md:block relative group">
                         <a href="#" class="mx-8 my-2.5 pb-4 text-gray-700 hover:text-red-500">Products</a>
                         <div class="w-full md:w-[768px] lg:w-[840px] xl:w-[1000px]  dropdown block pointer-events-none group-hover:pointer-events-auto hover:pointer-events-auto group-hover:block <?= do_shortcode( '[nav_dropdown_items_class]' ); ?>">

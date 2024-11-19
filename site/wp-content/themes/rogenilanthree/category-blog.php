@@ -43,19 +43,14 @@
             <?php
 	            $post_thumbnail_url = get_the_post_thumbnail_url( get_the_ID(), 'medium' );
 	            $post_title         = get_the_title();
+	            $post_excerpt        = get_the_excerpt();
 	            $permalink          = get_permalink();
             ?>
-            <!-- Chair Card 1 -->
-            <div class="bg-white rounded-lg shadow-lg overflow-hidden border">
-                <img src="<?= $post_thumbnail_url ?: 'https://www.richoceanchina.com/wp-content/themes/rogenilantwo/getattachment/8aea1c07-495d-4f2c-8121-020ceb45094e/aluk-s140-interior-angle-2-updated.jpg?height=500&resizemode=force'; ?>"
-                     alt="Boke Furniture ErgoFlex Adjustable Ergonomic Office Chair - Grey"
-                     class="w-full h-48 object-cover">
-                <div class="p-4">
-                    <h3 class="text-lg font-bold text-gray-800 mb-2"><?= $post_title ?></h3>
-                    <a href="<?= $permalink ?>"
-                       class="inline-block mt-4 bg-red-600 text-white px-6 py-2 rounded-md font-bold hover:bg-red-700 transition duration-300">Read
-                        more</a>
-                </div>
+            <div class="bg-white rounded-lg shadow-lg p-6 flex flex-col items-center">
+                <img src="<?= $post_thumbnail_url ?: 'http://www.rogenilan.com/upload/images/360_360/1646980923461464.jpg' ?>" alt="" class="w-full h-full object-cover mb-4">
+                <h3 class="text-lg font-bold text-gray-800 mb-2"><?= $post_title ?></h3>
+                <p class="text-gray-500 mb-4"><?= wp_trim_words($post_excerpt, 8) ?></p>
+                <a href="<?= $permalink ?>" class="inline-block bg-orange-500 text-white px-6 py-3 rounded-full hover:bg-orange-600 transition duration-300">Read More</a>
             </div>
             <?php endwhile; endif; wp_reset_postdata(); ?>
         </div>
