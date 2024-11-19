@@ -43,7 +43,7 @@
                                     <!-- Icon and Title -->
                                     <div class="flex pt-[1.5rem] items-center">
                                         <img class="w-[2.5rem] h-[2.5rem]"
-                                             src="http://www.rogenilan.com/template/pc/rogenilancom/style/images/CasementWindows.png"
+                                             src="https://www.rogenilan.com/template/pc/rogenilancom/style/images/CasementWindows.png"
                                              alt="">️
                                         <p class="pl-[1rem] text-[1.2rem]">Windows</p>
                                     </div>
@@ -68,7 +68,7 @@
                                     <!-- Icon and Title -->
                                     <div class="flex pt-[1.5rem] items-center">
                                         <img class="w-[2.5rem] h-[2.5rem]"
-                                             src="http://www.rogenilan.com/upload/sort/1648105836472820.png" alt="">️
+                                             src="https://www.rogenilan.com/upload/sort/1648105836472820.png" alt="">️
                                         <p class="pl-[1rem] text-[1.2rem]">Doors</p>
                                     </div>
                                     <!-- List of Items -->
@@ -92,7 +92,7 @@
                                     <!-- Icon and Title -->
                                     <div class="flex pt-[1.5rem] items-center">
                                         <img class="w-[2.5rem] h-[2.5rem]"
-                                             src="http://www.rogenilan.com/template/pc/rogenilancom/style/images/Sunrooms.png"
+                                             src="https://www.rogenilan.com/template/pc/rogenilancom/style/images/Sunrooms.png"
                                              alt="">️
                                         <p class="pl-[1rem] text-[1.2rem]">More Products</p>
                                     </div>
@@ -140,9 +140,9 @@
                     <div class="hidden md:block relative group">
                         <a href="#" class="mx-8 my-4 text-gray-700 hover:text-red-500">About</a>
                         <div class="<?= do_shortcode( '[nav_dropdown_items_class]' ); ?> min-w-48">
-                            <a href="#" class="<?= do_shortcode( '[nav_dropdown_items_class name=item]' ); ?>">Our
+                            <a href="<?= get_category_link( get_category_by_slug( 'our-story' ) ); ?>" class="<?= do_shortcode( '[nav_dropdown_items_class name=item]' ); ?>">Our
                                 Story</a>
-                            <a href="#" class="<?= do_shortcode( '[nav_dropdown_items_class name=item]' ); ?>">Why
+                            <a href="<?= get_category_link( get_category_by_slug( 'why-choose-us' ) ); ?>" class="<?= do_shortcode( '[nav_dropdown_items_class name=item]' ); ?>">Why
                                 Choose Us</a>
                         </div>
                     </div>
@@ -150,9 +150,9 @@
                         <a id="m-about-toggle" href="#"
                            class="block mx-8 my-4 text-gray-700 hover:text-red-500">About</a>
                         <div id="m-about-dropdown" class="hidden w-full bg-gray-700/[.05]">
-                            <a href="#" class="<?= do_shortcode( '[nav_dropdown_items_class name=item]' ); ?>">Our
+                            <a href="<?= get_category_link( get_category_by_slug( 'our-story' ) ); ?>" class="<?= do_shortcode( '[nav_dropdown_items_class name=item]' ); ?>">Our
                                 Story</a>
-                            <a href="#" class="<?= do_shortcode( '[nav_dropdown_items_class name=item]' ); ?>">Why
+                            <a href="<?= get_category_link( get_category_by_slug( 'why-choose-us' ) ); ?>" class="<?= do_shortcode( '[nav_dropdown_items_class name=item]' ); ?>">Why
                                 Choose Us</a>
                         </div>
                     </div>
