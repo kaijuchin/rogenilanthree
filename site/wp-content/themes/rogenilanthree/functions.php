@@ -62,12 +62,14 @@ function nav_dropdown_items_class($atts): void
 add_shortcode('nav_dropdown_items_class', 'nav_dropdown_items_class');
 
 
-//底部悬浮联系弹窗
+//底部悬浮联系弹窗 & Back to Top
 
 function footer_contact_form_shortcode(): false|string {
 	ob_start();
 	?>
-	<div id="floating-button" onclick="toggleFooterContactForm()"><i class="fa-regular fa-pen-to-square"></i></div>
+    <div id="floating-button" onclick="toggleFooterContactForm()"><i class="fa-regular fa-pen-to-square"></i></div>
+    <div id="go-to-top-btn" class="bg-red-600" onclick="topFunction()"><i class="fa-solid fa-arrow-up"></i></div>
+    <script>function topFunction() { document.body.scrollTop = 0; document.documentElement.scrollTo({top: 0, behavior: "smooth"}) }</script>
 	<!-- Contact Form Section -->
 	<div id="footer-contact-form" class="max-w-screen-md mx-auto bg-white p-8 rounded-md shadow-md">
 		<form class="grid grid-cols-1 md:grid-cols-2 gap-6">

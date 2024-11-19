@@ -63,10 +63,21 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 #floating-button {
     position: fixed;
     bottom: 80px;
-    right: 30px;
+    right: 10px;
     background-color: #00ad18;
     color: #fff;
     padding: 8px;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+#go-to-top-btn {
+    position: fixed;
+    bottom: 24px;
+    right: 10px;
+    color: #fff;
+    padding: 8px 10px;
     border-radius: 5px;
     cursor: pointer;
     z-index: 1000;
@@ -90,12 +101,13 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
         display: none;
         position: fixed;
         bottom: 20px;
-        right: 5rem;
+        right: 3.4rem;
         background-color: #fff;
         border: 1px solid #ccc;
         padding: 1.25rem 2.5rem;
         box-shadow: 0 0 10px rgba(0,0,0,0.1);
         z-index: 1000;
+        width: 326px;
     }
 }
 
