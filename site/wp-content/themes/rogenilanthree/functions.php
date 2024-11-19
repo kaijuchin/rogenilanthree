@@ -16,50 +16,48 @@ const WINDOWS_SYSTEMS = [
 ];
 
 const DOORS_SYSTEMS = [
-	['name' => 'Exterior Doors', 'slug' => 'exterior-doors' ],
-	['name' => 'Folding Doors', 'slug' => 'folding-doors' ],
-	['name' => 'Sliding Doors', 'slug' => 'sliding-doors' ],
-	['name' => 'Stacking Doors', 'slug' => 'stacking-doors' ],
-	['name' => 'Casement Doors', 'slug' => 'casement-doors' ],
-	['name' => 'Double Doors', 'slug' => 'double-doors' ],
+	[ 'name' => 'Exterior Doors', 'slug' => 'exterior-doors' ],
+	[ 'name' => 'Folding Doors', 'slug' => 'folding-doors' ],
+	[ 'name' => 'Sliding Doors', 'slug' => 'sliding-doors' ],
+	[ 'name' => 'Stacking Doors', 'slug' => 'stacking-doors' ],
+	[ 'name' => 'Casement Doors', 'slug' => 'casement-doors' ],
+	[ 'name' => 'Double Doors', 'slug' => 'double-doors' ],
 ];
 
 const MORE_PRODUCTS = [
-	['name' => 'Garage Door', 'slug' => 'garage-door' ],
-	['name' => 'Skylight', 'slug' => 'skylight' ],
-	['name' => 'Sunroom', 'slug' => 'sunroom' ],
-	['name' => 'Combination Window And Door', 'slug' => 'combination-window-and-door' ],
-	['name' => 'Curtain Wall', 'slug' => 'curtain-wall' ],
-	['name' => 'Glass Railing', 'slug' => 'glass-railing' ],
+	[ 'name' => 'Garage Door', 'slug' => 'garage-door' ],
+	[ 'name' => 'Skylight', 'slug' => 'skylight' ],
+	[ 'name' => 'Sunroom', 'slug' => 'sunroom' ],
+	[ 'name' => 'Combination Window And Door', 'slug' => 'combination-window-and-door' ],
+	[ 'name' => 'Curtain Wall', 'slug' => 'curtain-wall' ],
+	[ 'name' => 'Glass Railing', 'slug' => 'glass-railing' ],
 ];
 
-function my_theme_enqueue_styles(): void
-{
-    wp_deregister_script('jquery');
-    wp_enqueue_style('parent-style', get_template_directory_uri() . '/style.css');
-    wp_enqueue_style('font-awesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css', [], '1.0.0');
-    wp_enqueue_script('jquery', 'https://code.jquery.com/jquery-3.6.0.min.js', [], '3.6.0', true);
-	wp_enqueue_script('tailwindcss', 'https://cdn.tailwindcss.com', [], '1.0.0');
-	wp_enqueue_script('nav', get_template_directory_uri() . '/assets/scripts/nav.js', [], '1.0.0', true);
+function my_theme_enqueue_styles(): void {
+	wp_deregister_script( 'jquery' );
+	wp_enqueue_style( 'parent-style', get_template_directory_uri() . '/style.css' );
+	wp_enqueue_style( 'font-awesome', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css', [], '1.0.0' );
+	wp_enqueue_script( 'jquery', 'https://code.jquery.com/jquery-3.6.0.min.js', [], '3.6.0', true );
+	wp_enqueue_script( 'tailwindcss', 'https://cdn.tailwindcss.com', [], '1.0.0' );
+	wp_enqueue_script( 'nav', get_template_directory_uri() . '/assets/scripts/nav.js', [], '1.0.0', true );
 }
 
-add_action('wp_enqueue_scripts', 'my_theme_enqueue_styles');
+add_action( 'wp_enqueue_scripts', 'my_theme_enqueue_styles' );
 
-function nav_dropdown_items_class($atts): void
-{
-    $atts = shortcode_atts([
-        'name' => 'group',
-    ], $atts, 'nav_dropdown_items_class');
-    $array = [
-        'group' => 'absolute bg-grey left-full opacity-0 group-hover:opacity-100 bg-neutral-100 shadow-lg rounded 
+function nav_dropdown_items_class( $atts ): void {
+	$atts  = shortcode_atts( [
+		'name' => 'group',
+	], $atts, 'nav_dropdown_items_class' );
+	$array = [
+		'group' => 'absolute bg-grey left-full opacity-0 group-hover:opacity-100 bg-neutral-100 shadow-lg rounded 
     z-10 xl:-translate-x-[68%] lg:-translate-x-[58%] md:-translate-x-[50%] -translate-y-2 group-hover:translate-y-3 transition-all duration-500 ease-in-out',
-        'item' => 'block p-3 md:border-b text-gray-700 hover:bg-gray-700/[.05] hover:text-gray-700/[.8]',
-    ];
-    echo $array[$atts['name']];
+		'item'  => 'block p-3 md:border-b text-gray-700 hover:bg-gray-700/[.05] hover:text-gray-700/[.8]',
+	];
+	echo $array[ $atts['name'] ];
 
 }
 
-add_shortcode('nav_dropdown_items_class', 'nav_dropdown_items_class');
+add_shortcode( 'nav_dropdown_items_class', 'nav_dropdown_items_class' );
 
 
 //底部悬浮联系弹窗 & Back to Top
@@ -69,36 +67,43 @@ function footer_contact_form_shortcode(): false|string {
 	?>
     <div id="floating-button" onclick="toggleFooterContactForm()"><i class="fa-regular fa-pen-to-square"></i></div>
     <div id="go-to-top-btn" class="bg-red-600" onclick="topFunction()"><i class="fa-solid fa-arrow-up"></i></div>
-    <script>function topFunction() { document.body.scrollTop = 0; document.documentElement.scrollTo({top: 0, behavior: "smooth"}) }</script>
-	<!-- Contact Form Section -->
-	<div id="footer-contact-form" class="max-w-screen-md mx-auto bg-white p-8 rounded-md shadow-md">
-		<form class="grid grid-cols-1 md:grid-cols-2 gap-6">
-			<!-- Email Field -->
-			<div class="col-span-2">
-				<label for="email" class="block text-sm font-bold mb-2 text-gray-700">E-MAIL *</label>
-				<input type="email" id="email" placeholder="Email" class="w-full px-2 border-0 border-b border-stone-900 text-[0.75rem] leading-[3.125rem] focus:outline-0">
-			</div>
-			<!-- Phone Field -->
-			<div>
-				<label for="phone" class="block text-sm font-bold mb-2 text-gray-700">PHONE</label>
-				<input type="text" id="phone" placeholder="Phone" class="w-full px-2 border-0 border-b border-stone-900 text-[0.75rem] leading-[3.125rem] focus:outline-0">
-			</div>
-			<!-- Country Field -->
-			<div>
-				<label for="country" class="block text-sm font-bold mb-2 text-gray-700">COUNTRY</label>
-				<input type="text" id="country" placeholder="Country" class="w-full px-2 border-0 border-b border-stone-900 text-[0.75rem] leading-[3.125rem] focus:outline-0">
-			</div>
-			<!-- Message Field -->
-			<div class="col-span-2">
-				<label for="message" class="block text-sm font-bold mb-2 text-gray-700">MESSAGE *</label>
-				<textarea id="message" rows="1" placeholder="Please tell us about your requirements" class="w-full px-2 border-0 border-b border-stone-900 text-[0.75rem] leading-[3.125rem] focus:outline-0"></textarea>
-			</div>
-			<!-- Submit Button -->
-			<div class="col-span-2">
-				<button type="submit" class="w-full p-3 bg-red-600 text-white font-bold rounded">SEND</button>
-			</div>
-		</form>
-	</div>
+    <script>function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTo({top: 0, behavior: "smooth"})
+        }</script>
+    <!-- Contact Form Section -->
+    <div id="footer-contact-form" class="max-w-screen-md mx-auto bg-white p-8 rounded-md shadow-md">
+        <form class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <!-- Email Field -->
+            <div class="col-span-2">
+                <label for="email" class="block text-sm font-bold mb-2 text-gray-700">E-MAIL *</label>
+                <input type="email" id="email" placeholder="Email"
+                       class="w-full px-2 border-0 border-b border-stone-900 text-[0.75rem] leading-[3.125rem] focus:outline-0">
+            </div>
+            <!-- Phone Field -->
+            <div>
+                <label for="phone" class="block text-sm font-bold mb-2 text-gray-700">PHONE</label>
+                <input type="text" id="phone" placeholder="Phone"
+                       class="w-full px-2 border-0 border-b border-stone-900 text-[0.75rem] leading-[3.125rem] focus:outline-0">
+            </div>
+            <!-- Country Field -->
+            <div>
+                <label for="country" class="block text-sm font-bold mb-2 text-gray-700">COUNTRY</label>
+                <input type="text" id="country" placeholder="Country"
+                       class="w-full px-2 border-0 border-b border-stone-900 text-[0.75rem] leading-[3.125rem] focus:outline-0">
+            </div>
+            <!-- Message Field -->
+            <div class="col-span-2">
+                <label for="message" class="block text-sm font-bold mb-2 text-gray-700">MESSAGE *</label>
+                <textarea id="message" rows="1" placeholder="Please tell us about your requirements"
+                          class="w-full px-2 border-0 border-b border-stone-900 text-[0.75rem] leading-[3.125rem] focus:outline-0"></textarea>
+            </div>
+            <!-- Submit Button -->
+            <div class="col-span-2">
+                <button type="submit" class="w-full p-3 bg-red-600 text-white font-bold rounded">SEND</button>
+            </div>
+        </form>
+    </div>
 	<?php
 	return ob_get_clean();
 }
@@ -107,12 +112,13 @@ add_shortcode( 'footer_contact_form', 'footer_contact_form_shortcode' );
 
 function custom_breadcrumbs() {
 	// 首页链接
-	$home_link = home_url('/');
+	$home_link   = home_url( '/' );
 	$breadcrumbs = '<a href="' . $home_link . '">Home</a>';
 
 	// 检查是否为首页
 	if ( is_home() || is_front_page() ) {
 		echo '<div class="breadcrumbs">' . $breadcrumbs . '</div>';
+
 		return;
 	}
 
@@ -127,9 +133,9 @@ function custom_breadcrumbs() {
 	} elseif ( is_page() ) {
 		if ( $post = get_post( get_the_ID() ) ) {
 			if ( $post->post_parent ) {
-				$parent_link = get_permalink( $post->post_parent );
+				$parent_link  = get_permalink( $post->post_parent );
 				$parent_title = get_the_title( $post->post_parent );
-				$breadcrumbs .= ' › <a href="' . $parent_link . '">' . $parent_title . '</a>';
+				$breadcrumbs  .= ' › <a href="' . $parent_link . '">' . $parent_title . '</a>';
 			}
 		}
 		$breadcrumbs .= ' › ' . get_the_title();
@@ -275,3 +281,96 @@ function add_custom_meta_for_categories() {
 	$title .= '</title>';
 	echo $title;
 }
+
+
+function custom_product_category_template_shortcode( $atts ) {
+	// 获取当前查询对象，确保是分类页面
+	if ( ! is_category() ) {
+		return null;
+	}
+
+	ob_start(); // 开启输出缓冲区
+
+	get_header(); // 包含页眉
+
+	$category     = get_queried_object();
+	$banner_image = get_field( 'banner_image', 'category_' . $category->term_id );
+
+	// 开始生成页面内容
+	?>
+    <section class="py-16">
+        <div class="container mx-auto p-8">
+            <!-- Header Section -->
+            <div class="mb-8">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">CASEMENT WINDOWS</h2>
+                <nav class="text-gray-600">
+                    <a href="#" class="hover:text-red-500">Home</a> &nbsp; &gt; &nbsp; <a href="#"
+                                                                                          class="hover:text-red-500">Windows</a>
+                    &nbsp; &gt; &nbsp; <span class="font-bold text-gray-800">Casement Windows</span>
+                </nav>
+            </div>
+            <!-- Articles Section -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+				<?php
+				$posts_per_page = get_option( 'posts_per_page' );
+				$paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
+				$query = new WP_Query( [
+					'posts_per_page' => $posts_per_page,
+					'cat'            => $category->term_id,
+					'paged'          => $paged
+				] );
+				if ( $query->have_posts() ): while ( $query->have_posts() ): $query->the_post(); ?>
+					<?php
+					$post_thumbnail_url = get_the_post_thumbnail_url( get_the_ID(), 'medium' ) ?? 'https://www.richoceanchina.com/wp-content/themes/rogenilantwo/getattachment/dc1bcbbe-3dc4-4620-9ea6-2477b3f30c1c/pl7_2074.jpg?height=640&resizemode=force';
+					$post_title         = get_the_title();
+					$post_excerpt       = get_the_excerpt();
+					$permalink          = get_permalink();
+					?>
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden border">
+                        <img src="<?= $post_thumbnail_url ?>"
+                             alt="4 Reasons to Choose Casement Windows" class="w-full h-68 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-bold text-gray-800 mb-4"><?= $post_title ?></h3>
+                            <p class="text-gray-600 mb-6"><?= wp_trim_words($post_excerpt, 8) ?></p>
+                            <a href="<?= $permalink ?>" class="text-red-500 font-bold flex items-center hover:text-red-700">MORE INFO
+                                <span class="ml-2">&rarr;</span></a>
+                        </div>
+                    </div>
+				<?php endwhile; endif;
+				wp_reset_postdata(); ?>
+            </div>
+        </div>
+        <!-- Pagination -->
+        <div class="flex justify-center items-center space-x-2">
+
+			<?php
+			$total_pages  = ceil( $query->found_posts / $posts_per_page ); // Assuming '10' is the posts_per_page value, adjust if different
+			$current_page = $paged;
+
+			// Only display pagination if there's more than one page
+			if ( $total_pages > 1 ):
+				echo '<div class="flex justify-center items-center space-x-2">';
+				if ( $current_page > 1 ):
+					echo '<button class="w-8 h-8 text-gray-600 border rounded-md hover:bg-gray-200" onclick="location.href=\'' . get_pagenum_link( max( 1, $current_page - 1 ) ) . '\';">' . __( '<', 'textdomain' ) . '</button>';
+				endif;
+				for ( $i = 1; $i <= $total_pages; $i ++ ):
+					echo '<button class="w-8 h-8 ' . ( $i == $current_page ? 'bg-red-600 text-white' : 'text-gray-600' ) . ' border rounded-md hover:bg-gray-200"'
+					     . ' onclick="location.href=\'' . get_pagenum_link( $i ) . '\';">' . $i . '</button>';
+				endfor;
+				if ( $current_page < $total_pages ):
+					echo '<button class="w-8 h-8 text-gray-600 border rounded-md hover:bg-gray-200" onclick="location.href=\'' . get_pagenum_link( min( $total_pages, $current_page + 1 ) ) . '\';">' . __( '>', 'textdomain' ) . '</button>';
+				endif;
+				echo '</div>';
+			endif;
+			?>
+        </div>
+    </section>
+
+	<?php
+	wp_reset_postdata(); // 重置查询数据
+	get_footer(); // 包含页脚
+
+	return ob_get_clean(); // 获取缓冲区内容并清空
+}
+
+add_shortcode( 'product_category_template', 'custom_product_category_template_shortcode' );
