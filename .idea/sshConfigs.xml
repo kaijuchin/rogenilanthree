@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project version="4">
-  <component name="SshConfigs">
-    <configs>
-      <sshConfig authType="PASSWORD" host="vkt.c5d.myftpupload.com" id="6ffac635-16e2-4d44-8d0d-609f5ad0dee6" port="22" nameFormat="DESCRIPTIVE" username="a4uLvr2w1cytzV" useOpenSSHConfig="true" />
-    </configs>
-  </component>
-</project>
