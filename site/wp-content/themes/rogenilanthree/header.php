@@ -43,7 +43,7 @@
                                     <!-- Icon and Title -->
                                     <div class="flex pt-[1.5rem] items-center">
                                         <img class="w-[2.5rem] h-[2.5rem]"
-                                             src="https://www.rogenilan.com/template/pc/rogenilancom/style/images/CasementWindows.png"
+                                             src="http://www.rogenilan.com/template/pc/rogenilancom/style/images/CasementWindows.png"
                                              alt="">️
                                         <p class="pl-[1rem] text-[1.2rem]">Windows</p>
                                     </div>
@@ -68,7 +68,7 @@
                                     <!-- Icon and Title -->
                                     <div class="flex pt-[1.5rem] items-center">
                                         <img class="w-[2.5rem] h-[2.5rem]"
-                                             src="https://www.rogenilan.com/upload/sort/1648105836472820.png" alt="">️
+                                             src="http://www.rogenilan.com/upload/sort/1648105836472820.png" alt="">️
                                         <p class="pl-[1rem] text-[1.2rem]">Doors</p>
                                     </div>
                                     <!-- List of Items -->
@@ -92,7 +92,7 @@
                                     <!-- Icon and Title -->
                                     <div class="flex pt-[1.5rem] items-center">
                                         <img class="w-[2.5rem] h-[2.5rem]"
-                                             src="https://www.rogenilan.com/template/pc/rogenilancom/style/images/Sunrooms.png"
+                                             src="http://www.rogenilan.com/template/pc/rogenilancom/style/images/Sunrooms.png"
                                              alt="">️
                                         <p class="pl-[1rem] text-[1.2rem]">More Products</p>
                                     </div>
