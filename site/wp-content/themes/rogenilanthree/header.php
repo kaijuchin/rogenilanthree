@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Richocean</title>
+	<?php add_custom_meta_for_categories(); ?>
 	<?php wp_head(); ?>
 </head>
 <body class="bg-gray-100">
@@ -29,7 +29,7 @@
 
                     <a href="<?= home_url() ?>" class="mx-8 my-4 text-gray-700 hover:text-red-500">Home</a>
                     <div class="hidden md:block relative group">
-                        <a href="#" class="mx-8 my-2.5 pb-4 text-gray-700 hover:text-red-500">Products</a>
+                        <a href="#" class="mx-8 my-2 pb-4 text-gray-700 group-hover:text-red-500">Products</a>
                         <div class="w-full md:w-[768px] lg:w-[840px] xl:w-[1000px]  dropdown block pointer-events-none group-hover:pointer-events-auto hover:pointer-events-auto group-hover:block <?= do_shortcode( '[nav_dropdown_items_class]' ); ?>">
                             <!-- Office Furniture Section -->
                             <div class="flex w-full">
@@ -138,7 +138,7 @@
                     <a href="<?= get_category_link( get_cat_ID( 'Blog' ) ); ?>"
                        class="mx-8 my-4 text-gray-700 hover:text-red-600">Blog</a>
                     <div class="hidden md:block relative group">
-                        <a href="#" class="mx-8 my-4 text-gray-700 hover:text-red-500">About</a>
+                        <a href="#" class="mx-8 my-2 pb-4 text-gray-700 group-hover:text-red-500">About</a>
                         <div class="dropdown block pointer-events-none group-hover:pointer-events-auto hover:pointer-events-auto group-hover:block <?= do_shortcode( '[nav_dropdown_items_class]' ); ?> min-w-48">
                             <a href="<?= get_category_link( get_category_by_slug( 'our-story' ) ); ?>" class="<?= do_shortcode( '[nav_dropdown_items_class name=item]' ); ?>">Our
                                 Story</a>
