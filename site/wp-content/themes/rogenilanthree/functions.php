@@ -51,7 +51,7 @@ function nav_dropdown_items_class($atts): void
         'name' => 'group',
     ], $atts, 'nav_dropdown_items_class');
     $array = [
-        'group' => 'absolute bg-grey left-3/4 opacity-0 group-hover:opacity-100 bg-neutral-100 shadow-lg rounded 
+        'group' => 'absolute bg-grey left-full opacity-0 group-hover:opacity-100 bg-neutral-100 shadow-lg rounded 
     z-10 xl:-translate-x-[68%] lg:-translate-x-[58%] md:-translate-x-[50%] -translate-y-2 group-hover:translate-y-3 transition-all duration-500 ease-in-out',
         'item' => 'block p-3 md:border-b text-gray-700 hover:bg-gray-700/[.05] hover:text-gray-700/[.8]',
     ];

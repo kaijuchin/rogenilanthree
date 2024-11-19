@@ -139,7 +139,7 @@
                        class="mx-8 my-4 text-gray-700 hover:text-red-600">Blog</a>
                     <div class="hidden md:block relative group">
                         <a href="#" class="mx-8 my-4 text-gray-700 hover:text-red-500">About</a>
-                        <div class="<?= do_shortcode( '[nav_dropdown_items_class]' ); ?> min-w-48">
+                        <div class="dropdown block pointer-events-none group-hover:pointer-events-auto hover:pointer-events-auto group-hover:block <?= do_shortcode( '[nav_dropdown_items_class]' ); ?> min-w-48">
                             <a href="<?= get_category_link( get_category_by_slug( 'our-story' ) ); ?>" class="<?= do_shortcode( '[nav_dropdown_items_class name=item]' ); ?>">Our
                                 Story</a>
                             <a href="<?= get_category_link( get_category_by_slug( 'why-choose-us' ) ); ?>" class="<?= do_shortcode( '[nav_dropdown_items_class name=item]' ); ?>">Why
