@@ -67,7 +67,7 @@ add_shortcode('nav_dropdown_items_class', 'nav_dropdown_items_class');
 function footer_contact_form_shortcode(): false|string {
 	ob_start();
 	?>
-	<div id="floating-button" onclick="toggleFooterContactForm()"><i class="flaticon-sheet"></i></div>
+	<div id="floating-button" onclick="toggleFooterContactForm()"><i class="fa-regular fa-pen-to-square"></i></div>
 	<!-- Contact Form Section -->
 	<div id="footer-contact-form" class="max-w-screen-md mx-auto bg-white p-8 rounded-md shadow-md">
 		<form class="grid grid-cols-1 md:grid-cols-2 gap-6">
