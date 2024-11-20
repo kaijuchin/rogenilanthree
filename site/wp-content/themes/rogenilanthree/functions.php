@@ -72,12 +72,16 @@ function footer_contact_form_shortcode(): false|string {
             document.documentElement.scrollTo({top: 0, behavior: "smooth"})
         }</script>
     <!-- Contact Form Section -->
-    <div id="footer-contact-form" class="max-w-screen-md mx-auto bg-white p-8 rounded-md shadow-md">
-        <form class="grid grid-cols-1 md:grid-cols-2 gap-6">
+    <div id="popup-footer-form" class="max-w-screen-md mx-auto bg-white p-8 rounded-md shadow-md">
+        <form action="<?= esc_url( admin_url( 'admin-post.php' ) ) ?>" enctype="multipart/form-data" method="post" id="footer-contact-form" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <input type="hidden" name="action" value="submit_contact_form">
+            <input type="hidden" name="ajax" value="1">
             <!-- Email Field -->
             <div class="col-span-2">
                 <label for="email" class="block text-sm font-bold mb-2 text-gray-700">E-MAIL *</label>
                 <input type="email" id="email" placeholder="Email"
+                       data-val-regex="Please Enter Correct Email Address"
+                       data-val-regex-pattern="^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$"
                        class="w-full px-2 border-0 border-b border-stone-900 text-[0.75rem] leading-[3.125rem] focus:outline-0">
             </div>
             <!-- Phone Field -->
@@ -313,8 +317,8 @@ function custom_product_category_template_shortcode( $atts ) {
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
 				<?php
 				$posts_per_page = get_option( 'posts_per_page' );
-				$paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
-				$query = new WP_Query( [
+				$paged          = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
+				$query          = new WP_Query( [
 					'posts_per_page' => $posts_per_page,
 					'cat'            => $category->term_id,
 					'paged'          => $paged
@@ -331,8 +335,9 @@ function custom_product_category_template_shortcode( $atts ) {
                              alt="4 Reasons to Choose Casement Windows" class="w-full h-68 object-cover">
                         <div class="p-6">
                             <h3 class="text-2xl font-bold text-gray-800 mb-4"><?= $post_title ?></h3>
-                            <p class="text-gray-600 mb-6"><?= wp_trim_words($post_excerpt, 8) ?></p>
-                            <a href="<?= $permalink ?>" class="text-red-500 font-bold flex items-center hover:text-red-700">MORE INFO
+                            <p class="text-gray-600 mb-6"><?= wp_trim_words( $post_excerpt, 8 ) ?></p>
+                            <a href="<?= $permalink ?>"
+                               class="text-red-500 font-bold flex items-center hover:text-red-700">MORE INFO
                                 <span class="ml-2">&rarr;</span></a>
                         </div>
                     </div>

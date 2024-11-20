@@ -357,7 +357,7 @@
                     </li>
                     <li class="flex items-start">
                         <span class="text-orange-500 mr-3">&#10004;</span>
-                        <p class="text-gray-600">Phone us at 0086-15813395645</p>
+                        <p class="text-gray-600">Phone us at 17607086086</p>
                     </li>
                     <li class="flex items-start">
                         <span class="text-orange-500 mr-3">&#10004;</span>

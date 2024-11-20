@@ -84,7 +84,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 }
 
 
-#footer-contact-form {
+#popup-footer-form {
     display: none;
     position: fixed;
     bottom: 20px;
@@ -97,7 +97,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 }
 
 @media (max-width: 600px) {
-    #footer-contact-form {
+    #popup-footer-form {
         display: none;
         position: fixed;
         bottom: 20px;

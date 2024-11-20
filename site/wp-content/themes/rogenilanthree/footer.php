@@ -71,7 +71,7 @@
 <script>
 
     function toggleFooterContactForm() {
-        var form = document.getElementById('footer-contact-form');
+        var form = document.getElementById('popup-footer-form');
         console.log(form.style.display)
         if (form.style.display === 'none' || form.style.display === '') {
             form.style.display = 'flex';
