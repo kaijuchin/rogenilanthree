@@ -43,7 +43,7 @@
                                     <!-- Icon and Title -->
                                     <div class="flex pt-[1.5rem] items-center">
                                         <img class="w-[2.5rem] h-[2.5rem]"
-                                             src="http://www.rogenilan.com/template/pc/rogenilancom/style/images/CasementWindows.png"
+                                             src="<?= get_theme_file_uri( '/assets/images/nav/CasementWindows.png' ) ?>"
                                              alt="">️
                                         <p class="pl-[1rem] text-[1.2rem]">Windows</p>
                                     </div>
@@ -51,7 +51,8 @@
                                     <div class="flex flex-wrap w-full md:w-[34rem] lg:w-[38rem] xl:w-[46rem] p-4 gap-y-[.75rem] text-[0.8125rem] text-zinc-500">
 										<?php foreach ( WINDOWS_SYSTEMS as $item ): ?>
                                             <span class="w-1/4">
-                                            <a class="hover:text-red-600" href="<?= get_category_link( get_cat_ID( $item['name'] ) ); ?>"><?= $item['name']; ?></a>
+                                            <a class="hover:text-red-600"
+                                               href="<?= get_category_link( get_cat_ID( $item['name'] ) ); ?>"><?= $item['name']; ?></a>
                                         </span>
 										<?php endforeach; ?>
                                     </div>
@@ -68,14 +69,16 @@
                                     <!-- Icon and Title -->
                                     <div class="flex pt-[1.5rem] items-center">
                                         <img class="w-[2.5rem] h-[2.5rem]"
-                                             src="http://www.rogenilan.com/upload/sort/1648105836472820.png" alt="">️
+                                             src="<?= get_theme_file_uri( '/assets/images/nav/1648105836472820.png' ) ?>"
+                                             alt="">️
                                         <p class="pl-[1rem] text-[1.2rem]">Doors</p>
                                     </div>
                                     <!-- List of Items -->
                                     <div class="flex flex-wrap w-full md:w-[34rem] lg:w-[38rem] xl:w-[46rem] p-4 gap-y-[.75rem] text-[0.8125rem] text-zinc-500">
 										<?php foreach ( DOORS_SYSTEMS as $item ): ?>
                                             <span class="w-1/4">
-                                            <a class="hover:text-red-600" href="<?= get_category_link( get_cat_ID( $item['name'] ) ); ?>"><?= $item['name']; ?></a>
+                                            <a class="hover:text-red-600"
+                                               href="<?= get_category_link( get_cat_ID( $item['name'] ) ); ?>"><?= $item['name']; ?></a>
                                         </span>
 										<?php endforeach; ?>
                                     </div>
@@ -92,7 +95,7 @@
                                     <!-- Icon and Title -->
                                     <div class="flex pt-[1.5rem] items-center">
                                         <img class="w-[2.5rem] h-[2.5rem]"
-                                             src="http://www.rogenilan.com/template/pc/rogenilancom/style/images/Sunrooms.png"
+                                             src="<?= get_theme_file_uri( '/assets/images/nav/Sunrooms.png' ) ?>"
                                              alt="">️
                                         <p class="pl-[1rem] text-[1.2rem]">More Products</p>
                                     </div>
@@ -100,7 +103,8 @@
                                     <div class="flex flex-wrap w-full md:w-[34rem] lg:w-[38rem] xl:w-[46rem] p-4 gap-y-[.75rem] text-[0.8125rem] text-zinc-500">
 										<?php foreach ( MORE_PRODUCTS as $item ): ?>
                                             <span class="w-1/4">
-                                            <a class="hover:text-red-600" href="<?= get_category_link( get_cat_ID( $item['name'] ) ); ?>"><?= $item['name']; ?></a>
+                                            <a class="hover:text-red-600"
+                                               href="<?= get_category_link( get_cat_ID( $item['name'] ) ); ?>"><?= $item['name']; ?></a>
                                         </span>
 										<?php endforeach; ?>
                                     </div>
@@ -121,18 +125,19 @@
                         <a id="m-doors-toggle" href="#" class="block mx-8 my-4 text-gray-700 hover:text-red-500">Doors
                             <span class="sub-arrow"><i class="fas fa-chevron-left"></i></span></a>
                         <div id="m-windows-dropdown" class="hidden w-full bg-gray-700/[.05]">
-		                    <?php foreach ( DOORS_SYSTEMS as $item ): ?>
+							<?php foreach ( DOORS_SYSTEMS as $item ): ?>
                                 <a href="<?= get_category_link( get_cat_ID( $item['name'] ) ); ?>"
                                    class="<?= do_shortcode( '[nav_dropdown_items_class name=item]' ); ?>"><?= $item['name']; ?></a>
-		                    <?php endforeach; ?>
+							<?php endforeach; ?>
                         </div>
-                        <a id="m-more-products-toggle" href="#" class="block mx-8 my-4 text-gray-700 hover:text-red-500">Doors
+                        <a id="m-more-products-toggle" href="#"
+                           class="block mx-8 my-4 text-gray-700 hover:text-red-500">Doors
                             <span class="sub-arrow"><i class="fas fa-chevron-left"></i></span></a>
                         <div id="m-windows-dropdown" class="hidden w-full bg-gray-700/[.05]">
-		                    <?php foreach ( MORE_PRODUCTS as $item ): ?>
+							<?php foreach ( MORE_PRODUCTS as $item ): ?>
                                 <a href="<?= get_category_link( get_cat_ID( $item['name'] ) ); ?>"
                                    class="<?= do_shortcode( '[nav_dropdown_items_class name=item]' ); ?>"><?= $item['name']; ?></a>
-		                    <?php endforeach; ?>
+							<?php endforeach; ?>
                         </div>
                     </div>
                     <a href="<?= get_category_link( get_cat_ID( 'Blog' ) ); ?>"
@@ -140,9 +145,11 @@
                     <div class="hidden md:block relative group">
                         <a href="#" class="mx-8 my-2 pb-4 text-gray-700 group-hover:text-red-500">About</a>
                         <div class="dropdown block pointer-events-none group-hover:pointer-events-auto hover:pointer-events-auto group-hover:block <?= do_shortcode( '[nav_dropdown_items_class]' ); ?> min-w-48">
-                            <a href="<?= get_category_link( get_category_by_slug( 'our-story' ) ); ?>" class="<?= do_shortcode( '[nav_dropdown_items_class name=item]' ); ?>">Our
+                            <a href="<?= get_category_link( get_category_by_slug( 'our-story' ) ); ?>"
+                               class="<?= do_shortcode( '[nav_dropdown_items_class name=item]' ); ?>">Our
                                 Story</a>
-                            <a href="<?= get_category_link( get_category_by_slug( 'why-choose-us' ) ); ?>" class="<?= do_shortcode( '[nav_dropdown_items_class name=item]' ); ?>">Why
+                            <a href="<?= get_category_link( get_category_by_slug( 'why-choose-us' ) ); ?>"
+                               class="<?= do_shortcode( '[nav_dropdown_items_class name=item]' ); ?>">Why
                                 Choose Us</a>
                         </div>
                     </div>
@@ -150,9 +157,11 @@
                         <a id="m-about-toggle" href="#"
                            class="block mx-8 my-4 text-gray-700 hover:text-red-500">About</a>
                         <div id="m-about-dropdown" class="hidden w-full bg-gray-700/[.05]">
-                            <a href="<?= get_category_link( get_category_by_slug( 'our-story' ) ); ?>" class="<?= do_shortcode( '[nav_dropdown_items_class name=item]' ); ?>">Our
+                            <a href="<?= get_category_link( get_category_by_slug( 'our-story' ) ); ?>"
+                               class="<?= do_shortcode( '[nav_dropdown_items_class name=item]' ); ?>">Our
                                 Story</a>
-                            <a href="<?= get_category_link( get_category_by_slug( 'why-choose-us' ) ); ?>" class="<?= do_shortcode( '[nav_dropdown_items_class name=item]' ); ?>">Why
+                            <a href="<?= get_category_link( get_category_by_slug( 'why-choose-us' ) ); ?>"
+                               class="<?= do_shortcode( '[nav_dropdown_items_class name=item]' ); ?>">Why
                                 Choose Us</a>
                         </div>
                     </div>

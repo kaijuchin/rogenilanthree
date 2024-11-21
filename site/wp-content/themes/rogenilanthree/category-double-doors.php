@@ -1,0 +1,1 @@
+<?= do_shortcode('[product_category_template]'); ?>

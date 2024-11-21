@@ -62,102 +62,7 @@ add_shortcode( 'nav_dropdown_items_class', 'nav_dropdown_items_class' );
 
 //底部悬浮联系弹窗 & Back to Top
 
-function footer_contact_form_shortcode(): false|string {
-	ob_start();
-	?>
-    <div id="floating-button" onclick="toggleFooterContactForm()"><i class="fa-regular fa-pen-to-square"></i></div>
-    <div id="go-to-top-btn" class="bg-red-600" onclick="topFunction()"><i class="fa-solid fa-arrow-up"></i></div>
-    <script>function topFunction() {
-            document.body.scrollTop = 0;
-            document.documentElement.scrollTo({top: 0, behavior: "smooth"})
-        }</script>
-    <!-- Contact Form Section -->
-    <div id="popup-footer-form" class="max-w-screen-md mx-auto bg-white p-8 rounded-md shadow-md">
-        <form action="<?= esc_url( admin_url( 'admin-post.php' ) ) ?>" enctype="multipart/form-data" method="post" id="footer-contact-form" class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <input type="hidden" name="action" value="submit_contact_form">
-            <input type="hidden" name="ajax" value="1">
-            <!-- Email Field -->
-            <div class="col-span-2">
-                <label for="email" class="block text-sm font-bold mb-2 text-gray-700">E-MAIL *</label>
-                <input type="email" id="email" placeholder="Email"
-                       data-val-regex="Please Enter Correct Email Address"
-                       data-val-regex-pattern="^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$"
-                       class="w-full px-2 border-0 border-b border-stone-900 text-[0.75rem] leading-[3.125rem] focus:outline-0">
-            </div>
-            <!-- Phone Field -->
-            <div>
-                <label for="phone" class="block text-sm font-bold mb-2 text-gray-700">PHONE</label>
-                <input type="text" id="phone" placeholder="Phone"
-                       class="w-full px-2 border-0 border-b border-stone-900 text-[0.75rem] leading-[3.125rem] focus:outline-0">
-            </div>
-            <!-- Country Field -->
-            <div>
-                <label for="country" class="block text-sm font-bold mb-2 text-gray-700">COUNTRY</label>
-                <input type="text" id="country" placeholder="Country"
-                       class="w-full px-2 border-0 border-b border-stone-900 text-[0.75rem] leading-[3.125rem] focus:outline-0">
-            </div>
-            <!-- Message Field -->
-            <div class="col-span-2">
-                <label for="message" class="block text-sm font-bold mb-2 text-gray-700">MESSAGE *</label>
-                <textarea id="message" rows="1" placeholder="Please tell us about your requirements"
-                          class="w-full px-2 border-0 border-b border-stone-900 text-[0.75rem] leading-[3.125rem] focus:outline-0"></textarea>
-            </div>
-            <!-- Submit Button -->
-            <div class="col-span-2">
-                <button type="submit" class="w-full p-3 bg-red-600 text-white font-bold rounded">SEND</button>
-            </div>
-        </form>
-    </div>
-	<?php
-	return ob_get_clean();
-}
 
-add_shortcode( 'footer_contact_form', 'footer_contact_form_shortcode' );
-
-function custom_breadcrumbs() {
-	// 首页链接
-	$home_link   = home_url( '/' );
-	$breadcrumbs = '<a href="' . $home_link . '">Home</a>';
-
-	// 检查是否为首页
-	if ( is_home() || is_front_page() ) {
-		echo '<div class="breadcrumbs">' . $breadcrumbs . '</div>';
-
-		return;
-	}
-
-	// 获取其他页面的层级
-	if ( is_single() ) {
-		// 获取分类信息
-		$category = get_the_category();
-		if ( $category ) {
-			$breadcrumbs .= ' › <a href="' . get_category_link( $category[0]->term_id ) . '">' . $category[0]->name . '</a>';
-		}
-		$breadcrumbs .= ' › <span>' . get_the_title() . '</span>';
-	} elseif ( is_page() ) {
-		if ( $post = get_post( get_the_ID() ) ) {
-			if ( $post->post_parent ) {
-				$parent_link  = get_permalink( $post->post_parent );
-				$parent_title = get_the_title( $post->post_parent );
-				$breadcrumbs  .= ' › <a href="' . $parent_link . '">' . $parent_title . '</a>';
-			}
-		}
-		$breadcrumbs .= ' › ' . get_the_title();
-	} elseif ( is_category() ) {
-		$breadcrumbs .= ' › ' . single_cat_title( '', false );
-	} elseif ( is_tag() ) {
-		$breadcrumbs .= ' › ' . single_tag_title( '', false );
-	} elseif ( is_archive() ) {
-		$breadcrumbs .= ' › ' . post_type_archive_title( '', false );
-	} elseif ( is_search() ) {
-		$breadcrumbs .= ' › Search Result：' . get_search_query();
-	} elseif ( is_404() ) {
-		$breadcrumbs .= ' › Page Not Found';
-	}
-
-	// 输出面包屑导航
-	echo '<div class="breadcrumbs">' . $breadcrumbs . '</div>';
-}
 
 
 function add_custom_meta_for_categories() {
@@ -306,11 +211,12 @@ function custom_product_category_template_shortcode( $atts ) {
         <div class="container mx-auto p-8">
             <!-- Header Section -->
             <div class="mb-8">
-                <h2 class="text-4xl font-bold text-gray-800 mb-4">CASEMENT WINDOWS</h2>
+                <h2 class="text-4xl font-bold text-gray-800 mb-4"><?= strtoupper($category->name) ?></h2>
                 <nav class="text-gray-600">
-                    <a href="#" class="hover:text-red-500">Home</a> &nbsp; &gt; &nbsp; <a href="#"
-                                                                                          class="hover:text-red-500">Windows</a>
-                    &nbsp; &gt; &nbsp; <span class="font-bold text-gray-800">Casement Windows</span>
+<!--                    <a href="#" class="hover:text-red-500">Home</a> &nbsp; &gt; &nbsp; <a href="#"-->
+<!--                                                                                          class="hover:text-red-500">Windows</a>-->
+<!--                    &nbsp; &gt; &nbsp; <span class="font-bold text-gray-800">Casement Windows</span>-->
+                    <?php custom_breadcrumbs();  ?>
                 </nav>
             </div>
             <!-- Articles Section -->
@@ -379,3 +285,50 @@ function custom_product_category_template_shortcode( $atts ) {
 }
 
 add_shortcode( 'product_category_template', 'custom_product_category_template_shortcode' );
+
+
+
+
+function add_contact_columns( $columns ) {
+	$columns['message'] = 'message';
+	$columns['email']   = 'email';
+	$columns['phone']   = 'phone';
+	$columns['address'] = 'address';
+	$columns['country'] = 'country';
+	$date               = $columns['date'];
+	unset( $columns['date'] );
+	$columns['date'] = $date;
+
+	return $columns;
+}
+
+add_filter( 'manage_contact_posts_columns', 'add_contact_columns' );
+
+function show_contact_data_column( $column, $post_id ): void {
+
+	if ( $column === 'message' ) {
+		$contact_content = get_post_field( 'message', $post_id );
+		$trimmed_content = wp_trim_words( $contact_content, 20, '...' );
+		echo esc_html( $trimmed_content );
+	}
+	if ( $column === 'email' ) {
+		$contact_email = get_post_meta( $post_id, 'email', true );
+		if ( $contact_email ) {
+			echo esc_html( $contact_email );
+		}
+	}
+	if ( $column === 'phone' ) {
+		$contact_phone = get_post_meta( $post_id, 'phone', true );
+		if ( $contact_phone ) {
+			echo esc_html( $contact_phone );
+		}
+	}
+	if ( $column === 'country' ) {
+		$country = get_post_meta( $post_id, 'country', true );
+		if ( $country ) {
+			echo esc_html( $country );
+		}
+	}
+}
+
+add_action( 'manage_contact_posts_custom_column', 'show_contact_data_column', 10, 2 );

@@ -68,44 +68,6 @@
 <?php echo do_shortcode('[footer_contact_form]'); ?>
 <?php wp_footer(); ?>
 <script src="<?= get_theme_file_uri('/assets/scripts/nav.js'); ?>"></script>
-<script>
 
-    function toggleFooterContactForm() {
-        var form = document.getElementById('popup-footer-form');
-        console.log(form.style.display)
-        if (form.style.display === 'none' || form.style.display === '') {
-            form.style.display = 'flex';
-        } else {
-            form.style.display = 'none';
-        }
-    }
-
-    document.getElementById('footer-contact-form').addEventListener('submit', function(event) {
-        event.preventDefault();
-        // 在此处添加表单提交逻辑，例如通过 AJAX 将数据发送到服务器
-        // 获取表单数据
-        var formData = new FormData(this);
-
-        // 发送 AJAX 请求
-        fetch('/wp-admin/admin-ajax.php', {
-            method: 'POST',
-            body: formData
-        })
-            .then(data => {
-                if (data.status === 200) {
-                    alert('留言已提交！');
-                    document.getElementById('footer-contact-form').reset(); // 重置表单
-                    document.getElementById('footer-contact-form').style.display = 'none';
-                } else {
-                    alert('提交失败，请重试。');
-                }
-            })
-            .catch(error => {
-                console.error('Error:', error);
-                // alert('提交过程中出现错误，请稍后重试。');
-            });
-
-    });
-</script>
 </body>
 </html>
