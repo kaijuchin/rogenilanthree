@@ -200,7 +200,6 @@ function custom_product_category_template_shortcode( $atts ) {
 	get_header(); // 包含页眉
 
 	$category     = get_queried_object();
-	$banner_image = get_field( 'banner_image', 'category_' . $category->term_id );
 
 	// 开始生成页面内容
 	?>
@@ -226,16 +225,32 @@ function custom_product_category_template_shortcode( $atts ) {
 					'cat'            => $category->term_id,
 					'paged'          => $paged
 				] );
+				$directory = get_template_directory() . '/assets/images/' . $category->slug . '/';
+
+				$images = array_merge(
+					glob( $directory . '*.jpg' ),
+					glob( $directory . '*.jpeg' ),
+					glob( $directory . '*.png' ),
+					glob( $directory . '*.gif' )
+				);
+
+				$urls = [];
+				foreach ( $images as $image ) {
+					$urls[] = '/assets/images/' . $category->slug . '/' . basename( $image );
+				}
+				$default_images_count = count( $urls ) ?: 1;
+				$count                = 0;
 				if ( $query->have_posts() ): while ( $query->have_posts() ): $query->the_post(); ?>
 					<?php
-					$post_thumbnail_url = get_the_post_thumbnail_url( get_the_ID(), 'medium' ) ?? 'https://www.richoceanchina.com/wp-content/themes/rogenilantwo/getattachment/dc1bcbbe-3dc4-4620-9ea6-2477b3f30c1c/pl7_2074.jpg?height=640&resizemode=force';
+					$count     = $count % $default_images_count;
+					$post_thumbnail_url = get_field('image')['link'] ?: ($urls ? get_theme_file_uri($urls[$count++]) : get_theme_file_uri('/assets/images/richocean-logo.png'));
 					$post_title         = get_the_title();
 					$post_excerpt       = get_the_excerpt();
 					$permalink          = get_permalink();
 					?>
                     <div class="bg-white rounded-lg shadow-lg overflow-hidden border">
                         <img src="<?= $post_thumbnail_url ?>"
-                             alt="4 Reasons to Choose Casement Windows" class="w-full h-68 object-cover">
+                             alt="4 Reasons to Choose Casement Windows" class="w-full h-68 object-cover <?= count($urls) == 0 ? 'p-8' : '' ?>">
                         <div class="p-6">
                             <h3 class="text-2xl font-bold text-gray-800 mb-4"><?= $post_title ?></h3>
                             <p class="text-gray-600 mb-6"><?= wp_trim_words( $post_excerpt, 8 ) ?></p>

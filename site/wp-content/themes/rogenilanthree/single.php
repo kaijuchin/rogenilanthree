@@ -4,8 +4,8 @@
 	<?php custom_breadcrumbs(); ?>
 </section>
 <section class="px-8 py-12 bg-gray-50 relative m-auto">
-    <h1 class="text-center font-extrabold text-[3.8em] leading-[1.1em] py-[0.5em]"><?php the_title(); ?></h1>
-    <div class="md:w-[50%] container m-auto text-[1.2rem] leading-loose">
+    <h1 class="md:w-[56%] text-center font-extrabold text-[3.8em] leading-[1.1em] py-[0.5em] mx-auto my-8"><?php the_title(); ?></h1>
+    <div class="md:w-[56%] container m-auto text-[1.2rem] leading-loose">
 		<?php the_content(); ?>
     </div>
 </section>

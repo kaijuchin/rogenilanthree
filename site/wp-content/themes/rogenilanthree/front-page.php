@@ -84,95 +84,47 @@
     </section>
     <section class="container mx-auto p-12 lg:flex lg:items-center lg:justify-between">
         <div class="lg:w-1/2">
-            <h2 class="text-3xl lg:text-4xl font-bold mb-4">1. China Window & Door Representative</h2>
-            <h3 class="text-red-500 text-xl mb-4">Crafted to Perfection</h3>
+            <h2 class="text-3xl lg:text-4xl font-bold mb-4">Customized for you</h2>
+            <h3 class="text-red-500 text-xl mb-4">Top aluminium doors and windows manufacturer in china</h3>
             <p class="text-gray-700 mb-6">
-                We have a completely independent product developmentteam, dozens ofinternational certifications and
-                testingcertificates.we continue to be the market leader in Chinafor product design, strength, safety and
-                customer service.
+                Each product has its own unique customization elements, including the size.shape, configuration, hardware, color (some products can even be two-tone)and finish process, so you can create a one-of-a-kind window or door, nomatter which product you choose.
             </p>
-            <ul class="list-none mb-6 space-y-3">
-                <li class="flex items-start">
-                    <span class="text-red-600 mr-2">✔️</span> Personalized design consultations
-                </li>
-                <li class="flex items-start">
-                    <span class="text-red-600 mr-2">✔️</span> 3D renderings and material selection
-                </li>
-                <li class="flex items-start">
-                    <span class="text-red-600 mr-2">✔️</span> Customized to space and style requirements
-                </li>
-                <li class="flex items-start">
-                    <span class="text-red-600 mr-2">✔️</span> Quality-controlled production ensuring high standards
-                </li>
-            </ul>
         </div>
         <div class="lg:w-1/2 mt-8 lg:mt-0 lg:ml-8">
-            <img src="https://bokefurniture.com/wp-content/uploads/2024/10/furniture-consult-design.jpg"
+            <img src="<?= get_theme_file_uri('/assets/images/quyu5_01.jpg') ?>"
                  alt="Furniture Sketch" class="w-full h-auto rounded shadow-lg">
         </div>
     </section>
     <section class="container mx-auto p-12 lg:flex lg:items-center lg:justify-between">
         <div class="lg:w-1/2 ">
-            <img src="https://bokefurniture.com/wp-content/uploads/2024/10/furniture-consult-design.jpg"
+            <img src="<?= get_theme_file_uri('/assets/images/quyu5_02.jpg') ?>"
                  alt="Furniture Sketch" class="w-full h-auto rounded shadow-lg">
         </div>
         <div class="lg:w-1/2 mt-8 lg:mt-0 lg:ml-8">
-            <h2 class="text-3xl lg:text-4xl font-bold mb-4">2. High Production Capacity& Flexibility</h2>
-            <h3 class="text-red-500 text-xl mb-4">Crafted to Perfection</h3>
+            <h2 class="text-3xl lg:text-4xl font-bold mb-4">Thermally efficient low and u-values</h2>
+            <h3 class="text-red-500 text-xl mb-4">Top aluminium doors and windows manufacturer in china</h3>
             <p class="text-gray-700 mb-6">
-                We have a completely independent product developmentteam, dozens ofinternational certifications and
-                testingcertificates.we continue to be the market leader in Chinafor product design, strength, safety and
-                customer service.
+                Choosing the perfect colours for your windows and doors doesn’t have to be challenging! Use our helpful colour selector guide to help you decide.
             </p>
-            <ul class="list-none mb-6 space-y-3">
-                <li class="flex items-start">
-                    <span class="text-red-600 mr-2">✔️</span> Personalized design consultations
-                </li>
-                <li class="flex items-start">
-                    <span class="text-red-600 mr-2">✔️</span> 3D renderings and material selection
-                </li>
-                <li class="flex items-start">
-                    <span class="text-red-600 mr-2">✔️</span> Customized to space and style requirements
-                </li>
-                <li class="flex items-start">
-                    <span class="text-red-600 mr-2">✔️</span> Quality-controlled production ensuring high standards
-                </li>
-            </ul>
         </div>
 
     </section>
     <section class="container mx-auto p-12 lg:flex lg:items-center lg:justify-between">
         <div class="lg:w-1/2">
-            <h2 class="text-3xl lg:text-4xl font-bold mb-4">3. Experience Matters</h2>
-            <h3 class="text-red-500 text-xl mb-4">Crafted to Perfection</h3>
+            <h2 class="text-3xl lg:text-4xl font-bold mb-4">The safest delivery</h2>
+            <h3 class="text-red-500 text-xl mb-4">5 layers packaging guarantee zero damage</h3>
             <p class="text-gray-700 mb-6">
-                We have a completely independent product developmentteam, dozens ofinternational certifications and
-                testingcertificates.we continue to be the market leader in Chinafor product design, strength, safety and
-                customer service.
+                We pack each window individually and in four layers, and finally into woodenboxes with non-fumigation, and at the same time, there will be a lot of shock-proof measures in the container to protect your items. We ensure that yourproducts will arrive at the sites in good condition after long-distance trans-portation.
             </p>
-            <ul class="list-none mb-6 space-y-3">
-                <li class="flex items-start">
-                    <span class="text-red-600 mr-2">✔️</span> Personalized design consultations
-                </li>
-                <li class="flex items-start">
-                    <span class="text-red-600 mr-2">✔️</span> 3D renderings and material selection
-                </li>
-                <li class="flex items-start">
-                    <span class="text-red-600 mr-2">✔️</span> Customized to space and style requirements
-                </li>
-                <li class="flex items-start">
-                    <span class="text-red-600 mr-2">✔️</span> Quality-controlled production ensuring high standards
-                </li>
-            </ul>
         </div>
         <div class="lg:w-1/2 mt-8 lg:mt-0 lg:ml-8">
-            <img src="https://bokefurniture.com/wp-content/uploads/2024/10/furniture-consult-design.jpg"
+            <img src="<?= get_theme_file_uri('/assets/images/quyu5_03.jpg') ?>"
                  alt="Furniture Sketch" class="w-full h-auto rounded shadow-lg">
         </div>
     </section>
     <section class="container mx-auto p-12 lg:flex lg:items-center lg:justify-between">
         <div class="container">
-            <div class="lb_xgt">
+            <div class="lb_xgt" style="background: url('<?= get_theme_file_uri('/assets/images/projects/lbbjt_01.jpg') ?>')  no-repeat 100% 100%;">
                 <dl class="lbtxt wow slideInUp animated" style="visibility: visible; animation-name: slideInUp;">
                     <dt>Welcome to be our dealer</dt>
                     <dd style="padding-top:20px;">Richocean experts are experienced in working with architects,
