@@ -35,7 +35,7 @@
                             <div class="flex w-full">
                                 <!-- Image -->
                                 <div class="hidden md:block flex-none">
-                                    <img src="https://www.richoceanchina.com/wp-content/themes/rogenilantwo/assets/images/Sliding_Window_Residential_504_3.jpg"
+                                    <img src="<?= get_theme_file_uri('/assets/images/nav/Sliding_Window_Residential_504_3.jpg') ?>"
                                          alt="Office Furniture"
                                          class="md:w-[12rem] lg:w-[14rem] xl:w-[16rem] md:h-[12rem] lg:h-[14rem] xl:h-[16rem] object-cover rounded-lg p-6">
                                 </div>
@@ -61,7 +61,7 @@
                             <div class="flex w-full">
                                 <!-- Image -->
                                 <div class="flex-none">
-                                    <img src="https://www.richoceanchina.com/wp-content/themes/rogenilantwo/assets/images/folding-doors.webp"
+                                    <img src="<?= get_theme_file_uri('/assets/images/nav/folding-doors.webp') ?>"
                                          alt="Office Furniture"
                                          class="md:w-[12rem] lg:w-[14rem] xl:w-[16rem] md:h-[12rem] lg:h-[14rem] xl:h-[16rem] object-cover rounded-lg p-6">
                                 </div>
@@ -87,7 +87,7 @@
                             <div class="flex w-full">
                                 <!-- Image -->
                                 <div class="flex-none">
-                                    <img src="https://www.richoceanchina.com/wp-content/themes/rogenilantwo/assets/images/skylight.webp"
+                                    <img src="<?= get_theme_file_uri('/assets/images/nav/skylight.webp') ?>"
                                          alt="Office Furniture"
                                          class="md:w-[12rem] lg:w-[14rem] xl:w-[16rem] md:h-[12rem] lg:h-[14rem] xl:h-[16rem] object-cover rounded-lg p-6">
                                 </div>
@@ -165,7 +165,7 @@
                                 Choose Us</a>
                         </div>
                     </div>
-                    <a href="#" class="mx-8 my-4 text-gray-700 hover:text-red-500">Contact</a>
+                    <a href="<?= site_url('contact-us') ?>" class="mx-8 my-4 text-gray-700 hover:text-red-500">Contact</a>
                 </div>
             </div>
         </div>
