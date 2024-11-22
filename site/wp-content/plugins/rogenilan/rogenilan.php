@@ -301,3 +301,108 @@ add_action( 'admin_post_nopriv_submit_contact_form', 'handle_contact_form_submis
 add_action( 'wp_ajax_submit_contact_form', 'handle_contact_form_submission' );
 // 为未登录用户注册 AJAX 处理函数
 add_action( 'wp_ajax_nopriv_submit_contact_form', 'handle_contact_form_submission' );
+
+//注册 Contact 文章类型
+function contact_post_type(): void {
+	register_post_type( 'contact', array(
+		'public'   => false,
+		'label'    => 'Contact Submissions',
+		'supports' => array( 'title', 'editor' ),
+		'show_ui'  => true
+	) );
+}
+
+add_action( 'init', 'contact_post_type' );
+
+function show_contact_data_column( $column, $post_id ): void {
+
+	if ( $column === 'message' ) {
+		$contact_content = get_post_field( 'message', $post_id );
+		$trimmed_content = wp_trim_words( $contact_content, 20, '...' );
+		echo esc_html( $trimmed_content );
+	}
+	if ( $column === 'email' ) {
+		$contact_email = get_post_meta( $post_id, 'email', true );
+		if ( $contact_email ) {
+			echo esc_html( $contact_email );
+		}
+	}
+	if ( $column === 'phone' ) {
+		$contact_phone = get_post_meta( $post_id, 'phone', true );
+		if ( $contact_phone ) {
+			echo esc_html( $contact_phone );
+		}
+	}
+	if ( $column === 'country' ) {
+		$country = get_post_meta( $post_id, 'country', true );
+		if ( $country ) {
+			echo esc_html( $country );
+		}
+	}
+}
+
+add_action( 'manage_contact_posts_custom_column', 'show_contact_data_column', 10, 2 );
+
+
+
+function add_contact_columns( $columns ) {
+	$columns['message'] = 'message';
+	$columns['email']   = 'email';
+	$columns['phone']   = 'phone';
+	$columns['country'] = 'country';
+	$date               = $columns['date'];
+	unset( $columns['date'] );
+	$columns['date'] = $date;
+
+	return $columns;
+}
+
+add_filter( 'manage_contact_posts_columns', 'add_contact_columns' );
+
+function contact_custom_meta_box() {
+	add_meta_box(
+		'contact_data',
+		'Contact Data',
+		'show_contact_meta_box',
+		'contact',
+		'normal',
+		'high'
+	);
+}
+
+function show_contact_meta_box( $post ) {
+	$contact_email       = get_post_meta( $post->ID, 'email', true );
+	$contact_phone       = get_post_meta( $post->ID, 'phone', true );
+	$contact_country     = get_post_meta( $post->ID, 'country', true );
+	$contact_message     = get_post_meta( $post->ID, 'message', true );
+	echo '<table class="acf-table">
+        <thead>
+            <tr>
+                <th class="acf-th">
+                    <label>Email</label>
+                </th>
+                <th class="acf-th">
+                    <label>Phone</label>
+                </th>
+                <th class="acf-th">
+                    <label>Country</label>
+                </th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="acf-row" data-id="row-0">
+                <td class="acf-field acf-field-text">
+                    <input type="text" value="' . esc_attr( $contact_email ) . '" readonly />
+                </td>
+                <td class="acf-field acf-field-text">
+                        <input type="text" value="' . esc_attr( $contact_phone ) . '" readonly />
+                </td>
+                <td class="acf-field acf-field-text">
+                    <input type="text" value="' . esc_attr( $contact_country ) . '" readonly />
+                </td>
+        </tbody>
+    </table>';
+}
+
+add_action( 'add_meta_boxes', 'contact_custom_meta_box' );
