@@ -184,43 +184,43 @@
                         start a new one with us.
                     </dd>
                 </dl>
-                <p><img src="https://www.richoceanchina.com/wp-content/themes/rogenilantwo/skin/images/dtu_01.png"></p>
+                <p><img src="<?= get_theme_file_uri('/assets/images/projects/dtu_01.png') ?>"></p>
                 <div class="bd">
                     <div class="carousel-container">
                         <ul class="picList">
                             <li class="clone">
                                 <div class="pic"><img
-                                            src="https://www.richoceanchina.com/wp-content/themes/rogenilantwo/skin/images/dianpu5.jpg">
+                                            src="<?= get_theme_file_uri('/assets/images/projects/dianpu5.jpg') ?>">
                                 </div>
                             </li>
                             <li>
                                 <div class="pic"><img
-                                            src="https://www.richoceanchina.com/wp-content/themes/rogenilantwo/skin/images/dianpu1.jpg">
+                                            src="<?= get_theme_file_uri('/assets/images/projects/dianpu1.jpg') ?>">
                                 </div>
                             </li>
                             <li>
                                 <div class="pic"><img
-                                            src="https://www.richoceanchina.com/wp-content/themes/rogenilantwo/skin/images/dianpu2.jpg">
+                                            src="<?= get_theme_file_uri('/assets/images/projects/dianpu2.jpg') ?>">
                                 </div>
                             </li>
                             <li>
                                 <div class="pic"><img
-                                            src="https://www.richoceanchina.com/wp-content/themes/rogenilantwo/skin/images/dianpu3.jpg">
+                                            src="<?= get_theme_file_uri('/assets/images/projects/dianpu3.jpg') ?>">
                                 </div>
                             </li>
                             <li>
                                 <div class="pic"><img
-                                            src="https://www.richoceanchina.com/wp-content/themes/rogenilantwo/skin/images/dianpu4.jpg">
+                                            src="<?= get_theme_file_uri('/assets/images/projects/dianpu4.jpg') ?>">
                                 </div>
                             </li>
                             <li>
                                 <div class="pic"><img
-                                            src="https://www.richoceanchina.com/wp-content/themes/rogenilantwo/skin/images/dianpu5.jpg">
+                                            src="<?= get_theme_file_uri('/assets/images/projects/dianpu5.jpg') ?>">
                                 </div>
                             </li>
                             <li class="clone">
                                 <div class="pic"><img
-                                            src="https://www.richoceanchina.com/wp-content/themes/rogenilantwo/skin/images/dianpu1.jpg">
+                                            src="<?= get_theme_file_uri('/assets/images/projects/dianpu1.jpg') ?>">
                                 </div>
                             </li>
                             <!-- Add more clones if needed -->
@@ -232,31 +232,31 @@
                 <div class="yqlj">
                     <ul>
                         <li>
-                            <img src="https://www.richoceanchina.com/wp-content/themes/rogenilantwo/skin/images/yqlj_01.jpg">
+                            <img src="<?= get_theme_file_uri('/assets//images/projects/yqlj_01.jpg') ?>">
                         </li>
                         <li>
-                            <img src="https://www.richoceanchina.com/wp-content/themes/rogenilantwo/skin/images/yqlj_02.jpg">
+                            <img src="<?= get_theme_file_uri('/assets/images/projects/yqlj_02.jpg') ?>">
                         </li>
                         <li>
-                            <img src="https://www.richoceanchina.com/wp-content/themes/rogenilantwo/skin/images/yqlj_03.jpg">
+                            <img src="<?= get_theme_file_uri('/assets/images/projects/yqlj_03.jpg') ?>">
                         </li>
                         <li>
-                            <img src="https://www.richoceanchina.com/wp-content/themes/rogenilantwo/skin/images/yqlj_04.jpg">
+                            <img src="<?= get_theme_file_uri('/assets/images/projects/yqlj_04.jpg') ?>">
                         </li>
                         <li>
-                            <img src="https://www.richoceanchina.com/wp-content/themes/rogenilantwo/skin/images/yqlj_05.jpg">
+                            <img src="<?= get_theme_file_uri('/assets/images/projects/yqlj_05.jpg') ?>">
                         </li>
                         <li>
-                            <img src="https://www.richoceanchina.com/wp-content/themes/rogenilantwo/skin/images/yqlj_06.jpg">
+                            <img src="<?= get_theme_file_uri('/assets/images/projects/yqlj_06.jpg') ?>">
                         </li>
                         <li>
-                            <img src="https://www.richoceanchina.com/wp-content/themes/rogenilantwo/skin/images/yqlj_07.jpg">
+                            <img src="<?= get_theme_file_uri('/assets/images/projects/yqlj_07.jpg') ?>">
                         </li>
                         <li>
-                            <img src="https://www.richoceanchina.com/wp-content/themes/rogenilantwo/skin/images/yqlj_08.jpg">
+                            <img src="<?= get_theme_file_uri('/assets/images/projects/yqlj_08.jpg') ?>">
                         </li>
                         <li>
-                            <img src="https://www.richoceanchina.com/wp-content/themes/rogenilantwo/skin/images/yqlj_09.jpg">
+                            <img src="<?= get_theme_file_uri('/assets/images/projects/yqlj_09.jpg') ?>">
                         </li>
                     </ul>
                 </div>
@@ -281,7 +281,7 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Project Card 1 -->
                 <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                    <img src="https://www.richoceanchina.com/wp-content/themes/rogenilantwo/skin/images/project1.jpg"
+                    <img src="<?= get_theme_file_uri('/assets/images/projects/project1.jpg') ?>') ?>"
                          alt="Private Homes" class="w-full h-56 object-cover">
                     <div class="p-4">
                         <h3 class="text-xl font-bold mb-1">Private Homes</h3>
@@ -290,7 +290,7 @@
                 </div>
                 <!-- Project Card 2 -->
                 <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                    <img src="https://www.richoceanchina.com/wp-content/themes/rogenilantwo/skin/images/project2.jpg"
+                    <img src="<?= get_theme_file_uri('/assets/images/projects/project2.jpg') ?>"
                          alt="High-end Villa" class="w-full h-56 object-cover">
                     <div class="p-4">
                         <h3 class="text-xl font-bold mb-1">High-end Villa</h3>
@@ -299,7 +299,7 @@
                 </div>
                 <!-- Project Card 3 -->
                 <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                    <img src="https://www.richoceanchina.com/wp-content/themes/rogenilantwo/skin/images/project3.jpg"
+                    <img src="<?= get_theme_file_uri('/assets/images/projects/project3.jpg') ?>"
                          alt="Hotels" class="w-full h-56 object-cover">
                     <div class="p-4">
                         <h3 class="text-xl font-bold mb-1">Hotels</h3>
@@ -308,7 +308,7 @@
                 </div>
                 <!-- Project Card 4 -->
                 <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                    <img src="https://www.richoceanchina.com/wp-content/themes/rogenilantwo/skin/images/project4.jpg"
+                    <img src="<?= get_theme_file_uri('/assets/images/projects/project4.jpg') ?>"
                          alt="Villa Group" class="w-full h-56 object-cover">
                     <div class="p-4">
                         <h3 class="text-xl font-bold mb-1">Villa Group</h3>
@@ -317,7 +317,7 @@
                 </div>
                 <!-- Project Card 5 -->
                 <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                    <img src="https://www.richoceanchina.com/wp-content/themes/rogenilantwo/skin/images/project5.jpg"
+                    <img src="<?= get_theme_file_uri('/assets/images/projects/project5.jpg') ?>"
                          alt="Apartments" class="w-full h-56 object-cover">
                     <div class="p-4">
                         <h3 class="text-xl font-bold mb-1">Apartments</h3>
@@ -326,7 +326,7 @@
                 </div>
                 <!-- Project Card 6 -->
                 <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                    <img src="https://www.richoceanchina.com/wp-content/themes/rogenilantwo/skin/images/project6.jpg"
+                    <img src="<?= get_theme_file_uri('/assets/images/projects/project6.jpg') ?>"
                          alt="Multi-family" class="w-full h-56 object-cover">
                     <div class="p-4">
                         <h3 class="text-xl font-bold mb-1">Multi-family</h3>

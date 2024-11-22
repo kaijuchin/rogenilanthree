@@ -62,9 +62,6 @@ add_shortcode( 'nav_dropdown_items_class', 'nav_dropdown_items_class' );
 
 //底部悬浮联系弹窗 & Back to Top
 
-
-
-
 function add_custom_meta_for_categories() {
 	if ( is_category() ) {
 		$category      = get_queried_object();
@@ -286,5 +283,52 @@ function custom_product_category_template_shortcode( $atts ) {
 
 add_shortcode( 'product_category_template', 'custom_product_category_template_shortcode' );
 
+//根据分类获取默认图片
+function custom_category_gallery_template_shortcode( $atts ) {
+	if ( is_category() ):
+		$category = get_queried_object();
+		if ( $category ):
+			$atts      = shortcode_atts( [
+				'category_name' => $category->slug
+			], $atts, 'category_gallery_template' );
+			$directory = get_template_directory() . '/assets/images/' . $atts['category_name'] . '/';
 
+			$images = array_merge(
+				glob( $directory . '*.jpg' ),
+				glob( $directory . '*.jpeg' ),
+				glob( $directory . '*.png' ),
+				glob( $directory . '*.gif' )
+			);
+
+			$urls = [];
+			foreach ( $images as $image ) {
+				$urls[] = '/assets/images/' . $atts['category_name'] . '/' . basename( $image );
+			}
+
+            if (isset($atts['only_urls']) && $atts['only_urls']) {
+                return $urls;
+            }
+
+			$default_images_count = count( $urls );
+			$count                = 0;
+
+			$category_query = new WP_Query( [ 'cat' => $category->term_id, ] );
+			if ( $category_query->have_posts() ):
+				while ( $category_query->have_posts() ): $category_query->the_post();
+					$count     = $count % $default_images_count;
+					$image_url = get_field( 'image' )['link'] ?? get_theme_file_uri( $urls[ $count ++ ] );
+
+					echo '<div class="col-md-3 mb-4">
+                            <a href="' . $image_url . '" data-fancybox="images" data-caption="">
+                                <img src="' . $image_url . '" class="img-fluid" alt="">
+                            </a>
+                        </div>';
+
+				endwhile;
+			endif;
+		endif;
+	endif;
+}
+
+add_shortcode( 'category_gallery_template', 'custom_category_gallery_template_shortcode' );
 
