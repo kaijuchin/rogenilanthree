@@ -1,6 +1,6 @@
 <?php get_header(); ?>
     <section class="relative h-screen bg-cover bg-center flex items-center justify-start"
-             style="background-image: url('https://www.richoceanchina.com/wp-content/themes/rogenilantwo/assets/images/banner_01.jpg');">
+             style="background-image: url('<?= get_theme_file_uri('/assets/images/banner_01.jpg') ?>');">
         <div class="bg-black bg-opacity-60 text-white p-8 md:p-12 lg:p-16 max-w-2xl">
             <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
                 Richocean has quality and innovation at its heart
