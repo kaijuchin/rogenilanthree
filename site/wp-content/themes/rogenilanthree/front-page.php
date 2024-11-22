@@ -374,7 +374,8 @@
             <!-- Contact Form Section -->
             <div class="bg-white p-8 rounded-lg shadow-lg">
                 <h2 class="text-3xl font-bold text-gray-800 mb-6">Talk to Our Expert</h2>
-                <form action="#" method="POST" class="space-y-6">
+                <form action="<?= esc_url( admin_url( 'admin-post.php' ) ) ?>" method="POST" class="space-y-6">
+                    <input type="hidden" name="action" value="submit_contact_form">
                     <input type="email" name="email" placeholder="Your Email"
                            class="w-full border border-gray-300 p-4 rounded-md focus:outline-none focus:border-gray-500"
                            required>
