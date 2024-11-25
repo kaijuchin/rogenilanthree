@@ -15,7 +15,7 @@ const WINDOWS_SYSTEMS = [
 	[ 'name' => 'Shutter Windows', 'slug' => 'shutter-windows' ],
 ];
 
-const DOORS_SYSTEMS = [
+const DOORS_SYSTEMS   = [
 	[ 'name' => 'Exterior Doors', 'slug' => 'exterior-doors' ],
 	[ 'name' => 'Folding Doors', 'slug' => 'folding-doors' ],
 	[ 'name' => 'Sliding Doors', 'slug' => 'sliding-doors' ],
@@ -24,7 +24,7 @@ const DOORS_SYSTEMS = [
 	[ 'name' => 'Double Doors', 'slug' => 'double-doors' ],
 ];
 
-const MORE_PRODUCTS = [
+const MORE_PRODUCTS   = [
 	[ 'name' => 'Garage Door', 'slug' => 'garage-door' ],
 	[ 'name' => 'Skylight', 'slug' => 'skylight' ],
 	[ 'name' => 'Sunroom', 'slug' => 'sunroom' ],
@@ -63,6 +63,7 @@ add_shortcode( 'nav_dropdown_items_class', 'nav_dropdown_items_class' );
 //底部悬浮联系弹窗 & Back to Top
 
 function add_custom_meta_for_categories() {
+	$acf_title = get_field( 'title' ) ?? '';
 	if ( is_category() ) {
 		$category      = get_queried_object();
 		$category_slug = $category->slug; // 获取分类的 slug
@@ -173,7 +174,7 @@ function add_custom_meta_for_categories() {
 		$custom_title = get_the_title();
 	}
 
-	if (is_front_page()) {
+	if ( is_front_page() ) {
 		$custom_title = 'Richocean windows & doors  | China Quality Manufacturer';
 	}
 
@@ -203,7 +204,7 @@ function custom_product_category_template_shortcode( $atts ) {
 
 	get_header(); // 包含页眉
 
-	$category     = get_queried_object();
+	$category = get_queried_object();
 
 	// 开始生成页面内容
 	?>
@@ -211,12 +212,12 @@ function custom_product_category_template_shortcode( $atts ) {
         <div class="container mx-auto p-8">
             <!-- Header Section -->
             <div class="mb-8">
-                <h2 class="text-4xl font-bold text-gray-800 mb-4"><?= strtoupper($category->name) ?></h2>
+                <h2 class="text-4xl font-bold text-gray-800 mb-4"><?= strtoupper( $category->name ) ?></h2>
                 <nav class="text-gray-600">
-<!--                    <a href="#" class="hover:text-red-500">Home</a> &nbsp; &gt; &nbsp; <a href="#"-->
-<!--                                                                                          class="hover:text-red-500">Windows</a>-->
-<!--                    &nbsp; &gt; &nbsp; <span class="font-bold text-gray-800">Casement Windows</span>-->
-                    <?php custom_breadcrumbs();  ?>
+                    <!--                    <a href="#" class="hover:text-red-500">Home</a> &nbsp; &gt; &nbsp; <a href="#"-->
+                    <!--                                                                                          class="hover:text-red-500">Windows</a>-->
+                    <!--                    &nbsp; &gt; &nbsp; <span class="font-bold text-gray-800">Casement Windows</span>-->
+					<?php custom_breadcrumbs(); ?>
                 </nav>
             </div>
             <!-- Articles Section -->
@@ -229,7 +230,7 @@ function custom_product_category_template_shortcode( $atts ) {
 					'cat'            => $category->term_id,
 					'paged'          => $paged
 				] );
-				$directory = get_template_directory() . '/assets/images/' . $category->slug . '/';
+				$directory      = get_template_directory() . '/assets/images/' . $category->slug . '/';
 
 				$images = array_merge(
 					glob( $directory . '*.jpg' ),
@@ -246,15 +247,16 @@ function custom_product_category_template_shortcode( $atts ) {
 				$count                = 0;
 				if ( $query->have_posts() ): while ( $query->have_posts() ): $query->the_post(); ?>
 					<?php
-					$count     = $count % $default_images_count;
-					$post_thumbnail_url = get_field('image')['link'] ?: ($urls ? get_theme_file_uri($urls[$count++]) : get_theme_file_uri('/assets/images/richocean-logo.png'));
+					$count              = $count % $default_images_count;
+					$post_thumbnail_url = get_field( 'image' )['link'] ?: ( $urls ? get_theme_file_uri( $urls[ $count ++ ] ) : get_theme_file_uri( '/assets/images/richocean-logo.png' ) );
 					$post_title         = get_the_title();
 					$post_excerpt       = get_the_excerpt();
 					$permalink          = get_permalink();
 					?>
                     <div class="bg-white rounded-lg shadow-lg overflow-hidden border">
                         <img src="<?= $post_thumbnail_url ?>"
-                             alt="4 Reasons to Choose Casement Windows" class="w-full h-68 object-cover <?= count($urls) == 0 ? 'p-8' : '' ?>">
+                             alt="4 Reasons to Choose Casement Windows"
+                             class="w-full h-68 object-cover <?= count( $urls ) == 0 ? 'p-8' : '' ?>">
                         <div class="p-6">
                             <h3 class="text-2xl font-bold text-gray-800 mb-4"><?= $post_title ?></h3>
                             <p class="text-gray-600 mb-6"><?= wp_trim_words( $post_excerpt, 8 ) ?></p>
@@ -324,9 +326,9 @@ function custom_category_gallery_template_shortcode( $atts ) {
 				$urls[] = '/assets/images/' . $atts['category_name'] . '/' . basename( $image );
 			}
 
-            if (isset($atts['only_urls']) && $atts['only_urls']) {
-                return $urls;
-            }
+			if ( isset( $atts['only_urls'] ) && $atts['only_urls'] ) {
+				return $urls;
+			}
 
 			$default_images_count = count( $urls );
 			$count                = 0;
