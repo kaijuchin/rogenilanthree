@@ -64,7 +64,7 @@
 				] );
 				if ( $query->have_posts() ): while ( $query->have_posts() ): $query->the_post(); ?>
 					<?php
-					$post_image_url = get_field( 'image' )['link'] ?: 'http://www.rogenilan.com/upload/images/360_360/1646980923461464.jpg';
+					$post_image_url = get_field( 'image' )['link'] ?: get_theme_file_uri('/assets/images/1646980923461464.jpg');
 					$post_title     = wp_trim_words( get_the_title(), 4 );
 					$post_excerpt   = wp_trim_words( get_the_excerpt(), 8 );
 					$permalink      = get_permalink();
