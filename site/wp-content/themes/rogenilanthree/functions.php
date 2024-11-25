@@ -173,6 +173,10 @@ function add_custom_meta_for_categories() {
 		$custom_title = get_the_title();
 	}
 
+	if (is_front_page()) {
+		$custom_title = 'Richocean windows & doors  | China Quality Manufacturer';
+	}
+
 	$title = '<title>';
 
 	if ( $acf_title ) {
