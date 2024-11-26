@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<?php add_custom_meta_for_categories(); ?>
 	<?php wp_head(); ?>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 </head>
 <body class="bg-gray-100">
 <header>
