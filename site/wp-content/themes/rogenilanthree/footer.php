@@ -12,7 +12,7 @@
             <h3 class="text-red-500 mb-4">WINDOWS</h3>
             <ul class="space-y-2">
                 <?php foreach (WINDOWS_SYSTEMS as $item): ?>
-                <li><a href="<?= get_category_link( get_category_by_slug( $item['slug'] ) ); ?>" class="text-gray-400 hover:text-white transition duration-300">
+                <li><a target="_blank" href="<?= get_category_link( get_category_by_slug( $item['slug'] ) ); ?>" class="text-gray-400 hover:text-white transition duration-300">
                         <?= $item['name']; ?></a></li>
                 <?php endforeach; ?>
             </ul>
@@ -22,7 +22,7 @@
             <h3 class="text-red-500 mb-4">DOORS</h3>
             <ul class="space-y-2">
 			    <?php foreach (DOORS_SYSTEMS as $item): ?>
-                    <li><a href="<?= get_category_link( get_category_by_slug( $item['slug'] ) ); ?>" class="text-gray-400 hover:text-white transition duration-300">
+                    <li><a target="_blank" href="<?= get_category_link( get_category_by_slug( $item['slug'] ) ); ?>" class="text-gray-400 hover:text-white transition duration-300">
 						    <?= $item['name']; ?></a></li>
 			    <?php endforeach; ?>
             </ul>
@@ -32,7 +32,7 @@
             <h3 class="text-red-500 mb-4">More Products</h3>
             <ul class="space-y-2">
 			    <?php foreach (MORE_PRODUCTS as $item): ?>
-                    <li><a href="<?= get_category_link( get_category_by_slug( $item['slug'] ) ); ?>" class="text-gray-400 hover:text-white transition duration-300">
+                    <li><a target="_blank" href="<?= get_category_link( get_category_by_slug( $item['slug'] ) ); ?>" class="text-gray-400 hover:text-white transition duration-300">
 						    <?= $item['name']; ?></a></li>
 			    <?php endforeach; ?>
             </ul>
