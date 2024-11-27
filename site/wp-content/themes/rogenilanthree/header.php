@@ -152,6 +152,10 @@
                             <a href="<?= get_category_link( get_category_by_slug( 'why-choose-us' ) ); ?>"
                                class="<?= do_shortcode( '[nav_dropdown_items_class name=item]' ); ?>">Why
                                 Choose Us</a>
+                            <a href="<?= get_category_link( get_category_by_slug( 'corporate-video' ) ); ?>"
+                               class="<?= do_shortcode( '[nav_dropdown_items_class name=item]' ); ?>">Corporate Video</a>
+                            <a href="<?= get_category_link( get_category_by_slug( 'visit-factory' ) ); ?>"
+                               class="<?= do_shortcode( '[nav_dropdown_items_class name=item]' ); ?>">Visit Factory</a>
                         </div>
                     </div>
                     <div id="m-about" class="md:hidden relative group text-center w-full">
@@ -164,6 +168,10 @@
                             <a href="<?= get_category_link( get_category_by_slug( 'why-choose-us' ) ); ?>"
                                class="<?= do_shortcode( '[nav_dropdown_items_class name=item]' ); ?>">Why
                                 Choose Us</a>
+                            <a href="<?= get_category_link( get_category_by_slug( 'corporate-video' ) ); ?>"
+                               class="<?= do_shortcode( '[nav_dropdown_items_class name=item]' ); ?>">Corporate Video</a>
+                            <a href="<?= get_category_link( get_category_by_slug( 'visit-factory' ) ); ?>"
+                               class="<?= do_shortcode( '[nav_dropdown_items_class name=item]' ); ?>">Visit Factory</a>
                         </div>
                     </div>
                     <a href="<?= site_url('contact-us') ?>" class="mx-8 my-4 text-gray-700 hover:text-red-500">Contact</a>
