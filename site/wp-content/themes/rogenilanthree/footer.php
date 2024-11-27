@@ -4,7 +4,7 @@
         <div>
             <img src="<?= get_theme_file_uri('/assets/images/richocean-white-logo.png'); ?>" alt="" class="mb-4 w-56">
             <ul class="pl-0" style="text-align: left; line-height: 1.6rem; margin-top: 2rem;">
-                <li style="margin-bottom: 1rem;"><i class="fas fa-phone-alt" style="margin-right: 8px;"></i>Phone us at 86 17607086086 </li>
+                <li style="margin-bottom: 1rem;"><i class="fas fa-phone-alt" style="margin-right: 8px;"></i>Phone us at +86 17607086086 </li>
                 <li style="margin-bottom: 1rem;"><i class="fas fa-envelope" style="margin-right: 8px;"></i>Email us at <a class="text-red-600 font-bold border-b border-red-600 no-underline transition-all duration-500 ease-[cubic-bezier(0.54,0.1,0,0.99)]" href="mailto:Kai@rogenilan.com">Kai@rogenilan.com</a> </li>
                 <li style="margin-bottom: 1rem;"><i class="fas fa-map-marker-alt" style="margin-right: 8px;"></i>Marketing Center at 23/F, Weiye International Building, Dali Town, Foshan City, Guangdong Province, China</li>
             </ul>
