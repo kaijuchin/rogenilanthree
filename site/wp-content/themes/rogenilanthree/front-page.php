@@ -54,53 +54,39 @@
                         <!-- Swiper Container -->
                         <div class="swiper mySwiper">
                             <div class="swiper-wrapper">
-                                <!-- Swiper Slide 1 -->
-                                <div class="swiper-slide bg-white rounded-lg shadow-md overflow-hidden">
-                                    <div class="p-4">
-                                        <a target="_blank" href="https://www.richoceanchina.com/enhance-your-homes-thermal-efficiency-with-richocean-aluminium-doors-and-windows/">
-                                            <img src="https://www.richoceanchina.com/enhance-your-homes-thermal-efficiency-with-richocean-aluminium-doors-and-windows/enhance-your-homes-thermal-efficiency/" alt="Image 1" class="w-full h-64 object-cover">
-                                            <div class="mt-4">
-                                                <h3 class="text-lg font-bold mb-2">Enhance Your Home’s Thermal Efficiency with…</h3>
-                                                <p class="text-gray-600">When it comes to creating a comfortable, energy-efficient living space,…</p>
-                                            </div>
-                                        </a>
+	                            <?php
+	                            $category_slugs = [ 'windows', 'doors', 'more-products' ];
+	                            $category_ids   = [];
+	                            foreach ( $category_slugs as $slug ) {
+		                            $category = get_category_by_slug( $slug );
+		                            if ( $category ) {
+			                            $category_ids[] = $category->term_id;
+		                            }
+	                            }
+	                            $query = new WP_Query( [
+		                            'post_type'      => 'post',
+		                            'posts_per_page' => 8,
+		                            'category__in'   => $category_ids,
+	                            ] );
+	                            if ( $query->have_posts() ): while ( $query->have_posts() ): $query->the_post(); ?>
+		                            <?php
+		                            $post_image_url = get_field( 'image' )['link'] ?: get_theme_file_uri( '/assets/images/1646980923461464.jpg' );
+		                            $post_title     = wp_trim_words( get_the_title(), 4 );
+		                            $post_excerpt   = wp_trim_words( get_the_excerpt(), 8 );
+		                            $permalink      = get_permalink();
+		                            ?>
+                                    <div class="swiper-slide bg-white rounded-lg shadow-md overflow-hidden">
+                                        <div class="p-4">
+                                            <a target="_blank" href="<?= $permalink ?>">
+                                                <img src="<?= $post_image_url ?>" alt="Image 1" class="w-full h-64 object-cover">
+                                                <div class="mt-4">
+                                                    <h3 class="text-lg font-bold mb-2"><?= $post_title ?></h3>
+                                                    <p class="text-gray-600"><?= $post_excerpt ?></p>
+                                                </div>
+                                            </a>
+                                        </div>
                                     </div>
-                                </div>
-                                <!-- Swiper Slide 2 -->
-                                <div class="swiper-slide bg-white rounded-lg shadow-md overflow-hidden">
-                                    <div class="p-4">
-                                        <a target="_blank" href="https://www.richoceanchina.com/durability-certification-and-personalization/">
-                                            <img src="https://www.richoceanchina.com/durability-certification-and-personalization/durability-certification-and-personalization-2/" alt="Image 2" class="w-full h-64 object-cover">
-                                            <div class="mt-4">
-                                                <h3 class="text-lg font-bold mb-2">Durability, Certification, and Personalization</h3>
-                                                <p class="text-gray-600">When it comes to aluminium doors and windows, quality, reliability,…</p>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-                                <!-- 继续添加其他 Swiper Slide，类似上面结构 -->
-                                <div class="swiper-slide bg-white rounded-lg shadow-md overflow-hidden">
-                                    <div class="p-4">
-                                        <a target="_blank" href="https://www.richoceanchina.com/durability-certification-and-personalization/">
-                                            <img src="https://www.richoceanchina.com/durability-certification-and-personalization/durability-certification-and-personalization-2/" alt="Image 2" class="w-full h-64 object-cover">
-                                            <div class="mt-4">
-                                                <h3 class="text-lg font-bold mb-2">Durability, Certification, and Personalization</h3>
-                                                <p class="text-gray-600">When it comes to aluminium doors and windows, quality, reliability,…</p>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide bg-white rounded-lg shadow-md overflow-hidden">
-                                    <div class="p-4">
-                                        <a target="_blank" href="https://www.richoceanchina.com/durability-certification-and-personalization/">
-                                            <img src="https://www.richoceanchina.com/durability-certification-and-personalization/durability-certification-and-personalization-2/" alt="Image 2" class="w-full h-64 object-cover">
-                                            <div class="mt-4">
-                                                <h3 class="text-lg font-bold mb-2">Durability, Certification, and Personalization</h3>
-                                                <p class="text-gray-600">When it comes to aluminium doors and windows, quality, reliability,…</p>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
+	                            <?php endwhile; endif; ?>
                             </div>
                         </div>
                     </div>
