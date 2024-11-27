@@ -1,9 +1,32 @@
 <?php get_header(); ?>
 <section class="bg-gray-50 relative" style="background: url('https://www.richoceanchina.com/wp-content/themes/rogenilantwo/Content/Images/bg-content.jpg') no-repeat center top; background-size: cover; overflow: hidden;">
-	<img src="//sc04.alicdn.com/kf/H6f2dd165617d4ed3a91c01d6bab0243dB/222016583/H6f2dd165617d4ed3a91c01d6bab0243dB.jpg" alt="">
-	<img src="//sc04.alicdn.com/kf/He38ba2681a2347e0831c22bfc4330560X/222016583/He38ba2681a2347e0831c22bfc4330560X.jpg" alt="">
-	<img src="//sc04.alicdn.com/kf/H6ab90c0b925d40e998d01894c0bb8ff9l/222016583/H6ab90c0b925d40e998d01894c0bb8ff9l.jpg" alt="">
-	<img src="//sc04.alicdn.com/kf/Ha666f3c081984ea3a218abadfecd110bj/222016583/Ha666f3c081984ea3a218abadfecd110bj.jpg" alt="">
+    <img src="<?= get_theme_file_uri('/assets/images/why_01.jpg') ?>" alt="">
+    <img src="<?= get_theme_file_uri('/assets/images/why_02.jpg') ?>" alt="">
+    <div class="hidden md:block user_www_bannerdesign_cn" style="width:990px;height:443px;margin:0px auto;">
+        <div class="sc-hd-m-menu sc-hd-ms-title-top next-slick-dots" style="text-align:inherit;width:100%;height:443px;margin-left:50%;left:-50%;white-space:inherit;max-width:100%;z-index:1;">
+            <div class="userBannerdesign  next-slick-dots" style="width:1920px;height:100%;left:50%;margin-left:-960px;">
+                <div class="div_bannerdesign1" data-title="" style="height:443px;position:relative;width:1920px;">
+                    <div class="userBannerdesign  next-slick-dots" style="width:1200px;height:388px;">
+                        <div class="sc-hd-m-menu next-slick-dots" data-title="" style="height:100%;width:1920px;left:0px;top:0px;">
+                            <marquee behavior="scroll" direction="left" scrollamount="6" scrolldelay="100" style="float:left;">
+                                <div class="div_bannerdesign1" style="width:960000px;height:194px;position:relative;background-color:transparent;background-repeat:repeat-x;background-image:url(//sc04.alicdn.com/kf/H450361d552b24a1f9534eaf281c8d6f7r/222016583/H450361d552b24a1f9534eaf281c8d6f7r.png);background-position:center bottom;left:-1920px;">
+                                    <a href="#" target="_blank" style="width:100%;height:100%;display:none;"></a>
+                                </div>
+                            </marquee>
+                            <marquee behavior="scroll" direction="right" scrollamount="6" scrolldelay="100" style="float:left;">
+                                <div class="div_bannerdesign1" style="width:960000px;height:194px;position:relative;background-color:transparent;background-repeat:repeat-x;background-image:url(//sc04.alicdn.com/kf/He7a96acf172f41b99d06c240d1562a15b/222016583/He7a96acf172f41b99d06c240d1562a15b.png);background-position:center bottom;left:1920px;">
+                                    <a href="#" target="_blank" style="width:100%;height:100%;display:none;"></a>
+                                </div>
+                            </marquee>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <img src="<?= get_theme_file_uri('/assets/images/why_04.jpg') ?>" alt="">
+    <img src="<?= get_theme_file_uri('/assets/images/why_05.jpg') ?>" alt="">
+    <img src="<?= get_theme_file_uri('/assets/images/why_06.jpg') ?>" alt="">
 </section>
 <section class="px-8 py-16 bg-gray-50">
 	<div class="container mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">

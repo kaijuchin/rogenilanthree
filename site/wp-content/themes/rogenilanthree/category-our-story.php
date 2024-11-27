@@ -1,6 +1,14 @@
 <?php get_header() ?>
-<img src="//sc04.alicdn.com/kf/Hcc52aab697014e608a0c31791b808b0bE/222016583/Hcc52aab697014e608a0c31791b808b0bE.jpg" alt="">
-<img src="//sc04.alicdn.com/kf/H531b642df00b4cb39df7f6ceb027d81eq/222016583/H531b642df00b4cb39df7f6ceb027d81eq.jpg" alt="">
+<section class="px-8 py-16 bg-gray-50">
+    <div class="container mx-auto grid grid-cols-1 gap-16 items-center">
+        <img class="mx-auto" src="<?= get_theme_file_uri('/assets/images/newqy_01.jpg'); ?>" alt="">
+        <img class="mx-auto" src="<?= get_theme_file_uri('/assets/images/newqy_02.jpg'); ?>" alt="">
+        <img class="mx-auto" src="<?= get_theme_file_uri('/assets/images/newqynew_03.jpg'); ?>" alt="">
+        <img class="mx-auto" src="<?= get_theme_file_uri('/assets/images/newqy_04.jpg'); ?>" alt="">
+        <img class="mx-auto" src="<?= get_theme_file_uri('/assets/images/newqy_05.jpg'); ?>" alt="">
+    </div>
+</section>
+
 <section class="bg-gray-50 relative">
 	<div class="hidden md:block user_www_bannerdesign_cn" style="width:990px;height:443px;margin:0px auto;">
 		<div class="sc-hd-m-menu sc-hd-ms-title-top next-slick-dots" style="text-align:inherit;width:100%;height:443px;margin-left:50%;left:-50%;white-space:inherit;max-width:100%;z-index:1;">
