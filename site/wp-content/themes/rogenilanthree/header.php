@@ -13,7 +13,7 @@
         <div class="container mx-auto px-4">
             <div class="flex justify-between items-center py-4">
                 <!-- Logo -->
-                <a href="#" class="flex items-center">
+                <a target="_blank" href="<?= home_url() ?>" class="flex items-center">
                     <img src="<?= get_theme_file_uri( '/assets/images/richocean-logo.png' ); ?>" alt="" class="h-10">
                 </a>
                 <div class="md:hidden">
@@ -28,9 +28,9 @@
                 <!-- Navbar links -->
                 <div id="navbar-links" class="hidden md:flex items-center md:ml-32 z-10">
 
-                    <a href="<?= home_url() ?>" class="mx-8 my-4 text-gray-700 hover:text-red-500">Home</a>
+                    <a target="_blank" href="<?= home_url() ?>" class="mx-8 my-4 text-gray-700 hover:text-red-500">Home</a>
                     <div class="hidden md:block relative group">
-                        <a href="#" class="mx-8 my-2 pb-4 text-gray-700 group-hover:text-red-500">Products</a>
+                        <a href="###" class="mx-8 my-2 pb-4 text-gray-700 group-hover:text-red-500">Products</a>
                         <div class="w-full md:w-[768px] lg:w-[840px] xl:w-[1000px]  dropdown block pointer-events-none group-hover:pointer-events-auto hover:pointer-events-auto group-hover:block <?= do_shortcode( '[nav_dropdown_items_class]' ); ?>">
                             <!-- Office Furniture Section -->
                             <div class="flex w-full">
@@ -52,7 +52,7 @@
                                     <div class="flex flex-wrap w-full md:w-[34rem] lg:w-[38rem] xl:w-[46rem] p-4 gap-y-[.75rem] text-[0.8125rem] text-zinc-500">
 										<?php foreach ( WINDOWS_SYSTEMS as $item ): ?>
                                             <span class="w-1/4">
-                                            <a class="hover:text-red-600"
+                                            <a target="_blank" class="hover:text-red-600"
                                                href="<?= get_category_link( get_cat_ID( $item['name'] ) ); ?>"><?= $item['name']; ?></a>
                                         </span>
 										<?php endforeach; ?>
@@ -119,7 +119,7 @@
                             <span class="sub-arrow"><i class="fas fa-chevron-left"></i></span></a>
                         <div id="m-windows-dropdown" class="hidden w-full bg-gray-700/[.05]">
 							<?php foreach ( WINDOWS_SYSTEMS as $item ): ?>
-                                <a href="<?= get_category_link( get_cat_ID( $item['name'] ) ); ?>"
+                                <a target="_blank" href="<?= get_category_link( get_cat_ID( $item['name'] ) ); ?>"
                                    class="<?= do_shortcode( '[nav_dropdown_items_class name=item]' ); ?>"><?= $item['name']; ?></a>
 							<?php endforeach; ?>
                         </div>
@@ -127,7 +127,7 @@
                             <span class="sub-arrow"><i class="fas fa-chevron-left"></i></span></a>
                         <div id="m-windows-dropdown" class="hidden w-full bg-gray-700/[.05]">
 							<?php foreach ( DOORS_SYSTEMS as $item ): ?>
-                                <a href="<?= get_category_link( get_cat_ID( $item['name'] ) ); ?>"
+                                <a target="_blank" href="<?= get_category_link( get_cat_ID( $item['name'] ) ); ?>"
                                    class="<?= do_shortcode( '[nav_dropdown_items_class name=item]' ); ?>"><?= $item['name']; ?></a>
 							<?php endforeach; ?>
                         </div>
@@ -136,7 +136,7 @@
                             <span class="sub-arrow"><i class="fas fa-chevron-left"></i></span></a>
                         <div id="m-windows-dropdown" class="hidden w-full bg-gray-700/[.05]">
 							<?php foreach ( MORE_PRODUCTS as $item ): ?>
-                                <a href="<?= get_category_link( get_cat_ID( $item['name'] ) ); ?>"
+                                <a target="_blank" href="<?= get_category_link( get_cat_ID( $item['name'] ) ); ?>"
                                    class="<?= do_shortcode( '[nav_dropdown_items_class name=item]' ); ?>"><?= $item['name']; ?></a>
 							<?php endforeach; ?>
                         </div>
@@ -146,15 +146,15 @@
                     <div class="hidden md:block relative group">
                         <a href="#" class="mx-8 my-2 pb-4 text-gray-700 group-hover:text-red-500">About</a>
                         <div class="dropdown block pointer-events-none group-hover:pointer-events-auto hover:pointer-events-auto group-hover:block <?= do_shortcode( '[nav_dropdown_items_class]' ); ?> min-w-48">
-                            <a href="<?= get_category_link( get_category_by_slug( 'our-story' ) ); ?>"
+                            <a target="_blank" href="<?= get_category_link( get_category_by_slug( 'our-story' ) ); ?>"
                                class="<?= do_shortcode( '[nav_dropdown_items_class name=item]' ); ?>">Our
                                 Story</a>
-                            <a href="<?= get_category_link( get_category_by_slug( 'why-choose-us' ) ); ?>"
+                            <a target="_blank" href="<?= get_category_link( get_category_by_slug( 'why-choose-us' ) ); ?>"
                                class="<?= do_shortcode( '[nav_dropdown_items_class name=item]' ); ?>">Why
                                 Choose Us</a>
-                            <a href="<?= get_category_link( get_category_by_slug( 'corporate-video' ) ); ?>"
+                            <a target="_blank" href="<?= get_category_link( get_category_by_slug( 'corporate-video' ) ); ?>"
                                class="<?= do_shortcode( '[nav_dropdown_items_class name=item]' ); ?>">Corporate Video</a>
-                            <a href="<?= get_category_link( get_category_by_slug( 'visit-factory' ) ); ?>"
+                            <a target="_blank" href="<?= get_category_link( get_category_by_slug( 'visit-factory' ) ); ?>"
                                class="<?= do_shortcode( '[nav_dropdown_items_class name=item]' ); ?>">Visit Factory</a>
                         </div>
                     </div>
@@ -162,19 +162,19 @@
                         <a id="m-about-toggle" href="#"
                            class="block mx-8 my-4 text-gray-700 hover:text-red-500">About</a>
                         <div id="m-about-dropdown" class="hidden w-full bg-gray-700/[.05]">
-                            <a href="<?= get_category_link( get_category_by_slug( 'our-story' ) ); ?>"
+                            <a target="_blank" href="<?= get_category_link( get_category_by_slug( 'our-story' ) ); ?>"
                                class="<?= do_shortcode( '[nav_dropdown_items_class name=item]' ); ?>">Our
                                 Story</a>
-                            <a href="<?= get_category_link( get_category_by_slug( 'why-choose-us' ) ); ?>"
+                            <a target="_blank" href="<?= get_category_link( get_category_by_slug( 'why-choose-us' ) ); ?>"
                                class="<?= do_shortcode( '[nav_dropdown_items_class name=item]' ); ?>">Why
                                 Choose Us</a>
-                            <a href="<?= get_category_link( get_category_by_slug( 'corporate-video' ) ); ?>"
+                            <a target="_blank" href="<?= get_category_link( get_category_by_slug( 'corporate-video' ) ); ?>"
                                class="<?= do_shortcode( '[nav_dropdown_items_class name=item]' ); ?>">Corporate Video</a>
-                            <a href="<?= get_category_link( get_category_by_slug( 'visit-factory' ) ); ?>"
+                            <a target="_blank" href="<?= get_category_link( get_category_by_slug( 'visit-factory' ) ); ?>"
                                class="<?= do_shortcode( '[nav_dropdown_items_class name=item]' ); ?>">Visit Factory</a>
                         </div>
                     </div>
-                    <a href="<?= site_url('contact-us') ?>" class="mx-8 my-4 text-gray-700 hover:text-red-500">Contact</a>
+                    <a target="_blank" href="<?= site_url('contact-us') ?>" class="mx-8 my-4 text-gray-700 hover:text-red-500">Contact</a>
                 </div>
             </div>
         </div>
