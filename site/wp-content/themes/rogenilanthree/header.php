@@ -14,7 +14,7 @@
             <div class="flex justify-between items-center py-4">
                 <!-- Logo -->
                 <a target="_blank" href="<?= home_url() ?>" class="flex items-center">
-                    <img src="<?= get_theme_file_uri( '/assets/images/richocean-logo.png' ); ?>" alt="" class="h-10">
+                    <img src="<?= get_theme_file_uri( '/assets/images/richocean-logo.png' ); ?>" alt="" class="h-12">
                 </a>
                 <div class="md:hidden">
                     <button id="navbar-toggle" class="text-gray-700 focus:outline-none">
