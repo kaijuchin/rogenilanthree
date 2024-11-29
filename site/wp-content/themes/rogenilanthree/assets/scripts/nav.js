@@ -1,5 +1,6 @@
 // JavaScript to toggle mobile navbar
 document.getElementById('navbar-toggle').addEventListener('click', function () {
+    console.log(123);
     let navbarLinks = document.getElementById('navbar-links');
     if (navbarLinks.classList.contains('hidden')) {
         navbarLinks.classList.remove('hidden');
@@ -13,9 +14,10 @@ document.getElementById('navbar-toggle').addEventListener('click', function () {
 
 document.getElementById('m-windows-toggle').addEventListener('click', function () {
     let dropdown = document.querySelector('#m-windows-dropdown');
-    let toggleIcon = document.querySelector('#m-windows-toggle > span > i');
+    let toggleIcon = document.querySelector('#m-windows-toggle > span.sub-arrow > i');
     if (dropdown.classList.contains('hidden')) {
         dropdown.classList.remove('hidden');
+        console.log(toggleIcon)
         toggleIcon.className.remove('fa-chevron-left');
         toggleIcon.className.add('fa-chevron-down');
     } else {

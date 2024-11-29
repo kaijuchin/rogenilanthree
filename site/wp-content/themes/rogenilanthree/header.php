@@ -125,16 +125,16 @@
                         </div>
                         <a id="m-doors-toggle" href="#" class="block mx-8 my-4 text-gray-700 hover:text-red-500">Doors
                             <span class="sub-arrow"><i class="fas fa-chevron-left"></i></span></a>
-                        <div id="m-windows-dropdown" class="hidden w-full bg-gray-700/[.05]">
+                        <div id="m-doors-dropdown" class="hidden w-full bg-gray-700/[.05]">
 							<?php foreach ( DOORS_SYSTEMS as $item ): ?>
                                 <a target="_blank" href="<?= get_category_link( get_cat_ID( $item['name'] ) ); ?>"
                                    class="<?= do_shortcode( '[nav_dropdown_items_class name=item]' ); ?>"><?= $item['name']; ?></a>
 							<?php endforeach; ?>
                         </div>
                         <a id="m-more-products-toggle" href="#"
-                           class="block mx-8 my-4 text-gray-700 hover:text-red-500">Doors
+                           class="block mx-8 my-4 text-gray-700 hover:text-red-500">More Products
                             <span class="sub-arrow"><i class="fas fa-chevron-left"></i></span></a>
-                        <div id="m-windows-dropdown" class="hidden w-full bg-gray-700/[.05]">
+                        <div id="m-more-products-dropdown" class="hidden w-full bg-gray-700/[.05]">
 							<?php foreach ( MORE_PRODUCTS as $item ): ?>
                                 <a target="_blank" href="<?= get_category_link( get_cat_ID( $item['name'] ) ); ?>"
                                    class="<?= do_shortcode( '[nav_dropdown_items_class name=item]' ); ?>"><?= $item['name']; ?></a>
