@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 </head>
 <body class="bg-gray-100">
-<header>
-    <nav class="bg-white shadow">
+<header class="pt-[80px] md:pt-[88px]">
+    <nav class="bg-white shadow fixed top-0 left-0 z-[1000] w-full">
         <div class="container mx-auto px-4">
             <div class="flex justify-between items-center py-4">
                 <!-- Logo -->
