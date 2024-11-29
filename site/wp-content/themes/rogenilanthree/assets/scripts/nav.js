@@ -1,6 +1,5 @@
 // JavaScript to toggle mobile navbar
 document.getElementById('navbar-toggle').addEventListener('click', function () {
-    console.log(123);
     let navbarLinks = document.getElementById('navbar-links');
     if (navbarLinks.classList.contains('hidden')) {
         navbarLinks.classList.remove('hidden');
@@ -17,13 +16,13 @@ document.getElementById('m-windows-toggle').addEventListener('click', function (
     let toggleIcon = document.querySelector('#m-windows-toggle > span.sub-arrow > i');
     if (dropdown.classList.contains('hidden')) {
         dropdown.classList.remove('hidden');
-        console.log(toggleIcon)
-        toggleIcon.className.remove('fa-chevron-left');
-        toggleIcon.className.add('fa-chevron-down');
+        toggleIcon.classList.remove('fa-chevron-left');
+
+        toggleIcon.classList.add('fa-chevron-down');
     } else {
         dropdown.classList.add('hidden');
-        toggleIcon.className.remove('fa-chevron-down');
-        toggleIcon.className.add('fa-chevron-left');
+        toggleIcon.classList.remove('fa-chevron-down');
+        toggleIcon.classList.add('fa-chevron-left');
     }
 })
 document.getElementById('m-doors-toggle').addEventListener('click', function () {
@@ -31,12 +30,12 @@ document.getElementById('m-doors-toggle').addEventListener('click', function () 
     let toggleIcon = document.querySelector('#m-doors-toggle > span > i');
     if (dropdown.classList.contains('hidden')) {
         dropdown.classList.remove('hidden');
-        toggleIcon.className.remove('fa-chevron-left');
-        toggleIcon.className.add('fa-chevron-down');
+        toggleIcon.classList.remove('fa-chevron-left');
+        toggleIcon.classList.add('fa-chevron-down');
     } else {
         dropdown.classList.add('hidden');
-        toggleIcon.className.remove('fa-chevron-down');
-        toggleIcon.className.add('fa-chevron-left');
+        toggleIcon.classList.remove('fa-chevron-down');
+        toggleIcon.classList.add('fa-chevron-left');
     }
 })
 
@@ -45,12 +44,12 @@ document.getElementById('m-more-products-toggle').addEventListener('click', func
     let toggleIcon = document.querySelector('#m-more-products-toggle > span > i');
     if (dropdown.classList.contains('hidden')) {
         dropdown.classList.remove('hidden');
-        toggleIcon.className.remove('fa-chevron-left');
-        toggleIcon.className.add('fa-chevron-down');
+        toggleIcon.classList.remove('fa-chevron-left');
+        toggleIcon.classList.add('fa-chevron-down');
     } else {
         dropdown.classList.add('hidden');
-        toggleIcon.className.remove('fa-chevron-down');
-        toggleIcon.className.add('fa-chevron-left');
+        toggleIcon.classList.remove('fa-chevron-down');
+        toggleIcon.classList.add('fa-chevron-left');
     }
 })
 
