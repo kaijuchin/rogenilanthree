@@ -1,5 +1,5 @@
 <?php
-
+add_filter('show_admin_bar', '__return_false');
 const WINDOWS_SYSTEMS = [
 	[ 'name' => 'Casement Windows', 'slug' => 'casement-windows' ],
 	[ 'name' => 'Sliding Windows', 'slug' => 'sliding-windows' ],
