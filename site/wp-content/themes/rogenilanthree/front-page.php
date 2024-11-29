@@ -46,53 +46,99 @@
         <div class="container mx-auto text-center">
             <h2 class="text-4xl font-bold mb-12">RICHOCEAN WINDOWS AND DOORS</h2>
             <div class="container mx-auto px-4">
-                <div class="flex justify-center">
-                    <div class="w-1/12 flex items-center relative">
-                        <div class="swiper-button-prev"></div>
-                    </div>
-                    <div class="w-10/12">
-                        <!-- Swiper Container -->
-                        <div class="swiper mySwiper">
-                            <div class="swiper-wrapper">
-	                            <?php
-	                            $category_slugs = [ 'windows', 'doors', 'more-products' ];
-	                            $category_ids   = [];
-	                            foreach ( $category_slugs as $slug ) {
-		                            $category = get_category_by_slug( $slug );
-		                            if ( $category ) {
-			                            $category_ids[] = $category->term_id;
-		                            }
-	                            }
-	                            $query = new WP_Query( [
-		                            'post_type'      => 'post',
-		                            'posts_per_page' => 8,
-		                            'category__in'   => $category_ids,
-	                            ] );
-	                            if ( $query->have_posts() ): while ( $query->have_posts() ): $query->the_post(); ?>
-		                            <?php
-		                            $post_image_url = get_field( 'image' )['link'] ?: get_theme_file_uri( '/assets/images/1646980923461464.jpg' );
-		                            $post_title     = wp_trim_words( get_the_title(), 4 );
-		                            $post_excerpt   = wp_trim_words( get_the_excerpt(), 8 );
-		                            $permalink      = get_permalink();
-		                            ?>
-                                    <div class="swiper-slide bg-white rounded-lg shadow-md overflow-hidden">
-                                        <div class="p-4">
-                                            <a target="_blank" href="<?= $permalink ?>">
-                                                <img src="<?= $post_image_url ?>" alt="Image 1" class="w-full h-64 object-cover">
-                                                <div class="mt-4">
-                                                    <h3 class="text-lg font-bold mb-2"><?= $post_title ?></h3>
-                                                    <p class="text-gray-600"><?= $post_excerpt ?></p>
-                                                </div>
-                                            </a>
-                                        </div>
+                <div class="flex justify-center flex-col">
+                    <div class="container mx-auto">
+                        <p class="text-2xl font-bold text-left mb-6 text-stone-400">WINDOWS</p>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+							<?php foreach ( WINDOWS_SYSTEMS as $item ): ?>
+                                <a target="_blank" href="<?= get_category_link( get_cat_ID( $item['name'] ) ); ?>">
+                                    <div class="bg-white p-4 shadow-md flex items-center space-x-4">
+                                        <img src="<?= get_theme_file_uri( $item['nav_image'] ) ?>"
+                                             alt="<?= $item['name'] ?>" class="w-12 h-12">
+                                        <span class="text-lg font-semibold hover:text-red-500 transition duration-300"><?= $item['name'] ?></span>
                                     </div>
-	                            <?php endwhile; endif; ?>
-                            </div>
+                                </a>
+							<?php endforeach; ?>
                         </div>
                     </div>
-                    <div class="w-1/12 flex items-center relative">
-                        <div class="swiper-button-next"></div>
+                    <div class="container mx-auto">
+                        <p class="text-2xl font-bold text-left mt-6 mb-6 text-stone-400">DOORS</p>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+			                <?php foreach ( DOORS_SYSTEMS as $item ): ?>
+                                <a target="_blank" href="<?= get_category_link( get_cat_ID( $item['name'] ) ); ?>">
+                                    <div class="bg-white p-4 shadow-md flex items-center space-x-4">
+                                        <img src="<?= get_theme_file_uri( $item['nav_image'] ) ?>"
+                                             alt="<?= $item['name'] ?>" class="w-12 h-12">
+                                        <span class="text-lg font-semibold hover:text-red-500 transition duration-300"><?= $item['name'] ?></span>
+                                    </div>
+                                </a>
+			                <?php endforeach; ?>
+                        </div>
                     </div>
+                    <div class="container mx-auto">
+                        <p class="text-2xl font-bold text-left mt-6 mb-6 text-stone-400">MORE PRODUCTS</p>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+			                <?php foreach ( MORE_PRODUCTS as $item ): ?>
+                                <a target="_blank" href="<?= get_category_link( get_cat_ID( $item['name'] ) ); ?>">
+                                    <div class="bg-white p-4 shadow-md flex items-center space-x-4">
+                                        <img src="<?= get_theme_file_uri( $item['nav_image'] ) ?>"
+                                             alt="<?= $item['name'] ?>" class="w-12 h-12">
+                                        <span class="text-lg font-semibold hover:text-red-500 transition duration-300"><?= $item['name'] ?></span>
+                                    </div>
+                                </a>
+			                <?php endforeach; ?>
+                        </div>
+                    </div>
+
+                    <!--                    <div class="w-1/12 flex items-center relative">-->
+                    <!--                        <div class="swiper-button-prev"></div>-->
+                    <!--                    </div>-->
+                    <!--                    <div class="w-10/12">-->
+                    <!--                        <div class="swiper mySwiper">-->
+                    <!--                            <div class="swiper-wrapper">-->
+                    <!--	                            --><?php
+					//	                            $category_slugs = [ 'windows', 'doors', 'more-products' ];
+					//	                            $category_ids   = [];
+					//	                            foreach ( $category_slugs as $slug ) {
+					//		                            $category = get_category_by_slug( $slug );
+					//		                            if ( $category ) {
+					//			                            $category_ids[] = $category->term_id;
+					//		                            }
+					//	                            }
+					//	                            $query = new WP_Query( [
+					//		                            'post_type'      => 'post',
+					//		                            'posts_per_page' => 8,
+					//		                            'category__in'   => $category_ids,
+					//	                            ] );
+					//	                            if ( $query->have_posts() ): while ( $query->have_posts() ): $query->the_post(); ?>
+                    <!--		                            --><?php
+					//		                            $post_image_url = get_field( 'image' )['link'] ?: get_theme_file_uri( '/assets/images/1646980923461464.jpg' );
+					//		                            $post_title     = wp_trim_words( get_the_title(), 4 );
+					//		                            $post_excerpt   = wp_trim_words( get_the_excerpt(), 8 );
+					//		                            $permalink      = get_permalink();
+					//		                            ?>
+                    <!--                                    <div class="swiper-slide bg-white rounded-lg shadow-md overflow-hidden">-->
+                    <!--                                        <div class="p-4">-->
+                    <!--                                            <a target="_blank" href="-->
+					<?php //= $permalink ?><!--">-->
+                    <!--                                                <img src="-->
+					<?php //= $post_image_url ?><!--" alt="Image 1" class="w-full h-64 object-cover">-->
+                    <!--                                                <div class="mt-4">-->
+                    <!--                                                    <h3 class="text-lg font-bold mb-2">-->
+					<?php //= $post_title ?><!--</h3>-->
+                    <!--                                                    <p class="text-gray-600">-->
+					<?php //= $post_excerpt ?><!--</p>-->
+                    <!--                                                </div>-->
+                    <!--                                            </a>-->
+                    <!--                                        </div>-->
+                    <!--                                    </div>-->
+                    <!--	                            --><?php //endwhile; endif; ?>
+                    <!--                            </div>-->
+                    <!--                        </div>-->
+                    <!--                    </div>-->
+                    <!--                    <div class="w-1/12 flex items-center relative">-->
+                    <!--                        <div class="swiper-button-next"></div>-->
+                    <!--                    </div>-->
                 </div>
             </div>
         </div>
