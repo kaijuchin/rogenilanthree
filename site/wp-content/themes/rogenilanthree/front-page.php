@@ -1270,32 +1270,38 @@
                 <h2 class="text-red-600 font-bold text-lg mb-4">CONTACT & REACH US</h2>
                 <h1 class="text-4xl font-bold text-gray-800 mb-6">CONTACT & REACH US</h1>
                 <p class="text-gray-600 mb-8">
-                    We will be pleased to help with your general enquiries about our aluminium windows and doors and to
-                    help you find a local authorised dealer
+                    Start your journey towards transfo rming your space with Richocean s high-quality
+                    doors and windows. From the initial design consultation to the final installation, our
+                    dedicated team is here to bring your vision to li fe with precision and style. Contact
+                    us today to create the perfect doors and windows for your project.
                 </p>
 
-                <p>
-                    There are a number of ways you can contact us. You can:
-                </p>
                 <ul class="space-y-4">
                     <li class="flex items-start">
-                        <span class="text-orange-500 mr-3">&#10004;</span>
-                        <p class="text-gray-600">Fill in our contact form below</p>
+                        <span class="text-orange-500 mr-3"><span class="text-red-600 mr-2"><i
+                                        class="fas fa-check-circle"></i></span></span>
+                        <p class="text-gray-600">Over 10 Years of Expertise in the Door and Window Industry</p>
                     </li>
                     <li class="flex items-start">
-                        <span class="text-orange-500 mr-3">&#10004;</span>
-                        <p class="text-gray-600">Phone us at 17607086086</p>
+                        <span class="text-orange-500 mr-3"><span class="text-red-600 mr-2"><i
+                                        class="fas fa-check-circle"></i></span></span>
+                        <p class="text-gray-600">Global Partners in Over 120 Countries</p>
                     </li>
                     <li class="flex items-start">
-                        <span class="text-orange-500 mr-3">&#10004;</span>
-                        <p class="text-gray-600">Email us at Kai@rogenilan.com</p>
+                        <span class="text-orange-500 mr-3"><span class="text-red-600 mr-2"><i
+                                        class="fas fa-check-circle"></i></span></span>
+                        <p class="text-gray-600">95% Customer Satisfaction Rate</p>
                     </li>
                     <li class="flex items-start">
-                        <span class="text-orange-500 mr-3">&#10004;</span>
-                        <p class="text-gray-600">Marketing Center at 23/F, Weiye International Building, Dali Town,
-                            Foshan City, Guangdong Province, China</p>
+                        <span class="text-orange-500 mr-3"><span class="text-red-600 mr-2"><i
+                                        class="fas fa-check-circle"></i></span></span>
+                        <p class="text-gray-600">Rapid Response Within 12 Hours</p>
                     </li>
-
+                    <li class="flex items-start">
+                        <span class="text-orange-500 mr-3"><span class="text-red-600 mr-2"><i
+                                        class="fas fa-check-circle"></i></span></span>
+                        <p class="text-gray-600">Custom Design Solutions for Unique Projects</p>
+                    </li>
                 </ul>
             </div>
             <!-- Contact Form Section -->
@@ -1322,6 +1328,38 @@
             </div>
         </div>
     </section>
+<section class="elementor elementor-9277 ">
+    <div class="elementor-section elementor-top-section elementor-element elementor-element-eba665b elementor-section-content-middle elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="eba665b" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+        <div class="elementor-container elementor-column-gap-no">
+            <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-66e9ee1a" data-id="66e9ee1a" data-element_type="column">
+                <div class="elementor-widget-wrap elementor-element-populated">
+                    <div class="elementor-element elementor-element-5d4bca3b elementor-widget elementor-widget-heading" data-id="5d4bca3b" data-element_type="widget" data-widget_type="heading.default">
+                        <div class="elementor-widget-container">
+                            <h2 class="elementor-heading-title elementor-size-default">Reach Greater Business Heights by Partnering with RICHOCEAN</h2>		</div>
+                    </div>
+                    <div class="elementor-element elementor-element-54d5221 elementor-widget elementor-widget-spacer" data-id="54d5221" data-element_type="widget" data-widget_type="spacer.default">
+                        <div class="elementor-widget-container">
+                            <div class="elementor-spacer">
+                                <div class="elementor-spacer-inner"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="elementor-element elementor-element-139c4efc elementor-align-center elementor-widget elementor-widget-button" data-id="139c4efc" data-element_type="widget" data-widget_type="button.default">
+                        <div class="elementor-widget-container">
+                            <div class="elementor-button-wrapper">
+                                <a class="elementor-button elementor-button-link elementor-size-sm" href="<?= site_url('contact-us') ?>">
+						<span class="elementor-button-content-wrapper">
+									<span class="elementor-button-text">TALK TO SPECIALIST &gt;</span>
+					</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
+</section>
 
 <?php get_footer(); ?>

@@ -1,4 +1,4 @@
-<footer class="py-10 px-4 bg-gray-900 text-gray-400">
+<footer class="py-10 px-4 bg-gray-900 text-gray-400 border-t border-[#B9A4A4] transition-all duration-300">
     <div class="max-w-screen-xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
         <!-- Contact Section -->
         <div>
