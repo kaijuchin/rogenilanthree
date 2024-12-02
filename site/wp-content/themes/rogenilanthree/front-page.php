@@ -676,9 +676,9 @@
 
     </section>
 
-    <section class="hidden md:block p-16 bg-white elementor elementor-9698">
+    <section class="hidden md:block px-16 pb-16 bg-white elementor elementor-9698">
         <h1 class="text-4xl font-bold text-gray-800 mb-6 text-center">Simplified Process: RICHOCEAN's Workflow</h1>
-        <h2 class="text-xl font-semibold text-gray-500 mb-2 text-center">First, we conduct a thorough consultation to
+        <h2 class="text-xl font-semibold text-gray-500 mb-16 text-center">First, we conduct a thorough consultation to
             fully understand your requirements, ensuring our approach aligns perfectly with your business
             goals.</h2>
         <div class="container mx-auto p-4">
