@@ -12,33 +12,55 @@
             </p>
         </div>
     </section>
-    <section class="p-16 bg-gray-50">
-        <div class="container mx-auto px-4 py-16 grid grid-cols-1 gap-[10rem] md:grid-cols-3">
-            <div class="text-center">
-                <div class="w-24 h-px mx-auto mb-4 bg-red-500"></div>
-                <h3 class="text-xl font-bold mb-4">CHINA WINDOW & DOOR REPRESENTATIVE</h3>
-                <p class="text-gray-700">
-                    We have a completely independent product development team, dozens of international certifications
-                    and testing certificates. We continue to be the market leader in China for product design, strength,
-                    safety, and customer service.
-                </p>
+    <!-- Main Section -->
+    <section class="hidden w-full p-16 bg-brown-900 md:flex flex-col lg:flex-row bg-[#8A573B]">
+        <div class="container flex w-2/3 mx-auto">
+            <!-- Left Section: Content -->
+            <div class="lg:w-3/4 bg-[#8A573B] text-white p-8 rounded-lg">
+                <h2 class="text-3xl font-bold mb-4 text-center lg:text-left">Innovative Furniture Designs Tailored to
+                    Every Space</h2>
+                <p class="text-gray-200 mb-6 mt-12 text-left lg:text-left leading-6">At Boke Furniture, we provide
+                    high-quality, customizable Office, Hotel, and Home furniture solutions. Tailored for developers,
+                    wholesalers, and importers, our offerings blend design, function, and sustainability. Since 2012, we
+                    have been committed to craftsmanship and delivering premium furniture that enhances any space.</p>
+                <div class="flex justify-center lg:justify-start gap-4">
+                    <!-- Images -->
+<!--                    <img class="h-24 w-auto"-->
+<!--                         src="https://bokefurniture.com/wp-content/uploads/2024/06/Office-Workstation-removebg-preview.png"-->
+<!--                         alt="Office Workstation">-->
+<!--                    <img class="h-24 w-auto"-->
+<!--                         src="https://bokefurniture.com/wp-content/uploads/2024/10/Hotel_Bedroom-1.png"-->
+<!--                         alt="Hotel Bedroom">-->
+<!--                    <img class="h-24 w-auto"-->
+<!--                         src="https://bokefurniture.com/wp-content/uploads/2024/05/Luxury_Dining_Collections-removebg-preview.png"-->
+<!--                         alt="Luxury Dining Collections">-->
+<!--                    <img class="h-24 w-auto"-->
+<!--                         src="https://bokefurniture.com/wp-content/uploads/2024/05/Modular-Lounge-Furniture.png"-->
+<!--                         alt="Modular Lounge Furniture">-->
+                </div>
             </div>
-            <div class="text-center">
-                <div class="w-24 h-px mx-auto mb-4 bg-red-500"></div>
-                <h3 class="text-xl font-bold mb-4">HIGH PRODUCTION CAPACITY & FLEXIBILITY</h3>
-                <p class="text-gray-700">
-                    We have 20,000 square meters of production workshop, 150 workers, and 3 automatic production lines.
-                    And the sales volume has been growing at a rate of 30% per year.
-                </p>
-            </div>
-            <div class="text-center">
-                <div class="w-24 h-px mx-auto mb-4 bg-red-500"></div>
-                <h3 class="text-xl font-bold mb-4">EXPERIENCE MATTERS</h3>
-                <p class="text-gray-700">
-                    We have a completely independent product development team, dozens of international certifications
-                    and testing certificates. We continue to be the market leader in China for product design, strength,
-                    safety, and customer service.
-                </p>
+
+            <!-- Right Section: Form -->
+            <div class="lg:w-[540px] bg-gray-100 p-8 relative mt-[-160px] shadow-lg">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6">Talk to Our Expert</h2>
+                <form action="<?= esc_url( admin_url( 'admin-post.php' ) ) ?>" method="POST" class="space-y-6">
+                    <input type="hidden" name="action" value="submit_contact_form">
+                    <input type="email" name="email" placeholder="Your Email"
+                           class="w-full border border-gray-300 p-4 rounded-md focus:outline-none focus:border-gray-500"
+                           required>
+                    <input type="text" name="phone" placeholder="Your Phone"
+                           class="w-full border border-gray-300 p-4 rounded-md focus:outline-none focus:border-gray-500"
+                           required>
+                    <input type="text" name="country" placeholder="Your Country"
+                           class="w-full border border-gray-300 p-4 rounded-md focus:outline-none focus:border-gray-500">
+                    <textarea name="message" rows="2" placeholder="Enter Your Message.."
+                              class="w-full border border-gray-300 p-4 rounded-md focus:outline-none focus:border-gray-500"
+                              required></textarea>
+                    <button type="submit"
+                            class="w-full bg-red-600 text-white py-4 rounded-md font-bold hover:bg-red-700 transition duration-300">
+                        SUBMIT MESSAGE
+                    </button>
+                </form>
             </div>
         </div>
     </section>
@@ -64,7 +86,7 @@
                     <div class="container mx-auto">
                         <p class="text-2xl font-bold text-left mt-6 mb-6 text-stone-400">DOORS</p>
                         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-			                <?php foreach ( DOORS_SYSTEMS as $item ): ?>
+							<?php foreach ( DOORS_SYSTEMS as $item ): ?>
                                 <a target="_blank" href="<?= get_category_link( get_cat_ID( $item['name'] ) ); ?>">
                                     <div class="bg-white p-4 shadow-md flex items-center space-x-4">
                                         <img src="<?= get_theme_file_uri( $item['nav_image'] ) ?>"
@@ -72,13 +94,13 @@
                                         <span class="text-lg font-semibold hover:text-red-500 transition duration-300"><?= $item['name'] ?></span>
                                     </div>
                                 </a>
-			                <?php endforeach; ?>
+							<?php endforeach; ?>
                         </div>
                     </div>
                     <div class="container mx-auto">
                         <p class="text-2xl font-bold text-left mt-6 mb-6 text-stone-400">MORE PRODUCTS</p>
                         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-			                <?php foreach ( MORE_PRODUCTS as $item ): ?>
+							<?php foreach ( MORE_PRODUCTS as $item ): ?>
                                 <a target="_blank" href="<?= get_category_link( get_cat_ID( $item['name'] ) ); ?>">
                                     <div class="bg-white p-4 shadow-md flex items-center space-x-4">
                                         <img src="<?= get_theme_file_uri( $item['nav_image'] ) ?>"
@@ -86,7 +108,7 @@
                                         <span class="text-lg font-semibold hover:text-red-500 transition duration-300"><?= $item['name'] ?></span>
                                     </div>
                                 </a>
-			                <?php endforeach; ?>
+							<?php endforeach; ?>
                         </div>
                     </div>
 
@@ -160,25 +182,25 @@
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 my-20">
                 <!-- Maximum Brightness -->
                 <div class="flex flex-col items-center">
-                    <img src="https://alucorpstorage02.blob.core.windows.net/cms/aluk/media/fra/aluminium-icons/aluk_icon_light_full-black-2.png"
+                    <img src="<?= get_theme_file_uri('/assets/images/aluk_icon_light_full-black-2.png') ?>"
                          alt="Maximum brightness" class="w-32 h-32 mb-4">
                     <p class="font-medium">Maximum brightness</p>
                 </div>
                 <!-- Durable & Recyclable -->
                 <div class="flex flex-col items-center">
-                    <img src="https://alucorpstorage02.blob.core.windows.net/cms/aluk/media/fra/aluminium-icons/aluk_icon_recyclability_full-black-2.png"
+                    <img src="<?= get_theme_file_uri('/assets/images/aluk_icon_recyclability_full-black-2.png') ?>"
                          alt="Durable & recyclable" class="w-32 h-32 mb-4">
                     <p class="font-medium">Durable & recyclable</p>
                 </div>
                 <!-- Enhanced Security -->
                 <div class="flex flex-col items-center">
-                    <img src="https://alucorpstorage02.blob.core.windows.net/cms/aluk/media/fra/aluminium-icons/aluk_icon_security_full-black-2.png"
+                    <img src="<?= get_theme_file_uri('/assets/images/aluk_icon_security_full-black-2.png') ?>"
                          alt="Enhanced security" class="w-32 h-32 mb-4">
                     <p class="font-medium">Enhanced security</p>
                 </div>
                 <!-- Easy to Maintain -->
                 <div class="flex flex-col items-center">
-                    <img src="https://alucorpstorage02.blob.core.windows.net/cms/aluk/media/fra/aluminium-icons/aluk_icon_cleaning_full-black-2.png"
+                    <img src="<?= get_theme_file_uri('/assets/images/aluk_icon_cleaning_full-black-2.png') ?>"
                          alt="Very easy to maintain" class="w-32 h-32 mb-4">
                     <p class="font-medium">Very easy to maintain</p>
                 </div>
@@ -224,6 +246,176 @@
             </div>
         </div>
     </section>
+    <section class="hidden md:block p-16 bg-white">
+        <div class="container mx-auto px-4 py-8">
+            <div class="flex flex-col md:flex-row items-center bg-white p-16">
+                <!-- Text Content -->
+                <div class="md:w-1/2 w-full md:pr-8">
+                    <h2 class="text-3xl font-bold mb-2">1. Tailor-Made Windows & Doors Solutions</h2>
+                    <p class="text-xl text-red-600 mb-4">Exquisite Craftsmanship</p>
+                    <p class="text-gray-700 mb-6">At Richocean, we specialize in crafting custom-made doors and windows
+                        with expert precision, ensuring top-quality results from design to
+                        delivery.</p>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-center"><span class="text-red-600 mr-2"><i
+                                        class="fas fa-check-circle"></i></span> Personalized design consultations
+                        </li>
+                        <li class="flex items-center"><span class="text-red-600 mr-2"><i
+                                        class="fas fa-check-circle"></i></span> 3D renderings and material selection
+                        </li>
+                        <li class="flex items-center"><span class="text-red-600 mr-2"><i
+                                        class="fas fa-check-circle"></i></span> Customized to space and style
+                            requirements
+                        </li>
+                        <li class="flex items-center"><span class="text-red-600 mr-2"><i
+                                        class="fas fa-check-circle"></i></span> Quality-controlled production ensuring
+                            high standards.
+                        </li>
+                    </ul>
+                    <a href="#" class="bg-red-600 text-white px-6 py-3 inline-block mt-1 hover:bg-red-700 transition">Contact
+                        Us</a>
+                </div>
+                <!-- Image -->
+                <div class="md:w-1/2 w-full mt-6 md:mt-0 flex justify-center">
+                    <img src="<?= get_theme_file_uri( '/assets/images/furniture-consult-design.jpg' ) ?>"
+                         alt="Furniture Design" class="rounded-lg shadow-md h-[350px]">
+                </div>
+            </div>
+            <div class="flex flex-col md:flex-row items-center bg-white p-16">
+                <!-- Text Content -->
+                <div class="md:w-1/2 w-full md:pr-8">
+                    <h2 class="text-3xl font-bold mb-2">2.Exceptional Door and Window
+                        Manufacturing</h2>
+                    <p class="text-xl text-red-600 mb-4">Timeless Craftsmanship</p>
+                    <p class="text-gray-700 mb-6">We provide professional, tailor-made door and window solutions
+                        designed to enhance functionality and elevate the customer experience.</p>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-center"><span class="text-red-600 mr-2"><i
+                                        class="fas fa-check-circle"></i></span> Designed for the perfect blend of
+                            functionality and aesthetics in modern
+                            doors and windows
+                        </li>
+                        <li class="flex items-center"><span class="text-red-600 mr-2"><i
+                                        class="fas fa-check-circle"></i></span> Customized OEM and ODM solutions for
+                            clients worldwide
+                        </li>
+                        <li class="flex items-center"><span class="text-red-600 mr-2"><i
+                                        class="fas fa-check-circle"></i></span> Design and innovation through
+                            collaborative planning
+                        </li>
+                        <li class="flex items-center"><span class="text-red-600 mr-2"><i
+                                        class="fas fa-check-circle"></i></span> Precision cutting and hand assembly for
+                            long-lasting durability
+                        </li>
+                        <li class="flex items-center"><span class="text-red-600 mr-2"><i
+                                        class="fas fa-check-circle"></i></span> Meticulous craftsmanship for beauty and
+                            resilience
+                        </li>
+                    </ul>
+                    <a href="#" class="bg-red-600 text-white px-6 py-3 inline-block mt-1 hover:bg-red-700 transition">Contact
+                        Us</a>
+                </div>
+                <!-- Image -->
+                <div class="md:w-1/2 w-full mt-6 md:mt-0 flex justify-center">
+                    <img src="<?= get_theme_file_uri( '/assets/images/Exceptional-Craftsmanship-for-Hospitality-Spaces-04.jpg' ) ?>"
+                         alt="Furniture Design" class="rounded-lg shadow-md h-[350px]">
+                </div>
+            </div>
+            <div class="flex flex-col md:flex-row items-center bg-white p-16">
+                <!-- Text Content -->
+                <div class="md:w-1/2 w-full md:pr-8">
+                    <h2 class="text-3xl font-bold mb-2">3.Bulk Door and Window Orders</h2>
+                    <p class="text-xl text-red-600 mb-4">Efficient Large-Scale Procurement</p>
+                    <p class="text-gray-700 mb-6">Our streamlined bulk procurement process simplifies your door and
+                        window orders. We deliver high-quality, coordinated products on time
+                        and within budget at competitive prices, making us an ideal choice for
+                        multi-site businesses or large facilities.</p>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-center"><span class="text-red-600 mr-2"><i
+                                        class="fas fa-check-circle"></i></span> Competitive bulk pricing
+                        </li>
+                        <li class="flex items-center"><span class="text-red-600 mr-2"><i
+                                        class="fas fa-check-circle"></i></span> Timely and reliable multi-location
+                            delivery
+                        </li>
+                        <li class="flex items-center"><span class="text-red-600 mr-2"><i
+                                        class="fas fa-check-circle"></i></span> Dedicated customer management
+                        </li>
+                    </ul>
+                    <a href="#" class="bg-red-600 text-white px-6 py-3 inline-block mt-1 hover:bg-red-700 transition">Contact
+                        Us</a>
+                </div>
+                <!-- Image -->
+                <div class="md:w-1/2 w-full mt-6 md:mt-0 flex justify-center">
+                    <img src="<?= get_theme_file_uri( '/assets/images/warehouse.jpg' ) ?>" alt="Furniture Design"
+                         class="rounded-lg shadow-md">
+                </div>
+            </div>
+            <div class="flex flex-col md:flex-row items-center bg-white p-16">
+                <!-- Text Content -->
+                <div class="md:w-1/2 w-full md:pr-8">
+                    <h2 class="text-3xl font-bold mb-2">4.Global Shipping and Logistics</h2>
+                    <p class="text-xl text-red-600 mb-4">Worldwide Delivery</p>
+                    <p class="text-gray-700 mb-6">Expand your global operations with our efficient shipping solutions.
+                        Our
+                        logistics team ensures timely and safe delivery of furniture, handling all
+                        customs and import processes seamlessly, no matter your business
+                        location.</p>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-center"><span class="text-red-600 mr-2"><i
+                                        class="fas fa-check-circle"></i></span> Detailed logistics and shipping planning
+                        </li>
+                        <li class="flex items-center"><span class="text-red-600 mr-2"><i
+                                        class="fas fa-check-circle"></i></span> Customs documentation assistance
+                        </li>
+                        <li class="flex items-center"><span class="text-red-600 mr-2"><i
+                                        class="fas fa-check-circle"></i></span> Customized to space and style
+                            requirements
+                        </li>
+                        <li class="flex items-center"><span class="text-red-600 mr-2"><i
+                                        class="fas fa-check-circle"></i></span> Real-time shipping updates
+                        </li>
+                    </ul>
+                    <a href="#" class="bg-red-600 text-white px-6 py-3 inline-block mt-1 hover:bg-red-700 transition">Contact
+                        Us</a>
+                </div>
+                <!-- Image -->
+                <div class="md:w-1/2 w-full mt-6 md:mt-0 flex justify-center">
+                    <img src="<?= get_theme_file_uri( '/assets/images/Global-Logistics-for-Furniture-Delivery-01.jpg' ) ?>"
+                         alt="Furniture Design" class="rounded-lg shadow-md">
+                </div>
+            </div>
+            <div class="flex flex-col md:flex-row items-center bg-white p-16">
+                <!-- Text Content -->
+                <div class="md:w-1/2 w-full md:pr-8">
+                    <h2 class="text-3xl font-bold mb-2">5.After Sales Support</h2>
+                    <p class="text-xl text-red-600 mb-4">Dedicated customer service</p>
+                    <p class="text-gray-700 mb-6">Our after-sales support ensures that your windows and doors remain
+                        high quality and functional, and helps you resolve any issues after your
+                        purchase.</p>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-center"><span class="text-red-600 mr-2"><i
+                                        class="fas fa-check-circle"></i></span> Warranty covers repair or replacement.
+                        </li>
+                        <li class="flex items-center"><span class="text-red-600 mr-2"><i
+                                        class="fas fa-check-circle"></i></span> Maintenance advice.
+                        </li>
+                        <li class="flex items-center"><span class="text-red-600 mr-2"><i
+                                        class="fas fa-check-circle"></i></span> Round-the-clock customer service.
+                        </li>
+                    </ul>
+                    <a href="#" class="bg-red-600 text-white px-6 py-3 inline-block mt-1 hover:bg-red-700 transition">Contact
+                        Us</a>
+                </div>
+                <!-- Image -->
+                <div class="md:w-1/2 w-full mt-6 md:mt-0 flex justify-center">
+                    <img src="<?= get_theme_file_uri( '/assets/images/customer-support-for-furniture.jpg' ) ?>"
+                         alt="Furniture Design" class="rounded-lg shadow-md">
+                </div>
+            </div>
+        </div>
+
+    </section>
     <section class="container mx-auto p-12 lg:flex lg:items-center lg:justify-between">
         <div class="lg:w-1/2">
             <h2 class="text-3xl lg:text-4xl font-bold mb-4">Customized for you</h2>
@@ -252,7 +444,6 @@
                 colour selector guide to help you decide.
             </p>
         </div>
-
     </section>
     <section class="container mx-auto p-16 lg:flex lg:items-center lg:justify-between">
         <div class="lg:w-1/2">
@@ -365,19 +556,301 @@
 
         </div>
     </section>
+    <section class="hidden md:block p-16 bg-white">
+        <h1 class="text-4xl font-bold text-gray-800 mb-6 text-center">Tailored Services for Your Business Needs</h1>
+        <h2 class="text-xl font-semibold text-gray-500 mb-2 text-center">Empowering Your Enterprise with RICHOCEAN s Expertise</h2>
+        <div class="container mx-auto p-4">
+            <div class="flex flex-col md:flex-row items-center bg-white px-16 py-8 gap-12">
+                <!-- Text Content -->
+                <div class="md:w-1/3 w-full flex px-6 py-12 shadow-lg">
+                    <div class="md:w-1/4">
+                        <img src="<?= get_theme_file_uri('/assets/images/nav/nav_tb_02.png') ?>" alt="Sliding Windows" class="w-16 h-16 mx-auto">
+                    </div>
+                    <div class="md:w-3/4">
+                        <h3 class="text-3xl font-bold mb-4">Customized Product Design</h3>
+                        <p class="text-gray-700 mb-6 leading-8">We offer a wide range of customization
+                            options to meet the unique needs of different
+                            clients, including size, style, color, and
+                            functionality. This helps clients attract a
+                            targeted consumer market and enhance their
+                            competitive edge.</p>
+                        <a href="#"
+                           class="bg-red-600 text-white px-6 py-3 inline-block mt-1 hover:bg-red-700 transition">Contact
+                            Us</a></div>
+                </div>
+                <div class="md:w-1/3 w-full flex px-6 py-12 shadow-lg">
+                    <div class="md:w-1/4">
+                        <img src="<?= get_theme_file_uri('/assets/images/nav/nav_tb_02.png') ?>" alt="Sliding Windows" class="w-16 h-16 mx-auto">
+                    </div>
+                    <div class="md:w-3/4">
+                        <h3 class="text-3xl font-bold mb-4">High-Quality Certifications</h3>
+                        <p class="text-gray-700 mb-6 leading-8">Our doors and windows are certified by
+                            multiple international standards, including CE,
+                            AS2047, NFRC, and CSA, ensuring top-quality
+                            and reliability. Clients can leverage these
+                            certifications to demonstrate high standards
+                            and safety to end consumers, boosting market
+                            trust.</p>
+                        <a href="#"
+                           class="bg-red-600 text-white px-6 py-3 inline-block mt-1 hover:bg-red-700 transition">Contact
+                            Us</a></div>
+                </div>
+                <div class="md:w-1/3 w-full flex px-6 py-12 shadow-lg">
+                    <div class="md:w-1/4">
+                        <img src="<?= get_theme_file_uri('/assets/images/nav/nav_tb_02.png') ?>" alt="Sliding Windows" class="w-16 h-16 mx-auto">
+                    </div>
+                    <div class="md:w-3/4">
+                        <h3 class="text-3xl font-bold mb-4">Energy-Efficient and EcoFriendly Features</h3>
+                        <p class="text-gray-700 mb-6 leading-8">We use advanced energy-saving technologies
+                            and materials, such as thermal break
+                            aluminum and double-glazed insulated glass,
+                            to promote energy efficiency and
+                            sustainability. This helps clients reduce energy
+                            costs while complying with increasingly
+                            stringent environmental regulations.</p>
+                        <a href="#"
+                           class="bg-red-600 text-white px-6 py-3 inline-block mt-1 hover:bg-red-700 transition">Contact
+                            Us</a></div>
+                </div>
+
+            </div>
+            <div class="flex flex-col md:flex-row items-center bg-white px-16 pb-16 gap-12">
+                <!-- Text Content -->
+                <div class="md:w-1/3 w-full flex px-6 py-12 shadow-lg">
+                    <div class="md:w-1/4">
+                        <img src="<?= get_theme_file_uri('/assets/images/nav/nav_tb_02.png') ?>" alt="Sliding Windows" class="w-16 h-16 mx-auto">
+                    </div>
+                    <div class="md:w-3/4">
+                        <h3 class="text-3xl font-bold mb-4">Fast Delivery and Efficient
+                            Production</h3>
+                        <p class="text-gray-700 mb-6 leading-8">With modern production equipment and a
+                            well-managed supply chain, we can offer fast
+                            delivery and large-scale manufacturing to
+                            meet market demand on time, helping clients
+                            seize market opportunities quickly.</p>
+                        <a href="#"
+                           class="bg-red-600 text-white px-6 py-3 inline-block mt-1 hover:bg-red-700 transition">Contact
+                            Us</a></div>
+                </div>
+                <div class="md:w-1/3 w-full flex px-6 py-12 shadow-lg">
+                    <div class="md:w-1/4">
+                        <img src="<?= get_theme_file_uri('/assets/images/nav/nav_tb_02.png') ?>" alt="Sliding Windows" class="w-16 h-16 mx-auto">
+                    </div>
+                    <div class="md:w-3/4">
+                        <h3 class="text-3xl font-bold mb-4 text-[24px]">Professional After-Sales Support</h3>
+                        <p class="text-gray-700 mb-6 leading-8">We provide comprehensive technical support
+                            and after-sales services, including installation
+                            guidance, product warranties, and quality
+                            tracking. Our worry-free after-sales services
+                            help strengthen customer loyalty and improve
+                            brand reputation.</p>
+                        <a href="#"
+                           class="bg-red-600 text-white px-6 py-3 inline-block mt-1 hover:bg-red-700 transition">Contact
+                            Us</a></div>
+                </div>
+                <div class="md:w-1/3 w-full flex px-6 py-12 shadow-lg">
+                    <div class="md:w-1/4">
+                        <img src="<?= get_theme_file_uri('/assets/images/nav/nav_tb_02.png') ?>" alt="Sliding Windows" class="w-16 h-16 mx-auto">
+                    </div>
+                    <div class="md:w-3/4">
+                        <h3 class="text-3xl font-bold mb-4">Competitive Pricing and HighQuality Raw Materials</h3>
+                        <p class="text-gray-700 mb-6 leading-8">As a manufacturer, we source raw materials
+                            directly and optimize production processes to
+                            ensure competitive pricing while maintaining
+                            high product quality, helping clients achieve
+                            higher profit margins in the market.</p>
+                        <a href="#"
+                           class="bg-red-600 text-white px-6 py-3 inline-block mt-1 hover:bg-red-700 transition">Contact
+                            Us</a></div>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+    <section class="hidden md:block p-16 bg-white elementor elementor-9698">
+        <h1 class="text-4xl font-bold text-gray-800 mb-6 text-center">Simplified Process: RICHOCEAN's Workflow</h1>
+        <h2 class="text-xl font-semibold text-gray-500 mb-2 text-center">First, we conduct a thorough consultation to fully understand your requirements, ensuring our approach aligns perfectly with your business
+            goals.</h2>
+        <div class="container mx-auto p-4">
+            <section class="elementor-section elementor-inner-section elementor-element elementor-element-53023186 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="53023186" data-element_type="section">
+                <div class="elementor-container elementor-column-gap-no">
+                    <div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-132679fb" data-id="132679fb" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+                        <div class="elementor-widget-wrap elementor-element-populated">
+                            <div class="elementor-background-overlay"></div>
+                            <div class="elementor-element elementor-element-3b3e5fea elementor-absolute elementor-widget elementor-widget-image" data-id="3b3e5fea" data-element_type="widget" data-settings="{&quot;_position&quot;:&quot;absolute&quot;}" data-widget_type="image.default">
+                                <div class="elementor-widget-container">
+                                    <img loading="lazy" decoding="async" width="209" height="209" src="<?= get_theme_file_uri('/assets/images/1-1.png') ?>" class="attachment-full size-full wp-image-9657" alt="" sizes="(max-width: 209px) 100vw, 209px">													</div>
+                            </div>
+                            <div class="elementor-element elementor-element-536c4b65 elementor-absolute elementor-hidden-tablet elementor-hidden-phone elementor-widget elementor-widget-image" data-id="536c4b65" data-element_type="widget" data-settings="{&quot;_position&quot;:&quot;absolute&quot;}" data-widget_type="image.default">
+                                <div class="elementor-widget-container">
+                                    <img loading="lazy" decoding="async" width="675" height="90" src="<?= get_theme_file_uri('/assets/images/Arrow.png') ?>" class="attachment-full size-full wp-image-9658" alt="" sizes="(max-width: 675px) 100vw, 675px">													</div>
+                            </div>
+                            <div class="elementor-element elementor-element-383d75e2 ekit-equal-height-disable elementor-widget elementor-widget-elementskit-icon-box" data-id="383d75e2" data-element_type="widget" data-widget_type="elementskit-icon-box.default">
+                                <div class="elementor-widget-container">
+                                    <div class="ekit-wid-con">        <!-- link opening -->
+                                        <!-- end link opening -->
+
+                                        <div class="elementskit-infobox text-center text- icon-top-align elementor-animation-   ">
+                                            <div class="elementskit-box-header elementor-animation-">
+                                                <div class="elementskit-info-box-icon  ">
+                                                    <i aria-hidden="true" class="elementkit-infobox-icon icon icon-Consultancy"></i>
+                                                </div>
+                                            </div>
+                                            <div class="box-body">
+                                                <h3 class="elementskit-info-box-title">
+                                                    Initial Consultation                </h3>
+                                                <p>At the beginning of the project, we will
+                                                    engage in an in-depth discussion to
+                                                    understand your needs, preferences, and
+                                                    project scope, laying the foundation for a
+                                                    tailor-made solution.
+                                                </p>
+                                            </div>
+
+
+                                        </div>
+                                    </div>		</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-2449ad4" data-id="2449ad4" data-element_type="column">
+                        <div class="elementor-widget-wrap elementor-element-populated">
+                            <div class="elementor-element elementor-element-1dd33082 elementor-absolute elementor-hidden-tablet elementor-hidden-phone elementor-widget elementor-widget-image" data-id="1dd33082" data-element_type="widget" data-settings="{&quot;_position&quot;:&quot;absolute&quot;}" data-widget_type="image.default">
+                                <div class="elementor-widget-container">
+                                    <img loading="lazy" decoding="async" width="675" height="90" src="<?= get_theme_file_uri('/assets/images/Arrow.png') ?>" class="attachment-full size-full wp-image-9658" alt="" sizes="(max-width: 675px) 100vw, 675px">													</div>
+                            </div>
+                            <div class="elementor-element elementor-element-1569d0ae ekit-equal-height-disable elementor-widget elementor-widget-elementskit-icon-box" data-id="1569d0ae" data-element_type="widget" data-widget_type="elementskit-icon-box.default">
+                                <div class="elementor-widget-container">
+                                    <div class="ekit-wid-con">        <!-- link opening -->
+                                        <!-- end link opening -->
+
+                                        <div class="elementskit-infobox text-center text- icon-top-align elementor-animation-   ">
+                                            <div class="elementskit-box-header elementor-animation-">
+                                                <div class="elementskit-info-box-icon  ">
+                                                    <i aria-hidden="true" class="elementkit-infobox-icon icon icon-design"></i>
+                                                </div>
+                                            </div>
+                                            <div class="box-body">
+                                                <h3 class="elementskit-info-box-title">Design and Customization</h3>
+                                                <p>Our highly skilled design team will bring
+                                                    your vision to life, offering 3D
+                                                    visualizations and a wide range of
+                                                    customization options to meet and exceed
+                                                    your expectations.</p>
+                                            </div>
+
+
+                                        </div>
+                                    </div>		</div>
+                            </div>
+                            <div class="elementor-element elementor-element-53bd7c13 elementor-absolute elementor-widget elementor-widget-image" data-id="53bd7c13" data-element_type="widget" data-settings="{&quot;_position&quot;:&quot;absolute&quot;}" data-widget_type="image.default">
+                                <div class="elementor-widget-container">
+                                    <img loading="lazy" decoding="async" width="209" height="209" src="<?= get_theme_file_uri('/assets/images/2-1.png') ?>" class="attachment-full size-full wp-image-9660" alt="" sizes="(max-width: 209px) 100vw, 209px">													</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-2c7190c9" data-id="2c7190c9" data-element_type="column">
+                        <div class="elementor-widget-wrap elementor-element-populated">
+                            <div class="elementor-element elementor-element-7fbf8491 ekit-equal-height-disable elementor-widget elementor-widget-elementskit-icon-box" data-id="7fbf8491" data-element_type="widget" data-widget_type="elementskit-icon-box.default">
+                                <div class="elementor-widget-container">
+                                    <div class="ekit-wid-con">        <!-- link opening -->
+                                        <!-- end link opening -->
+
+                                        <div class="elementskit-infobox text-center text- icon-top-align elementor-animation-   ">
+                                            <div class="elementskit-box-header elementor-animation-">
+                                                <div class="elementskit-info-box-icon  ">
+                                                    <i aria-hidden="true" class="elementkit-infobox-icon icon icon-factory"></i>
+                                                </div>
+                                            </div>
+                                            <div class="box-body">
+                                                <h3 class="elementskit-info-box-title">Manufacturing and Quality
+                                                    Assurance</h3>
+                                                <p>We carefully craft doors and windows
+                                                    using premium materials, with each
+                                                    product undergoing rigorous quality checks
+                                                    to ensure it meets our high standards.</p>
+                                            </div>
+
+
+                                        </div>
+                                    </div>		</div>
+                            </div>
+                            <div class="elementor-element elementor-element-517d3ef5 elementor-absolute elementor-widget elementor-widget-image" data-id="517d3ef5" data-element_type="widget" data-settings="{&quot;_position&quot;:&quot;absolute&quot;}" data-widget_type="image.default">
+                                <div class="elementor-widget-container">
+                                    <img loading="lazy" decoding="async" width="209" height="209" src="<?= get_theme_file_uri('/assets/images/3-1.png') ?>" class="attachment-full size-full wp-image-9662" alt=""  sizes="(max-width: 209px) 100vw, 209px">													</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-67e61b92" data-id="67e61b92" data-element_type="column">
+                        <div class="elementor-widget-wrap elementor-element-populated">
+                            <div class="elementor-element elementor-element-2b1fcf3b ekit-equal-height-disable elementor-widget elementor-widget-elementskit-icon-box" data-id="2b1fcf3b" data-element_type="widget" data-widget_type="elementskit-icon-box.default">
+                                <div class="elementor-widget-container">
+                                    <div class="ekit-wid-con">        <!-- link opening -->
+                                        <!-- end link opening -->
+
+                                        <div class="elementskit-infobox text-center text- icon-top-align elementor-animation-   ">
+                                            <div class="elementskit-box-header elementor-animation-">
+                                                <div class="elementskit-info-box-icon  ">
+                                                    <i aria-hidden="true" class="elementkit-infobox-icon icon icon-settings1"></i>
+                                                </div>
+                                            </div>
+                                            <div class="box-body">
+                                                <h3 class="elementskit-info-box-title">Logistics and After-Sales
+                                                    Service</h3>
+                                                <p>After production, we arrange international
+                                                    logistics for timely delivery and provide
+                                                    comprehensive after-sales service to
+                                                    ensure your satisfaction and the success of
+                                                    your project.
+                                                </p>
+                                            </div>
+
+
+                                        </div>
+                                    </div>		</div>
+                            </div>
+                            <div class="elementor-element elementor-element-5c02a733 elementor-absolute elementor-hidden-tablet elementor-hidden-phone elementor-widget elementor-widget-image" data-id="5c02a733" data-element_type="widget" data-settings="{&quot;_position&quot;:&quot;absolute&quot;}" data-widget_type="image.default">
+                                <div class="elementor-widget-container">
+                                    <img loading="lazy" decoding="async" width="675" height="90" src="<?= get_theme_file_uri('/assets/images/Arrow.png') ?>" class="attachment-full size-full wp-image-9658" alt="" sizes="(max-width: 675px) 100vw, 675px">													</div>
+                            </div>
+                            <div class="elementor-element elementor-element-47d401c elementor-absolute elementor-widget elementor-widget-image" data-id="47d401c" data-element_type="widget" data-settings="{&quot;_position&quot;:&quot;absolute&quot;}" data-widget_type="image.default">
+                                <div class="elementor-widget-container">
+                                    <img loading="lazy" decoding="async" width="209" height="209" src="<?= get_theme_file_uri('/assets/images/2-1-1-1.png') ?>" class="attachment-full size-full wp-image-9664" alt="" sizes="(max-width: 209px) 100vw, 209px">													</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+
+    </section>
+
+
+
     <section class="p-16">
         <div class="container mx-auto text-center">
             <h2 class="text-4xl font-bold mb-4">What Projects Can We Take?</h2>
             <p class="text-gray-500 mb-8">Testing in accordance to NFRC / AS2047 / ISO9001 / CE</p>
             <div class="flex flex-wrap justify-center space-x-4 mb-12">
-                <span class="font-medium">&#10003; High-end Villa</span>
-                <span class="font-medium">&#10003; Private Homes</span>
-                <span class="font-medium">&#10003; Apartments</span>
-                <span class="font-medium">&#10003; Multi-family</span>
-                <span class="font-medium">&#10003; Row Houses</span>
-                <span class="font-medium">&#10003; Hotels</span>
-                <span class="font-medium">&#10003; Schools</span>
-                <span class="font-medium">&#10003; Offices</span>
+                <div class="font-medium"><span class="text-red-600 mr-2"><i
+                                class="fas fa-check-circle"></i></span> High-end Villa</div>
+                <div class="font-medium"><span class="text-red-600 mr-2"><i
+                                class="fas fa-check-circle"></i></span> Private Homes</div>
+                <div class="font-medium"><span class="text-red-600 mr-2"><i
+                                class="fas fa-check-circle"></i></span> Apartments</div>
+                <div class="font-medium"><span class="text-red-600 mr-2"><i
+                                class="fas fa-check-circle"></i></span> Multi-family</div>
+                <div class="font-medium"><span class="text-red-600 mr-2"><i
+                                class="fas fa-check-circle"></i></span> Row Houses</div>
+                <div class="font-medium"><span class="text-red-600 mr-2"><i
+                                class="fas fa-check-circle"></i></span> Hotels</div>
+                <div class="font-medium"><span class="text-red-600 mr-2"><i
+                                class="fas fa-check-circle"></i></span> Schools</div>
+                <div class="font-medium"><span class="text-red-600 mr-2"><i
+                                class="fas fa-check-circle"></i></span> Offices</div>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Project Card 1 -->

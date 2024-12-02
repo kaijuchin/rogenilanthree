@@ -406,3 +406,49 @@ function show_contact_meta_box( $post ) {
 }
 
 add_action( 'add_meta_boxes', 'contact_custom_meta_box' );
+
+function autoload_css_assets($css_path = '') {
+	// 获取 CSS 和 JS 文件的路径
+	$css_dir = plugin_dir_path(__FILE__) . $css_path;
+
+	// 获取文件夹中的所有 CSS 文件
+	foreach (glob($css_dir . '*.css') as $css_file) {
+		$file_name = basename($css_file); // 获取文件名
+		wp_enqueue_style(
+			'custom-css-' . $file_name, // 唯一的 handle 名称
+			plugin_dir_url(__FILE__) . $css_path . $file_name, // 文件 URL
+			array(), // 依赖项
+			filemtime($css_file) // 使用文件的修改时间作为版本号，方便缓存控制
+		);
+	}
+
+}
+
+function autoload_js_assets($js_path = '') {
+	// 获取JS 文件的路径
+	$js_dir = plugin_dir_path(__FILE__) . $js_path;
+
+	// 获取文件夹中的所有 JS 文件
+	foreach (glob($js_dir . '*.js') as $js_file) {
+		$file_name = basename($js_file); // 获取文件名
+		wp_enqueue_script(
+			'custom-js-' . $file_name, // 唯一的 handle 名称
+			plugin_dir_url(__FILE__) . $js_path . $file_name, // 文件 URL
+			array('jquery'), // 依赖项，可根据需要调整
+			filemtime($js_file), // 使用文件的修改时间作为版本号
+			true // 是否放在页脚加载
+		);
+	}
+}
+
+function load_custom_assets(): void {
+	autoload_css_assets('elementor/assets/css/');
+	autoload_css_assets('elementor/assets/css/posts/');
+	autoload_css_assets('elementor/assets/css/conditionals');
+//	autoload_js_assets('elementor/assets/js/');
+	autoload_css_assets('elementskit-lite/modules/elementskit-icon-pack/assets/css/');
+	autoload_css_assets('elementskit-lite/widgets/init/assets/css/');
+//	autoload_js_assets('elementskit-lite/libs/framework/assets/js/');
+//	autoload_js_assets('elementskit-lite/widgets/init/assets/js/');
+}
+add_action('wp_enqueue_scripts', 'load_custom_assets');
