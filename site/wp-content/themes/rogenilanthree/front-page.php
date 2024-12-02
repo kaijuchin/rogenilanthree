@@ -1328,7 +1328,7 @@
             </div>
         </div>
     </section>
-<section class="elementor elementor-9277 ">
+<section class="elementor elementor-9277 elementor-kit-34">
     <div class="elementor-section elementor-top-section elementor-element elementor-element-eba665b elementor-section-content-middle elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="eba665b" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
         <div class="elementor-container elementor-column-gap-no">
             <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-66e9ee1a" data-id="66e9ee1a" data-element_type="column">
