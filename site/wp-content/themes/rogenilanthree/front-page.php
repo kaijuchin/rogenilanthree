@@ -25,18 +25,18 @@
                     have been committed to craftsmanship and delivering premium furniture that enhances any space.</p>
                 <div class="flex justify-center lg:justify-start gap-4">
                     <!-- Images -->
-<!--                    <img class="h-24 w-auto"-->
-<!--                         src="https://bokefurniture.com/wp-content/uploads/2024/06/Office-Workstation-removebg-preview.png"-->
-<!--                         alt="Office Workstation">-->
-<!--                    <img class="h-24 w-auto"-->
-<!--                         src="https://bokefurniture.com/wp-content/uploads/2024/10/Hotel_Bedroom-1.png"-->
-<!--                         alt="Hotel Bedroom">-->
-<!--                    <img class="h-24 w-auto"-->
-<!--                         src="https://bokefurniture.com/wp-content/uploads/2024/05/Luxury_Dining_Collections-removebg-preview.png"-->
-<!--                         alt="Luxury Dining Collections">-->
-<!--                    <img class="h-24 w-auto"-->
-<!--                         src="https://bokefurniture.com/wp-content/uploads/2024/05/Modular-Lounge-Furniture.png"-->
-<!--                         alt="Modular Lounge Furniture">-->
+                    <!--                    <img class="h-24 w-auto"-->
+                    <!--                         src="https://bokefurniture.com/wp-content/uploads/2024/06/Office-Workstation-removebg-preview.png"-->
+                    <!--                         alt="Office Workstation">-->
+                    <!--                    <img class="h-24 w-auto"-->
+                    <!--                         src="https://bokefurniture.com/wp-content/uploads/2024/10/Hotel_Bedroom-1.png"-->
+                    <!--                         alt="Hotel Bedroom">-->
+                    <!--                    <img class="h-24 w-auto"-->
+                    <!--                         src="https://bokefurniture.com/wp-content/uploads/2024/05/Luxury_Dining_Collections-removebg-preview.png"-->
+                    <!--                         alt="Luxury Dining Collections">-->
+                    <!--                    <img class="h-24 w-auto"-->
+                    <!--                         src="https://bokefurniture.com/wp-content/uploads/2024/05/Modular-Lounge-Furniture.png"-->
+                    <!--                         alt="Modular Lounge Furniture">-->
                 </div>
             </div>
 
@@ -182,25 +182,25 @@
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 my-20">
                 <!-- Maximum Brightness -->
                 <div class="flex flex-col items-center">
-                    <img src="<?= get_theme_file_uri('/assets/images/aluk_icon_light_full-black-2.png') ?>"
+                    <img src="<?= get_theme_file_uri( '/assets/images/aluk_icon_light_full-black-2.png' ) ?>"
                          alt="Maximum brightness" class="w-32 h-32 mb-4">
                     <p class="font-medium">Maximum brightness</p>
                 </div>
                 <!-- Durable & Recyclable -->
                 <div class="flex flex-col items-center">
-                    <img src="<?= get_theme_file_uri('/assets/images/aluk_icon_recyclability_full-black-2.png') ?>"
+                    <img src="<?= get_theme_file_uri( '/assets/images/aluk_icon_recyclability_full-black-2.png' ) ?>"
                          alt="Durable & recyclable" class="w-32 h-32 mb-4">
                     <p class="font-medium">Durable & recyclable</p>
                 </div>
                 <!-- Enhanced Security -->
                 <div class="flex flex-col items-center">
-                    <img src="<?= get_theme_file_uri('/assets/images/aluk_icon_security_full-black-2.png') ?>"
+                    <img src="<?= get_theme_file_uri( '/assets/images/aluk_icon_security_full-black-2.png' ) ?>"
                          alt="Enhanced security" class="w-32 h-32 mb-4">
                     <p class="font-medium">Enhanced security</p>
                 </div>
                 <!-- Easy to Maintain -->
                 <div class="flex flex-col items-center">
-                    <img src="<?= get_theme_file_uri('/assets/images/aluk_icon_cleaning_full-black-2.png') ?>"
+                    <img src="<?= get_theme_file_uri( '/assets/images/aluk_icon_cleaning_full-black-2.png' ) ?>"
                          alt="Very easy to maintain" class="w-32 h-32 mb-4">
                     <p class="font-medium">Very easy to maintain</p>
                 </div>
@@ -272,7 +272,7 @@
                             high standards.
                         </li>
                     </ul>
-                    <a href="#" class="bg-red-600 text-white px-6 py-3 inline-block mt-1 hover:bg-red-700 transition">Contact
+                    <a href="<?= site_url('contact-us') ?>" class="bg-red-600 text-white px-6 py-3 inline-block mt-1 hover:bg-red-700 transition">Contact
                         Us</a>
                 </div>
                 <!-- Image -->
@@ -312,7 +312,7 @@
                             resilience
                         </li>
                     </ul>
-                    <a href="#" class="bg-red-600 text-white px-6 py-3 inline-block mt-1 hover:bg-red-700 transition">Contact
+                    <a href="<?= site_url('contact-us') ?>" class="bg-red-600 text-white px-6 py-3 inline-block mt-1 hover:bg-red-700 transition">Contact
                         Us</a>
                 </div>
                 <!-- Image -->
@@ -342,7 +342,7 @@
                                         class="fas fa-check-circle"></i></span> Dedicated customer management
                         </li>
                     </ul>
-                    <a href="#" class="bg-red-600 text-white px-6 py-3 inline-block mt-1 hover:bg-red-700 transition">Contact
+                    <a href="<?= site_url('contact-us') ?>" class="bg-red-600 text-white px-6 py-3 inline-block mt-1 hover:bg-red-700 transition">Contact
                         Us</a>
                 </div>
                 <!-- Image -->
@@ -376,7 +376,7 @@
                                         class="fas fa-check-circle"></i></span> Real-time shipping updates
                         </li>
                     </ul>
-                    <a href="#" class="bg-red-600 text-white px-6 py-3 inline-block mt-1 hover:bg-red-700 transition">Contact
+                    <a href="<?= site_url('contact-us') ?>" class="bg-red-600 text-white px-6 py-3 inline-block mt-1 hover:bg-red-700 transition">Contact
                         Us</a>
                 </div>
                 <!-- Image -->
@@ -404,7 +404,7 @@
                                         class="fas fa-check-circle"></i></span> Round-the-clock customer service.
                         </li>
                     </ul>
-                    <a href="#" class="bg-red-600 text-white px-6 py-3 inline-block mt-1 hover:bg-red-700 transition">Contact
+                    <a href="<?= site_url('contact-us') ?>" class="bg-red-600 text-white px-6 py-3 inline-block mt-1 hover:bg-red-700 transition">Contact
                         Us</a>
                 </div>
                 <!-- Image -->
@@ -558,13 +558,15 @@
     </section>
     <section class="hidden md:block p-16 bg-white">
         <h1 class="text-4xl font-bold text-gray-800 mb-6 text-center">Tailored Services for Your Business Needs</h1>
-        <h2 class="text-xl font-semibold text-gray-500 mb-2 text-center">Empowering Your Enterprise with RICHOCEAN s Expertise</h2>
+        <h2 class="text-xl font-semibold text-gray-500 mb-2 text-center">Empowering Your Enterprise with RICHOCEAN s
+            Expertise</h2>
         <div class="container mx-auto p-4">
             <div class="flex flex-col md:flex-row items-center bg-white px-16 py-8 gap-12">
                 <!-- Text Content -->
                 <div class="md:w-1/3 w-full flex px-6 py-12 shadow-lg">
                     <div class="md:w-1/4">
-                        <img src="<?= get_theme_file_uri('/assets/images/nav/nav_tb_02.png') ?>" alt="Sliding Windows" class="w-16 h-16 mx-auto">
+                        <img src="<?= get_theme_file_uri( '/assets/images/nav/nav_tb_02.png' ) ?>" alt="Sliding Windows"
+                             class="w-16 h-16 mx-auto">
                     </div>
                     <div class="md:w-3/4">
                         <h3 class="text-3xl font-bold mb-4">Customized Product Design</h3>
@@ -574,13 +576,14 @@
                             functionality. This helps clients attract a
                             targeted consumer market and enhance their
                             competitive edge.</p>
-                        <a href="#"
+                        <a href="<?= site_url('contact-us') ?>"
                            class="bg-red-600 text-white px-6 py-3 inline-block mt-1 hover:bg-red-700 transition">Contact
                             Us</a></div>
                 </div>
                 <div class="md:w-1/3 w-full flex px-6 py-12 shadow-lg">
                     <div class="md:w-1/4">
-                        <img src="<?= get_theme_file_uri('/assets/images/nav/nav_tb_02.png') ?>" alt="Sliding Windows" class="w-16 h-16 mx-auto">
+                        <img src="<?= get_theme_file_uri( '/assets/images/nav/nav_tb_02.png' ) ?>" alt="Sliding Windows"
+                             class="w-16 h-16 mx-auto">
                     </div>
                     <div class="md:w-3/4">
                         <h3 class="text-3xl font-bold mb-4">High-Quality Certifications</h3>
@@ -591,13 +594,14 @@
                             certifications to demonstrate high standards
                             and safety to end consumers, boosting market
                             trust.</p>
-                        <a href="#"
+                        <a href="<?= site_url('contact-us') ?>"
                            class="bg-red-600 text-white px-6 py-3 inline-block mt-1 hover:bg-red-700 transition">Contact
                             Us</a></div>
                 </div>
                 <div class="md:w-1/3 w-full flex px-6 py-12 shadow-lg">
                     <div class="md:w-1/4">
-                        <img src="<?= get_theme_file_uri('/assets/images/nav/nav_tb_02.png') ?>" alt="Sliding Windows" class="w-16 h-16 mx-auto">
+                        <img src="<?= get_theme_file_uri( '/assets/images/nav/nav_tb_02.png' ) ?>" alt="Sliding Windows"
+                             class="w-16 h-16 mx-auto">
                     </div>
                     <div class="md:w-3/4">
                         <h3 class="text-3xl font-bold mb-4">Energy-Efficient and EcoFriendly Features</h3>
@@ -608,7 +612,7 @@
                             sustainability. This helps clients reduce energy
                             costs while complying with increasingly
                             stringent environmental regulations.</p>
-                        <a href="#"
+                        <a href="<?= site_url('contact-us') ?>"
                            class="bg-red-600 text-white px-6 py-3 inline-block mt-1 hover:bg-red-700 transition">Contact
                             Us</a></div>
                 </div>
@@ -618,7 +622,8 @@
                 <!-- Text Content -->
                 <div class="md:w-1/3 w-full flex px-6 py-12 shadow-lg">
                     <div class="md:w-1/4">
-                        <img src="<?= get_theme_file_uri('/assets/images/nav/nav_tb_02.png') ?>" alt="Sliding Windows" class="w-16 h-16 mx-auto">
+                        <img src="<?= get_theme_file_uri( '/assets/images/nav/nav_tb_02.png' ) ?>" alt="Sliding Windows"
+                             class="w-16 h-16 mx-auto">
                     </div>
                     <div class="md:w-3/4">
                         <h3 class="text-3xl font-bold mb-4">Fast Delivery and Efficient
@@ -628,13 +633,14 @@
                             delivery and large-scale manufacturing to
                             meet market demand on time, helping clients
                             seize market opportunities quickly.</p>
-                        <a href="#"
+                        <a href="<?= site_url('contact-us') ?>"
                            class="bg-red-600 text-white px-6 py-3 inline-block mt-1 hover:bg-red-700 transition">Contact
                             Us</a></div>
                 </div>
                 <div class="md:w-1/3 w-full flex px-6 py-12 shadow-lg">
                     <div class="md:w-1/4">
-                        <img src="<?= get_theme_file_uri('/assets/images/nav/nav_tb_02.png') ?>" alt="Sliding Windows" class="w-16 h-16 mx-auto">
+                        <img src="<?= get_theme_file_uri( '/assets/images/nav/nav_tb_02.png' ) ?>" alt="Sliding Windows"
+                             class="w-16 h-16 mx-auto">
                     </div>
                     <div class="md:w-3/4">
                         <h3 class="text-3xl font-bold mb-4 text-[24px]">Professional After-Sales Support</h3>
@@ -644,13 +650,14 @@
                             tracking. Our worry-free after-sales services
                             help strengthen customer loyalty and improve
                             brand reputation.</p>
-                        <a href="#"
+                        <a href="<?= site_url('contact-us') ?>"
                            class="bg-red-600 text-white px-6 py-3 inline-block mt-1 hover:bg-red-700 transition">Contact
                             Us</a></div>
                 </div>
                 <div class="md:w-1/3 w-full flex px-6 py-12 shadow-lg">
                     <div class="md:w-1/4">
-                        <img src="<?= get_theme_file_uri('/assets/images/nav/nav_tb_02.png') ?>" alt="Sliding Windows" class="w-16 h-16 mx-auto">
+                        <img src="<?= get_theme_file_uri( '/assets/images/nav/nav_tb_02.png' ) ?>" alt="Sliding Windows"
+                             class="w-16 h-16 mx-auto">
                     </div>
                     <div class="md:w-3/4">
                         <h3 class="text-3xl font-bold mb-4">Competitive Pricing and HighQuality Raw Materials</h3>
@@ -659,7 +666,7 @@
                             ensure competitive pricing while maintaining
                             high product quality, helping clients achieve
                             higher profit margins in the market.</p>
-                        <a href="#"
+                        <a href="<?= site_url('contact-us') ?>"
                            class="bg-red-600 text-white px-6 py-3 inline-block mt-1 hover:bg-red-700 transition">Contact
                             Us</a></div>
                 </div>
@@ -671,23 +678,42 @@
 
     <section class="hidden md:block p-16 bg-white elementor elementor-9698">
         <h1 class="text-4xl font-bold text-gray-800 mb-6 text-center">Simplified Process: RICHOCEAN's Workflow</h1>
-        <h2 class="text-xl font-semibold text-gray-500 mb-2 text-center">First, we conduct a thorough consultation to fully understand your requirements, ensuring our approach aligns perfectly with your business
+        <h2 class="text-xl font-semibold text-gray-500 mb-2 text-center">First, we conduct a thorough consultation to
+            fully understand your requirements, ensuring our approach aligns perfectly with your business
             goals.</h2>
         <div class="container mx-auto p-4">
-            <section class="elementor-section elementor-inner-section elementor-element elementor-element-53023186 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="53023186" data-element_type="section">
+            <section
+                    class="elementor-section elementor-inner-section elementor-element elementor-element-53023186 elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+                    data-id="53023186" data-element_type="section">
                 <div class="elementor-container elementor-column-gap-no">
-                    <div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-132679fb" data-id="132679fb" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+                    <div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-132679fb"
+                         data-id="132679fb" data-element_type="column"
+                         data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
                         <div class="elementor-widget-wrap elementor-element-populated">
                             <div class="elementor-background-overlay"></div>
-                            <div class="elementor-element elementor-element-3b3e5fea elementor-absolute elementor-widget elementor-widget-image" data-id="3b3e5fea" data-element_type="widget" data-settings="{&quot;_position&quot;:&quot;absolute&quot;}" data-widget_type="image.default">
+                            <div class="elementor-element elementor-element-3b3e5fea elementor-absolute elementor-widget elementor-widget-image"
+                                 data-id="3b3e5fea" data-element_type="widget"
+                                 data-settings="{&quot;_position&quot;:&quot;absolute&quot;}"
+                                 data-widget_type="image.default">
                                 <div class="elementor-widget-container">
-                                    <img loading="lazy" decoding="async" width="209" height="209" src="<?= get_theme_file_uri('/assets/images/1-1.png') ?>" class="attachment-full size-full wp-image-9657" alt="" sizes="(max-width: 209px) 100vw, 209px">													</div>
+                                    <img loading="lazy" decoding="async" width="209" height="209"
+                                         src="<?= get_theme_file_uri( '/assets/images/1-1.png' ) ?>"
+                                         class="attachment-full size-full wp-image-9657" alt=""
+                                         sizes="(max-width: 209px) 100vw, 209px"></div>
                             </div>
-                            <div class="elementor-element elementor-element-536c4b65 elementor-absolute elementor-hidden-tablet elementor-hidden-phone elementor-widget elementor-widget-image" data-id="536c4b65" data-element_type="widget" data-settings="{&quot;_position&quot;:&quot;absolute&quot;}" data-widget_type="image.default">
+                            <div class="elementor-element elementor-element-536c4b65 elementor-absolute elementor-hidden-tablet elementor-hidden-phone elementor-widget elementor-widget-image"
+                                 data-id="536c4b65" data-element_type="widget"
+                                 data-settings="{&quot;_position&quot;:&quot;absolute&quot;}"
+                                 data-widget_type="image.default">
                                 <div class="elementor-widget-container">
-                                    <img loading="lazy" decoding="async" width="675" height="90" src="<?= get_theme_file_uri('/assets/images/Arrow.png') ?>" class="attachment-full size-full wp-image-9658" alt="" sizes="(max-width: 675px) 100vw, 675px">													</div>
+                                    <img loading="lazy" decoding="async" width="675" height="90"
+                                         src="<?= get_theme_file_uri( '/assets/images/Arrow.png' ) ?>"
+                                         class="attachment-full size-full wp-image-9658" alt=""
+                                         sizes="(max-width: 675px) 100vw, 675px"></div>
                             </div>
-                            <div class="elementor-element elementor-element-383d75e2 ekit-equal-height-disable elementor-widget elementor-widget-elementskit-icon-box" data-id="383d75e2" data-element_type="widget" data-widget_type="elementskit-icon-box.default">
+                            <div class="elementor-element elementor-element-383d75e2 ekit-equal-height-disable elementor-widget elementor-widget-elementskit-icon-box"
+                                 data-id="383d75e2" data-element_type="widget"
+                                 data-widget_type="elementskit-icon-box.default">
                                 <div class="elementor-widget-container">
                                     <div class="ekit-wid-con">        <!-- link opening -->
                                         <!-- end link opening -->
@@ -695,12 +721,13 @@
                                         <div class="elementskit-infobox text-center text- icon-top-align elementor-animation-   ">
                                             <div class="elementskit-box-header elementor-animation-">
                                                 <div class="elementskit-info-box-icon  ">
-                                                    <i aria-hidden="true" class="elementkit-infobox-icon icon icon-Consultancy"></i>
+                                                    <i aria-hidden="true"
+                                                       class="elementkit-infobox-icon icon icon-Consultancy"></i>
                                                 </div>
                                             </div>
                                             <div class="box-body">
                                                 <h3 class="elementskit-info-box-title">
-                                                    Initial Consultation                </h3>
+                                                    Initial Consultation </h3>
                                                 <p>At the beginning of the project, we will
                                                     engage in an in-depth discussion to
                                                     understand your needs, preferences, and
@@ -711,17 +738,27 @@
 
 
                                         </div>
-                                    </div>		</div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-2449ad4" data-id="2449ad4" data-element_type="column">
+                    <div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-2449ad4"
+                         data-id="2449ad4" data-element_type="column">
                         <div class="elementor-widget-wrap elementor-element-populated">
-                            <div class="elementor-element elementor-element-1dd33082 elementor-absolute elementor-hidden-tablet elementor-hidden-phone elementor-widget elementor-widget-image" data-id="1dd33082" data-element_type="widget" data-settings="{&quot;_position&quot;:&quot;absolute&quot;}" data-widget_type="image.default">
+                            <div class="elementor-element elementor-element-1dd33082 elementor-absolute elementor-hidden-tablet elementor-hidden-phone elementor-widget elementor-widget-image"
+                                 data-id="1dd33082" data-element_type="widget"
+                                 data-settings="{&quot;_position&quot;:&quot;absolute&quot;}"
+                                 data-widget_type="image.default">
                                 <div class="elementor-widget-container">
-                                    <img loading="lazy" decoding="async" width="675" height="90" src="<?= get_theme_file_uri('/assets/images/Arrow.png') ?>" class="attachment-full size-full wp-image-9658" alt="" sizes="(max-width: 675px) 100vw, 675px">													</div>
+                                    <img loading="lazy" decoding="async" width="675" height="90"
+                                         src="<?= get_theme_file_uri( '/assets/images/Arrow.png' ) ?>"
+                                         class="attachment-full size-full wp-image-9658" alt=""
+                                         sizes="(max-width: 675px) 100vw, 675px"></div>
                             </div>
-                            <div class="elementor-element elementor-element-1569d0ae ekit-equal-height-disable elementor-widget elementor-widget-elementskit-icon-box" data-id="1569d0ae" data-element_type="widget" data-widget_type="elementskit-icon-box.default">
+                            <div class="elementor-element elementor-element-1569d0ae ekit-equal-height-disable elementor-widget elementor-widget-elementskit-icon-box"
+                                 data-id="1569d0ae" data-element_type="widget"
+                                 data-widget_type="elementskit-icon-box.default">
                                 <div class="elementor-widget-container">
                                     <div class="ekit-wid-con">        <!-- link opening -->
                                         <!-- end link opening -->
@@ -729,7 +766,8 @@
                                         <div class="elementskit-infobox text-center text- icon-top-align elementor-animation-   ">
                                             <div class="elementskit-box-header elementor-animation-">
                                                 <div class="elementskit-info-box-icon  ">
-                                                    <i aria-hidden="true" class="elementkit-infobox-icon icon icon-design"></i>
+                                                    <i aria-hidden="true"
+                                                       class="elementkit-infobox-icon icon icon-design"></i>
                                                 </div>
                                             </div>
                                             <div class="box-body">
@@ -743,17 +781,27 @@
 
 
                                         </div>
-                                    </div>		</div>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="elementor-element elementor-element-53bd7c13 elementor-absolute elementor-widget elementor-widget-image" data-id="53bd7c13" data-element_type="widget" data-settings="{&quot;_position&quot;:&quot;absolute&quot;}" data-widget_type="image.default">
+                            <div class="elementor-element elementor-element-53bd7c13 elementor-absolute elementor-widget elementor-widget-image"
+                                 data-id="53bd7c13" data-element_type="widget"
+                                 data-settings="{&quot;_position&quot;:&quot;absolute&quot;}"
+                                 data-widget_type="image.default">
                                 <div class="elementor-widget-container">
-                                    <img loading="lazy" decoding="async" width="209" height="209" src="<?= get_theme_file_uri('/assets/images/2-1.png') ?>" class="attachment-full size-full wp-image-9660" alt="" sizes="(max-width: 209px) 100vw, 209px">													</div>
+                                    <img loading="lazy" decoding="async" width="209" height="209"
+                                         src="<?= get_theme_file_uri( '/assets/images/2-1.png' ) ?>"
+                                         class="attachment-full size-full wp-image-9660" alt=""
+                                         sizes="(max-width: 209px) 100vw, 209px"></div>
                             </div>
                         </div>
                     </div>
-                    <div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-2c7190c9" data-id="2c7190c9" data-element_type="column">
+                    <div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-2c7190c9"
+                         data-id="2c7190c9" data-element_type="column">
                         <div class="elementor-widget-wrap elementor-element-populated">
-                            <div class="elementor-element elementor-element-7fbf8491 ekit-equal-height-disable elementor-widget elementor-widget-elementskit-icon-box" data-id="7fbf8491" data-element_type="widget" data-widget_type="elementskit-icon-box.default">
+                            <div class="elementor-element elementor-element-7fbf8491 ekit-equal-height-disable elementor-widget elementor-widget-elementskit-icon-box"
+                                 data-id="7fbf8491" data-element_type="widget"
+                                 data-widget_type="elementskit-icon-box.default">
                                 <div class="elementor-widget-container">
                                     <div class="ekit-wid-con">        <!-- link opening -->
                                         <!-- end link opening -->
@@ -761,7 +809,8 @@
                                         <div class="elementskit-infobox text-center text- icon-top-align elementor-animation-   ">
                                             <div class="elementskit-box-header elementor-animation-">
                                                 <div class="elementskit-info-box-icon  ">
-                                                    <i aria-hidden="true" class="elementkit-infobox-icon icon icon-factory"></i>
+                                                    <i aria-hidden="true"
+                                                       class="elementkit-infobox-icon icon icon-factory"></i>
                                                 </div>
                                             </div>
                                             <div class="box-body">
@@ -775,17 +824,27 @@
 
 
                                         </div>
-                                    </div>		</div>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="elementor-element elementor-element-517d3ef5 elementor-absolute elementor-widget elementor-widget-image" data-id="517d3ef5" data-element_type="widget" data-settings="{&quot;_position&quot;:&quot;absolute&quot;}" data-widget_type="image.default">
+                            <div class="elementor-element elementor-element-517d3ef5 elementor-absolute elementor-widget elementor-widget-image"
+                                 data-id="517d3ef5" data-element_type="widget"
+                                 data-settings="{&quot;_position&quot;:&quot;absolute&quot;}"
+                                 data-widget_type="image.default">
                                 <div class="elementor-widget-container">
-                                    <img loading="lazy" decoding="async" width="209" height="209" src="<?= get_theme_file_uri('/assets/images/3-1.png') ?>" class="attachment-full size-full wp-image-9662" alt=""  sizes="(max-width: 209px) 100vw, 209px">													</div>
+                                    <img loading="lazy" decoding="async" width="209" height="209"
+                                         src="<?= get_theme_file_uri( '/assets/images/3-1.png' ) ?>"
+                                         class="attachment-full size-full wp-image-9662" alt=""
+                                         sizes="(max-width: 209px) 100vw, 209px"></div>
                             </div>
                         </div>
                     </div>
-                    <div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-67e61b92" data-id="67e61b92" data-element_type="column">
+                    <div class="elementor-column elementor-col-25 elementor-inner-column elementor-element elementor-element-67e61b92"
+                         data-id="67e61b92" data-element_type="column">
                         <div class="elementor-widget-wrap elementor-element-populated">
-                            <div class="elementor-element elementor-element-2b1fcf3b ekit-equal-height-disable elementor-widget elementor-widget-elementskit-icon-box" data-id="2b1fcf3b" data-element_type="widget" data-widget_type="elementskit-icon-box.default">
+                            <div class="elementor-element elementor-element-2b1fcf3b ekit-equal-height-disable elementor-widget elementor-widget-elementskit-icon-box"
+                                 data-id="2b1fcf3b" data-element_type="widget"
+                                 data-widget_type="elementskit-icon-box.default">
                                 <div class="elementor-widget-container">
                                     <div class="ekit-wid-con">        <!-- link opening -->
                                         <!-- end link opening -->
@@ -793,7 +852,8 @@
                                         <div class="elementskit-infobox text-center text- icon-top-align elementor-animation-   ">
                                             <div class="elementskit-box-header elementor-animation-">
                                                 <div class="elementskit-info-box-icon  ">
-                                                    <i aria-hidden="true" class="elementkit-infobox-icon icon icon-settings1"></i>
+                                                    <i aria-hidden="true"
+                                                       class="elementkit-infobox-icon icon icon-settings1"></i>
                                                 </div>
                                             </div>
                                             <div class="box-body">
@@ -809,15 +869,28 @@
 
 
                                         </div>
-                                    </div>		</div>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="elementor-element elementor-element-5c02a733 elementor-absolute elementor-hidden-tablet elementor-hidden-phone elementor-widget elementor-widget-image" data-id="5c02a733" data-element_type="widget" data-settings="{&quot;_position&quot;:&quot;absolute&quot;}" data-widget_type="image.default">
+                            <div class="elementor-element elementor-element-5c02a733 elementor-absolute elementor-hidden-tablet elementor-hidden-phone elementor-widget elementor-widget-image"
+                                 data-id="5c02a733" data-element_type="widget"
+                                 data-settings="{&quot;_position&quot;:&quot;absolute&quot;}"
+                                 data-widget_type="image.default">
                                 <div class="elementor-widget-container">
-                                    <img loading="lazy" decoding="async" width="675" height="90" src="<?= get_theme_file_uri('/assets/images/Arrow.png') ?>" class="attachment-full size-full wp-image-9658" alt="" sizes="(max-width: 675px) 100vw, 675px">													</div>
+                                    <img loading="lazy" decoding="async" width="675" height="90"
+                                         src="<?= get_theme_file_uri( '/assets/images/Arrow.png' ) ?>"
+                                         class="attachment-full size-full wp-image-9658" alt=""
+                                         sizes="(max-width: 675px) 100vw, 675px"></div>
                             </div>
-                            <div class="elementor-element elementor-element-47d401c elementor-absolute elementor-widget elementor-widget-image" data-id="47d401c" data-element_type="widget" data-settings="{&quot;_position&quot;:&quot;absolute&quot;}" data-widget_type="image.default">
+                            <div class="elementor-element elementor-element-47d401c elementor-absolute elementor-widget elementor-widget-image"
+                                 data-id="47d401c" data-element_type="widget"
+                                 data-settings="{&quot;_position&quot;:&quot;absolute&quot;}"
+                                 data-widget_type="image.default">
                                 <div class="elementor-widget-container">
-                                    <img loading="lazy" decoding="async" width="209" height="209" src="<?= get_theme_file_uri('/assets/images/2-1-1-1.png') ?>" class="attachment-full size-full wp-image-9664" alt="" sizes="(max-width: 209px) 100vw, 209px">													</div>
+                                    <img loading="lazy" decoding="async" width="209" height="209"
+                                         src="<?= get_theme_file_uri( '/assets/images/2-1-1-1.png' ) ?>"
+                                         class="attachment-full size-full wp-image-9664" alt=""
+                                         sizes="(max-width: 209px) 100vw, 209px"></div>
                             </div>
                         </div>
                     </div>
@@ -828,6 +901,278 @@
 
     </section>
 
+    <section
+            class="hidden md:block p-16 elementor elementor-9698 elementor-section elementor-top-section elementor-element elementor-element-322d0c06 custom-ele-section-css elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+            data-id="322d0c06" data-element_type="section"
+            data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+        <div class="elementor-container elementor-column-gap-default">
+            <div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-77956979 animated fadeInLeft"
+                 data-id="77956979" data-element_type="column"
+                 data-settings="{&quot;animation&quot;:&quot;fadeInLeft&quot;}">
+                <div class="elementor-widget-wrap elementor-element-populated">
+                    <div class="elementor-element elementor-element-57ef4f4b elementor-widget-tablet__width-inherit elementor-widget elementor-widget-heading"
+                         data-id="57ef4f4b" data-element_type="widget" data-widget_type="heading.default">
+                        <div class="elementor-widget-container">
+                            <h2 class="elementor-heading-title elementor-size-default">Partnering for Success: Our
+                                Diverse Clientele
+                            </h2></div>
+                    </div>
+                    <section
+                            class="elementor-section elementor-inner-section elementor-element elementor-element-16924bbd elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+                            data-id="16924bbd" data-element_type="section">
+                        <div class="elementor-container elementor-column-gap-default">
+                            <div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-247ad814 elementor-hidden-mobile"
+                                 data-id="247ad814" data-element_type="column">
+                                <div class="elementor-widget-wrap elementor-element-populated">
+                                    <div class="elementor-element elementor-element-41d037f8 elementor-widget-divider--view-line elementor-widget elementor-widget-divider"
+                                         data-id="41d037f8" data-element_type="widget"
+                                         data-widget_type="divider.default">
+                                        <div class="elementor-widget-container">
+                                            <div class="elementor-divider">
+<span class="elementor-divider-separator">
+    </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-462e82cf"
+                                 data-id="462e82cf" data-element_type="column">
+                                <div class="elementor-widget-wrap elementor-element-populated">
+                                    <div class="elementor-element elementor-element-82b5e17 elementor-widget elementor-widget-heading"
+                                         data-id="82b5e17" data-element_type="widget"
+                                         data-widget_type="heading.default">
+                                        <div class="elementor-widget-container">
+                                            <h2 class="elementor-heading-title elementor-size-default">Services</h2>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <div class="elementor-element elementor-element-a7fc72b elementor-widget elementor-widget-text-editor"
+                         data-id="a7fc72b" data-element_type="widget" data-widget_type="text-editor.default">
+                        <div class="elementor-widget-container">
+                            <p>At Richocean, we pride ourselves on delivering tailored solutions that
+                                meet the unique needs of a wide array of industry professionals. Our
+                                comprehensive services cater to the specific demands of each client
+                                segment, ensuring satisfaction across the board.</p>
+                            <p>&nbsp;</p></div>
+                    </div>
+                    <div class="elementor-element elementor-element-79b52dd8 elementor-widget elementor-widget-spacer"
+                         data-id="79b52dd8" data-element_type="widget" data-widget_type="spacer.default">
+                        <div class="elementor-widget-container">
+                            <div class="elementor-spacer">
+                                <div class="elementor-spacer-inner"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="elementor-element elementor-element-5db82eb7 elementor-mobile-align-center elementor-widget elementor-widget-button"
+                         data-id="5db82eb7" data-element_type="widget" data-widget_type="button.default">
+                        <div class="elementor-widget-container">
+                            <div class="elementor-button-wrapper">
+                                <a class="elementor-button elementor-button-link elementor-size-sm"
+                                   href="<?= site_url('contact-us') ?>"
+                                   target="_blank" rel="nofollow">
+    <span class="elementor-button-content-wrapper">
+                <span class="elementor-button-text">Request Design Consult</span>
+</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-449a0337 animated fadeInRight"
+                 data-id="449a0337" data-element_type="column"
+                 data-settings="{&quot;animation&quot;:&quot;fadeInRight&quot;}">
+                <div class="elementor-widget-wrap elementor-element-populated">
+                    <section
+                            class="elementor-section elementor-inner-section elementor-element elementor-element-3a368f4e elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+                            data-id="3a368f4e" data-element_type="section">
+                        <div class="elementor-container elementor-column-gap-default">
+                            <div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-b258043"
+                                 data-id="b258043" data-element_type="column"
+                                 data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+                                <div class="elementor-widget-wrap elementor-element-populated">
+                                    <div class="elementor-element elementor-element-769b2338 elementor-view-default elementor-widget elementor-widget-icon"
+                                         data-id="769b2338" data-element_type="widget" data-widget_type="icon.default">
+                                        <div class="elementor-widget-container">
+                                            <div class="elementor-icon-wrapper">
+                                                <div class="elementor-icon">
+                                                    <i aria-hidden="true" class="fas fa-business-time"></i></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="elementor-element elementor-element-3ea00c0e elementor-widget elementor-widget-heading"
+                                         data-id="3ea00c0e" data-element_type="widget"
+                                         data-widget_type="heading.default">
+                                        <div class="elementor-widget-container">
+                                            <h2 class="elementor-heading-title elementor-size-default">Wholesalers</h2>
+                                        </div>
+                                    </div>
+                                    <div class="elementor-element elementor-element-3ee43035 elementor-widget elementor-widget-spacer"
+                                         data-id="3ee43035" data-element_type="widget"
+                                         data-widget_type="spacer.default">
+                                        <div class="elementor-widget-container">
+                                            <div class="elementor-spacer">
+                                                <div class="elementor-spacer-inner"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="elementor-element elementor-element-23c005bc elementor-widget elementor-widget-text-editor"
+                                         data-id="23c005bc" data-element_type="widget"
+                                         data-widget_type="text-editor.default">
+                                        <div class="elementor-widget-container">
+                                            <p>Richocean offers wholesalers a
+                                                diverse range of high-quality, costeffective doors and windows,
+                                                providing reliable bulk purchasing
+                                                options to meet large-scale
+                                                demand with superior
+                                                performance and design.</p></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-46fca0e6"
+                                 data-id="46fca0e6" data-element_type="column"
+                                 data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+                                <div class="elementor-widget-wrap elementor-element-populated">
+                                    <div class="elementor-element elementor-element-438a8563 elementor-view-default elementor-widget elementor-widget-icon"
+                                         data-id="438a8563" data-element_type="widget" data-widget_type="icon.default">
+                                        <div class="elementor-widget-container">
+                                            <div class="elementor-icon-wrapper">
+                                                <div class="elementor-icon">
+                                                    <i aria-hidden="true" class="far fa-building"></i></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="elementor-element elementor-element-6197957e elementor-widget elementor-widget-heading"
+                                         data-id="6197957e" data-element_type="widget"
+                                         data-widget_type="heading.default">
+                                        <div class="elementor-widget-container">
+                                            <h2 class="elementor-heading-title elementor-size-default">Builders</h2>
+                                        </div>
+                                    </div>
+                                    <div class="elementor-element elementor-element-3f742313 elementor-widget elementor-widget-spacer"
+                                         data-id="3f742313" data-element_type="widget"
+                                         data-widget_type="spacer.default">
+                                        <div class="elementor-widget-container">
+                                            <div class="elementor-spacer">
+                                                <div class="elementor-spacer-inner"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="elementor-element elementor-element-42f59249 elementor-widget elementor-widget-text-editor"
+                                         data-id="42f59249" data-element_type="widget"
+                                         data-widget_type="text-editor.default">
+                                        <div class="elementor-widget-container">
+                                            <p>Trusted by builders for our
+                                                durable, aesthetically appealing
+                                                doors and windows, Richocean
+                                                delivers functional solutions that
+                                                enhance any construction or
+                                                renovation project, combining
+                                                strength with style.</p></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section
+                            class="elementor-section elementor-inner-section elementor-element elementor-element-30e88029 elementor-section-boxed elementor-section-height-default elementor-section-height-default"
+                            data-id="30e88029" data-element_type="section">
+                        <div class="elementor-container elementor-column-gap-default">
+                            <div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-2cacd532"
+                                 data-id="2cacd532" data-element_type="column"
+                                 data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+                                <div class="elementor-widget-wrap elementor-element-populated">
+                                    <div class="elementor-element elementor-element-57f7cb41 elementor-view-default elementor-widget elementor-widget-icon"
+                                         data-id="57f7cb41" data-element_type="widget" data-widget_type="icon.default">
+                                        <div class="elementor-widget-container">
+                                            <div class="elementor-icon-wrapper">
+                                                <div class="elementor-icon">
+                                                    <i aria-hidden="true" class="icon icon-commerce"></i></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="elementor-element elementor-element-2a25c1e5 elementor-widget elementor-widget-heading"
+                                         data-id="2a25c1e5" data-element_type="widget"
+                                         data-widget_type="heading.default">
+                                        <div class="elementor-widget-container">
+                                            <h2 class="elementor-heading-title elementor-size-default">Dealers</h2>
+                                        </div>
+                                    </div>
+                                    <div class="elementor-element elementor-element-7ad56da5 elementor-widget elementor-widget-spacer"
+                                         data-id="7ad56da5" data-element_type="widget"
+                                         data-widget_type="spacer.default">
+                                        <div class="elementor-widget-container">
+                                            <div class="elementor-spacer">
+                                                <div class="elementor-spacer-inner"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="elementor-element elementor-element-26024fe9 elementor-widget elementor-widget-text-editor"
+                                         data-id="26024fe9" data-element_type="widget"
+                                         data-widget_type="text-editor.default">
+                                        <div class="elementor-widget-container">
+                                            <p>With a focus on premium quality
+                                                and customization, Richocean
+                                                provides door and window dealers
+                                                with a wide selection of products
+                                                that cater to diverse customer
+                                                needs, helping them stay ahead in
+                                                a competitive market.</p></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-53da8870"
+                                 data-id="53da8870" data-element_type="column"
+                                 data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+                                <div class="elementor-widget-wrap elementor-element-populated">
+                                    <div class="elementor-element elementor-element-2030d209 elementor-view-default elementor-widget elementor-widget-icon"
+                                         data-id="2030d209" data-element_type="widget" data-widget_type="icon.default">
+                                        <div class="elementor-widget-container">
+                                            <div class="elementor-icon-wrapper">
+                                                <div class="elementor-icon">
+                                                    <i aria-hidden="true" class="fas fa-city"></i></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="elementor-element elementor-element-5a5508a2 elementor-widget elementor-widget-heading"
+                                         data-id="5a5508a2" data-element_type="widget"
+                                         data-widget_type="heading.default">
+                                        <div class="elementor-widget-container">
+                                            <h2 class="elementor-heading-title elementor-size-default">Renovation Companies</h2></div>
+                                    </div>
+                                    <div class="elementor-element elementor-element-1c91d0b9 elementor-widget elementor-widget-spacer"
+                                         data-id="1c91d0b9" data-element_type="widget"
+                                         data-widget_type="spacer.default">
+                                        <div class="elementor-widget-container">
+                                            <div class="elementor-spacer">
+                                                <div class="elementor-spacer-inner"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="elementor-element elementor-element-12f2e22d elementor-widget elementor-widget-text-editor"
+                                         data-id="12f2e22d" data-element_type="widget"
+                                         data-widget_type="text-editor.default">
+                                        <div class="elementor-widget-container">
+                                            <p>Richocean s energy-efficient and stylish
+                                                doors and windows offer renovation
+                                                companies the perfect blend of design
+                                                flexibility and performance, ensuring
+                                                seamless integration into every
+                                                renovation project, from residential to
+                                                commercial.</p></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </section>
 
 
     <section class="p-16">
@@ -836,21 +1181,29 @@
             <p class="text-gray-500 mb-8">Testing in accordance to NFRC / AS2047 / ISO9001 / CE</p>
             <div class="flex flex-wrap justify-center space-x-4 mb-12">
                 <div class="font-medium"><span class="text-red-600 mr-2"><i
-                                class="fas fa-check-circle"></i></span> High-end Villa</div>
+                                class="fas fa-check-circle"></i></span> High-end Villa
+                </div>
                 <div class="font-medium"><span class="text-red-600 mr-2"><i
-                                class="fas fa-check-circle"></i></span> Private Homes</div>
+                                class="fas fa-check-circle"></i></span> Private Homes
+                </div>
                 <div class="font-medium"><span class="text-red-600 mr-2"><i
-                                class="fas fa-check-circle"></i></span> Apartments</div>
+                                class="fas fa-check-circle"></i></span> Apartments
+                </div>
                 <div class="font-medium"><span class="text-red-600 mr-2"><i
-                                class="fas fa-check-circle"></i></span> Multi-family</div>
+                                class="fas fa-check-circle"></i></span> Multi-family
+                </div>
                 <div class="font-medium"><span class="text-red-600 mr-2"><i
-                                class="fas fa-check-circle"></i></span> Row Houses</div>
+                                class="fas fa-check-circle"></i></span> Row Houses
+                </div>
                 <div class="font-medium"><span class="text-red-600 mr-2"><i
-                                class="fas fa-check-circle"></i></span> Hotels</div>
+                                class="fas fa-check-circle"></i></span> Hotels
+                </div>
                 <div class="font-medium"><span class="text-red-600 mr-2"><i
-                                class="fas fa-check-circle"></i></span> Schools</div>
+                                class="fas fa-check-circle"></i></span> Schools
+                </div>
                 <div class="font-medium"><span class="text-red-600 mr-2"><i
-                                class="fas fa-check-circle"></i></span> Offices</div>
+                                class="fas fa-check-circle"></i></span> Offices
+                </div>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Project Card 1 -->

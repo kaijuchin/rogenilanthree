@@ -445,6 +445,13 @@ function load_custom_assets(): void {
 	autoload_css_assets('elementor/assets/css/');
 	autoload_css_assets('elementor/assets/css/posts/');
 	autoload_css_assets('elementor/assets/css/conditionals');
+	autoload_css_assets('elementor/assets/lib/animations/');
+	autoload_css_assets('elementor/assets/lib/animations/styles/');
+	autoload_css_assets('elementor/assets/lib/e-gallery/css/');
+	autoload_css_assets('elementor/assets/lib/eicons/css/');
+	autoload_css_assets('elementor/assets/lib/font-awesome/css/');
+	autoload_css_assets('elementor/assets/lib/swiper/v8/css/');
+
 //	autoload_js_assets('elementor/assets/js/');
 	autoload_css_assets('elementskit-lite/modules/elementskit-icon-pack/assets/css/');
 	autoload_css_assets('elementskit-lite/widgets/init/assets/css/');
