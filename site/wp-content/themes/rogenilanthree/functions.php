@@ -154,16 +154,24 @@ function add_custom_meta_for_categories() {
 		} elseif ( $category_slug == 'blog' ) {
 			echo '<meta name="description" content="">';
 			$custom_title = 'Blog';
+		} elseif ( $category_slug == 'our-story' ) {
+			echo '<meta name="description" content="">';
+			$custom_title = 'Our Story';
+		} elseif ( $category_slug == 'why-choose-us' ) {
+			echo '<meta name="description" content="">';
+			$custom_title = 'Why Choose Us';
+		} elseif ( $category_slug == 'corporate-video' ) {
+			echo '<meta name="description" content="">';
+			$custom_title = 'Corporate Video';
+		} elseif ( $category_slug == 'visit-factory' ) {
+			echo '<meta name="description" content="">';
+			$custom_title = 'Visit Factory';
 		} else {
 			echo '<meta name="description" content="">';
 		}
 	}
 
-	if ( is_page( 'our-story' ) ) {
-		$custom_title = 'Our Story';
-	} elseif ( is_page( 'why-choose-us' ) ) {
-		$custom_title = 'Why Choose Us';
-	} elseif ( is_page( 'contact-us' ) ) {
+	if ( is_page( 'contact-us' ) ) {
 		$custom_title = 'Contact Us';
 	}
 
@@ -175,7 +183,7 @@ function add_custom_meta_for_categories() {
 	}
 
 	if ( is_front_page() ) {
-		$custom_title = 'Richocean windows & doors  | China Quality Manufacturer';
+		$custom_title = 'Global Luxury Aluminum Windows and Doors Manufacturer | Richocean Windows & Doors';
 	}
 
 	$title = '<title>';
