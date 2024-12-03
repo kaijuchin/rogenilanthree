@@ -176,7 +176,12 @@
                     </div>
                     <a target="_blank" href="<?= site_url('contact-us') ?>" class="mx-8 my-4 text-gray-700 hover:text-red-500">Contact</a>
                 </div>
+	            <?= do_shortcode('[gtranslate]') ?>
+
             </div>
+
         </div>
+
     </nav>
+
 </header>

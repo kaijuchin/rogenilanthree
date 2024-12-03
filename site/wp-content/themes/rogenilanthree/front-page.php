@@ -17,12 +17,14 @@
         <div class="container flex w-2/3 mx-auto">
             <!-- Left Section: Content -->
             <div class="lg:w-3/4 bg-[#8A573B] text-white p-8 rounded-lg">
-                <h2 class="text-3xl font-bold mb-4 text-center lg:text-left">Innovative Furniture Designs Tailored to
-                    Every Space</h2>
-                <p class="text-gray-200 mb-6 mt-12 text-left lg:text-left leading-6">At Boke Furniture, we provide
-                    high-quality, customizable Office, Hotel, and Home furniture solutions. Tailored for developers,
-                    wholesalers, and importers, our offerings blend design, function, and sustainability. Since 2012, we
-                    have been committed to craftsmanship and delivering premium furniture that enhances any space.</p>
+                <h2 class="text-3xl font-bold mb-4 text-center lg:text-left">Customized Whole-Home Windows & Doors
+                    Your One-Stop Solution</h2>
+                <p class="text-gray-200 mb-6 mt-12 text-left lg:text-left leading-6">We provide a wide range of affordable and customizable building products for architects,
+                    designers, individual homeowners, contractors, and distributors, helping you transform a house
+                    into the home of your dreams. We believe that your home should reflect your unique style and
+                    personality, which is why we offer tailored services to meet each client s distinct needs. Whether
+                    it s quality for architects, innovation for designers, personalization for individuals, efficiency for
+                    contractors, or diverse choices for distributors, we are here to bring your dream home to life.</p>
                 <div class="flex justify-center lg:justify-start gap-4">
                     <!-- Images -->
                     <img class="h-24 w-auto"
@@ -730,19 +732,20 @@
 
         </div>
     </section>
-    <section class="hidden md:block bg-white">
+    <section class="hidden md:block bg-white elementor elementor-9698">
         <div class="p-16">
             <h1 class="text-4xl font-bold text-gray-800 mb-6 text-center">Tailored Services for Your Business Needs</h1>
             <h2 class="text-xl font-semibold text-gray-500 mb-2 text-center">Empowering Your Enterprise with RICHOCEAN s
                 Expertise</h2>
-            <div class="container mx-auto p-4">
+            <div class="container mx-auto p-4 ">
                 <div class="flex flex-col md:flex-row items-center bg-white px-16 py-8 gap-12">
                     <!-- Text Content -->
                     <div class="md:w-1/3 w-full flex px-6 py-12 shadow-lg">
-                        <div class="md:w-1/4">
-                            <img src="<?= get_theme_file_uri( '/assets/images/nav/nav_tb_02.png' ) ?>"
-                                 alt="Sliding Windows"
-                                 class="w-16 h-16 mx-auto">
+                        <div class="md:w-1/4 elementor-element elementor-element-61f2d3f5 elementor-view-default">
+                            <div class="elementor-icon-wrapper">
+                                <div class="elementor-icon px-6" style="font-size: 4rem;">
+                                    <i aria-hidden="true" class="elementkit-infobox-icon icon icon-agenda"></i></div>
+                            </div>
                         </div>
                         <div class="md:w-3/4">
                             <h3 class="text-3xl font-bold mb-4">Customized Product Design</h3>
@@ -757,10 +760,11 @@
                                 Us</a></div>
                     </div>
                     <div class="md:w-1/3 w-full flex px-6 py-12 shadow-lg">
-                        <div class="md:w-1/4">
-                            <img src="<?= get_theme_file_uri( '/assets/images/nav/nav_tb_02.png' ) ?>"
-                                 alt="Sliding Windows"
-                                 class="w-16 h-16 mx-auto">
+                        <div class="md:w-1/4 elementor-element elementor-element-61f2d3f5 elementor-view-default">
+                            <div class="elementor-icon-wrapper">
+                                <div class="elementor-icon px-6" style="font-size: 4rem;">
+                                    <i aria-hidden="true" class="elementkit-infobox-icon icon icon-star2"></i></div>
+                            </div>
                         </div>
                         <div class="md:w-3/4">
                             <h3 class="text-3xl font-bold mb-4">High-Quality Certifications</h3>
@@ -776,10 +780,11 @@
                                 Us</a></div>
                     </div>
                     <div class="md:w-1/3 w-full flex px-6 py-12 shadow-lg">
-                        <div class="md:w-1/4">
-                            <img src="<?= get_theme_file_uri( '/assets/images/nav/nav_tb_02.png' ) ?>"
-                                 alt="Sliding Windows"
-                                 class="w-16 h-16 mx-auto">
+                        <div class="md:w-1/4 elementor-element elementor-element-61f2d3f5 elementor-view-default">
+                            <div class="elementor-icon-wrapper">
+                                <div class="elementor-icon px-6" style="font-size: 4rem;">
+                                    <i aria-hidden="true" class="elementkit-infobox-icon icon icon-leaf"></i></div>
+                            </div>
                         </div>
                         <div class="md:w-3/4">
                             <h3 class="text-3xl font-bold mb-4">Energy-Efficient and EcoFriendly Features</h3>
@@ -799,10 +804,11 @@
                 <div class="flex flex-col md:flex-row items-center bg-white px-16 pb-16 gap-12">
                     <!-- Text Content -->
                     <div class="md:w-1/3 w-full flex px-6 py-12 shadow-lg">
-                        <div class="md:w-1/4">
-                            <img src="<?= get_theme_file_uri( '/assets/images/nav/nav_tb_02.png' ) ?>"
-                                 alt="Sliding Windows"
-                                 class="w-16 h-16 mx-auto">
+                        <div class="md:w-1/4 elementor-element elementor-element-61f2d3f5 elementor-view-default">
+                            <div class="elementor-icon-wrapper">
+                                <div class="elementor-icon px-6" style="font-size: 4rem;">
+                                    <i aria-hidden="true" class="elementkit-infobox-icon icon icon-cart"></i></div>
+                            </div>
                         </div>
                         <div class="md:w-3/4">
                             <h3 class="text-3xl font-bold mb-4">Fast Delivery and Efficient
@@ -817,10 +823,11 @@
                                 Us</a></div>
                     </div>
                     <div class="md:w-1/3 w-full flex px-6 py-12 shadow-lg">
-                        <div class="md:w-1/4">
-                            <img src="<?= get_theme_file_uri( '/assets/images/nav/nav_tb_02.png' ) ?>"
-                                 alt="Sliding Windows"
-                                 class="w-16 h-16 mx-auto">
+                        <div class="md:w-1/4 elementor-element elementor-element-61f2d3f5 elementor-view-default">
+                            <div class="elementor-icon-wrapper">
+                                <div class="elementor-icon px-6" style="font-size: 4rem;">
+                                    <i aria-hidden="true" class="elementkit-infobox-icon icon icon-customer-service"></i></div>
+                            </div>
                         </div>
                         <div class="md:w-3/4">
                             <h3 class="text-3xl font-bold mb-4 text-[24px]">Professional After-Sales Support</h3>
@@ -835,10 +842,11 @@
                                 Us</a></div>
                     </div>
                     <div class="md:w-1/3 w-full flex px-6 py-12 shadow-lg">
-                        <div class="md:w-1/4">
-                            <img src="<?= get_theme_file_uri( '/assets/images/nav/nav_tb_02.png' ) ?>"
-                                 alt="Sliding Windows"
-                                 class="w-16 h-16 mx-auto">
+                        <div class="md:w-1/4 elementor-element elementor-element-61f2d3f5 elementor-view-default">
+                            <div class="elementor-icon-wrapper">
+                                <div class="elementor-icon px-6" style="font-size: 4rem;">
+                                    <i aria-hidden="true" class="icon icon-Design-3"></i></div>
+                            </div>
                         </div>
                         <div class="md:w-3/4">
                             <h3 class="text-3xl font-bold mb-4">Competitive Pricing and HighQuality Raw Materials</h3>
