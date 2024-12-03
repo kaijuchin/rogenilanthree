@@ -25,18 +25,18 @@
                     have been committed to craftsmanship and delivering premium furniture that enhances any space.</p>
                 <div class="flex justify-center lg:justify-start gap-4">
                     <!-- Images -->
-                    <!--                    <img class="h-24 w-auto"-->
-                    <!--                         src="https://bokefurniture.com/wp-content/uploads/2024/06/Office-Workstation-removebg-preview.png"-->
-                    <!--                         alt="Office Workstation">-->
-                    <!--                    <img class="h-24 w-auto"-->
-                    <!--                         src="https://bokefurniture.com/wp-content/uploads/2024/10/Hotel_Bedroom-1.png"-->
-                    <!--                         alt="Hotel Bedroom">-->
-                    <!--                    <img class="h-24 w-auto"-->
-                    <!--                         src="https://bokefurniture.com/wp-content/uploads/2024/05/Luxury_Dining_Collections-removebg-preview.png"-->
-                    <!--                         alt="Luxury Dining Collections">-->
-                    <!--                    <img class="h-24 w-auto"-->
-                    <!--                         src="https://bokefurniture.com/wp-content/uploads/2024/05/Modular-Lounge-Furniture.png"-->
-                    <!--                         alt="Modular Lounge Furniture">-->
+                    <img class="h-24 w-auto"
+                         src="<?= get_theme_file_uri( '/assets/images/20241203/casement-window.png' ) ?>"
+                         alt="Casement Window China">
+                    <img class="h-24 w-auto"
+                         src="<?= get_theme_file_uri( '/assets/images/20241203/folding-door.png' ) ?>"
+                         alt="Folding Door China">
+                    <img class="h-24 w-auto"
+                         src="<?= get_theme_file_uri( '/assets/images/20241203/sliding-window.png' ) ?>"
+                         alt="Sliding Window China">
+                    <img class="h-24 w-auto"
+                         src="<?= get_theme_file_uri( '/assets/images/20241203/sliding-door.png' ) ?>"
+                         alt="Sliding Door China">
                 </div>
             </div>
 
@@ -436,11 +436,12 @@
                                     to life.</p>
                             </div>
                             <div class="elementor-widget-wrap elementor-element-populated elementor-element elementor-element-61f2d3f5">
-                                <div class="elementor-element elementor-element-61f2d3f5 elementor-widget__width-auto elementor-view-default elementor-widget elementor-widget-icon" data-id="61f2d3f5" data-element_type="widget" data-widget_type="icon.default">
+                                <div class="elementor-element elementor-element-61f2d3f5 elementor-widget__width-auto elementor-view-default elementor-widget elementor-widget-icon"
+                                     data-id="61f2d3f5" data-element_type="widget" data-widget_type="icon.default">
                                     <div class="elementor-widget-container relative -right-3/4">
                                         <div class="elementor-icon-wrapper">
                                             <div class="elementor-icon">
-                                                <i aria-hidden="true" class="icon icon-Design-3"></i>			</div>
+                                                <i aria-hidden="true" class="icon icon-Design-3"></i></div>
                                         </div>
                                     </div>
                                 </div>
@@ -455,11 +456,12 @@
                                     services.</p>
                             </div>
                             <div class="elementor-widget-wrap elementor-element-populated elementor-element elementor-element-61f2d3f5">
-                                <div class="elementor-element elementor-element-61f2d3f5 elementor-widget__width-auto elementor-view-default elementor-widget elementor-widget-icon" data-id="61f2d3f5" data-element_type="widget" data-widget_type="icon.default">
+                                <div class="elementor-element elementor-element-61f2d3f5 elementor-widget__width-auto elementor-view-default elementor-widget elementor-widget-icon"
+                                     data-id="61f2d3f5" data-element_type="widget" data-widget_type="icon.default">
                                     <div class="elementor-widget-container relative -right-3/4">
                                         <div class="elementor-icon-wrapper">
                                             <div class="elementor-icon">
-                                                <i aria-hidden="true" class="icon icon-customer-support"></i>			</div>
+                                                <i aria-hidden="true" class="icon icon-customer-support"></i></div>
                                         </div>
                                     </div>
                                 </div>
@@ -473,11 +475,12 @@
                                 <p class="text-gray-600 mt-1">Worldwide shipping with professional setup.</p>
                             </div>
                             <div class="elementor-widget-wrap elementor-element-populated elementor-element elementor-element-61f2d3f5">
-                                <div class="elementor-element elementor-element-61f2d3f5 elementor-widget__width-auto elementor-view-default elementor-widget elementor-widget-icon" data-id="61f2d3f5" data-element_type="widget" data-widget_type="icon.default">
+                                <div class="elementor-element elementor-element-61f2d3f5 elementor-widget__width-auto elementor-view-default elementor-widget elementor-widget-icon"
+                                     data-id="61f2d3f5" data-element_type="widget" data-widget_type="icon.default">
                                     <div class="elementor-widget-container relative -right-3/4">
                                         <div class="elementor-icon-wrapper">
                                             <div class="elementor-icon">
-                                                <i aria-hidden="true" class="icon icon-speed"></i>			</div>
+                                                <i aria-hidden="true" class="icon icon-speed"></i></div>
                                         </div>
                                     </div>
                                 </div>
@@ -487,8 +490,8 @@
                     </div>
                     <div class="mx-8 w-[50%]">
                         <!-- 3D Image Section -->
-                            <img src="<?= get_theme_file_uri( '/assets/images/20241203/Product_Cases-Logo_Design-20241130.jpg' ) ?>"
-                                 alt="3D Design" class="w-full max-w-lg rounded-full shadow-lg mx-auto">
+                        <img src="<?= get_theme_file_uri( '/assets/images/20241203/Product_Cases-Logo_Design-20241130.jpg' ) ?>"
+                             alt="3D Design" class="w-full max-w-lg rounded-full shadow-lg mx-auto">
                     </div>
                     <!-- Cards Section -->
                     <div class="grid grid-cols-1 md:grid-cols-1 gap-8 w-[25%] elementor-9698">
@@ -496,11 +499,12 @@
                         <div class="border-4 border-sky-100 rounded-lg shadow-md p-6 flex items-start ">
 
                             <div class="elementor-widget-wrap elementor-element-populated elementor-element elementor-element-61f2d3f5">
-                                <div class="elementor-element elementor-element-61f2d3f5 elementor-widget__width-auto elementor-view-default elementor-widget elementor-widget-icon" data-id="61f2d3f5" data-element_type="widget" data-widget_type="icon.default">
+                                <div class="elementor-element elementor-element-61f2d3f5 elementor-widget__width-auto elementor-view-default elementor-widget elementor-widget-icon"
+                                     data-id="61f2d3f5" data-element_type="widget" data-widget_type="icon.default">
                                     <div class="elementor-widget-container relative -left-full">
                                         <div class="elementor-icon-wrapper">
                                             <div class="elementor-icon">
-                                                <i aria-hidden="true" class="icon icon-leaf"></i>			</div>
+                                                <i aria-hidden="true" class="icon icon-leaf"></i></div>
                                         </div>
                                     </div>
                                 </div>
@@ -516,11 +520,12 @@
                         <div class="border-4 border-sky-100 rounded-lg shadow-md p-6 flex items-start ">
 
                             <div class="elementor-widget-wrap elementor-element-populated elementor-element elementor-element-61f2d3f5">
-                                <div class="elementor-element elementor-element-61f2d3f5 elementor-widget__width-auto elementor-view-default elementor-widget elementor-widget-icon" data-id="61f2d3f5" data-element_type="widget" data-widget_type="icon.default">
+                                <div class="elementor-element elementor-element-61f2d3f5 elementor-widget__width-auto elementor-view-default elementor-widget elementor-widget-icon"
+                                     data-id="61f2d3f5" data-element_type="widget" data-widget_type="icon.default">
                                     <div class="elementor-widget-container relative -left-full">
                                         <div class="elementor-icon-wrapper">
                                             <div class="elementor-icon">
-                                                <i aria-hidden="true" class="fas fa-headphones-alt"></i>			</div>
+                                                <i aria-hidden="true" class="fas fa-headphones-alt"></i></div>
                                         </div>
                                     </div>
                                 </div>
@@ -528,7 +533,8 @@
                             <div>
                                 <h3 class="font-semibold text-lg text-gray-800">Showcasing China's Door and
                                     Window Excellence</h3>
-                                <p class="text-gray-600 mt-1">Certified by CE, AS2047, NFRC, and CSA, ensuring toptier performance, durability, and safety standards.</p>
+                                <p class="text-gray-600 mt-1">Certified by CE, AS2047, NFRC, and CSA, ensuring toptier
+                                    performance, durability, and safety standards.</p>
                             </div>
                         </div>
 
@@ -536,11 +542,12 @@
                         <div class="border-4 border-sky-100 rounded-lg shadow-md p-6 flex items-start ">
 
                             <div class="elementor-widget-wrap elementor-element-populated elementor-element elementor-element-61f2d3f5">
-                                <div class="elementor-element elementor-element-61f2d3f5 elementor-widget__width-auto elementor-view-default elementor-widget elementor-widget-icon" data-id="61f2d3f5" data-element_type="widget" data-widget_type="icon.default">
+                                <div class="elementor-element elementor-element-61f2d3f5 elementor-widget__width-auto elementor-view-default elementor-widget elementor-widget-icon"
+                                     data-id="61f2d3f5" data-element_type="widget" data-widget_type="icon.default">
                                     <div class="elementor-widget-container relative -left-full">
                                         <div class="elementor-icon-wrapper">
                                             <div class="elementor-icon">
-                                                <i aria-hidden="true" class="icon icon-Target"></i>			</div>
+                                                <i aria-hidden="true" class="icon icon-Target"></i></div>
                                         </div>
                                     </div>
                                 </div>
@@ -555,10 +562,10 @@
                     </div>
                 </div>
                 <!-- Title Section -->
-<!--                <h1 class="text-4xl font-bold text-gray-800">Your Complete Furniture <span-->
-<!--                            class="text-red-600">Solution</span>-->
-<!--                </h1>-->
-<!--                <p class="text-lg text-gray-500 mt-2">Elevating Spaces, Boosting Efficiency</p>-->
+                <!--                <h1 class="text-4xl font-bold text-gray-800">Your Complete Furniture <span-->
+                <!--                            class="text-red-600">Solution</span>-->
+                <!--                </h1>-->
+                <!--                <p class="text-lg text-gray-500 mt-2">Elevating Spaces, Boosting Efficiency</p>-->
 
 
                 <!-- Main Content Section -->
@@ -569,8 +576,8 @@
 
                 <!-- Inquire Button -->
                 <div class="mt-10">
-                    <a target="_blank" href="<?= site_url('contact-us') ?>"
-                            class="bg-red-600 text-white font-semibold py-3 px-6 hover:bg-red-700 focus:outline-none">
+                    <a target="_blank" href="<?= site_url( 'contact-us' ) ?>"
+                       class="bg-red-600 text-white font-semibold py-3 px-6 hover:bg-red-700 focus:outline-none">
                         Inquire
                         Now
                     </a>
