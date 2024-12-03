@@ -217,7 +217,7 @@ function custom_product_category_template_shortcode( $atts ) {
 	// 开始生成页面内容
 	?>
     <section class="relative py-16 bg-cover bg-center flex items-center justify-center"
-             style="background-image: url('<?= get_field('banner_image')['link'] ?: get_theme_file_uri( '/assets/images/banner_01.jpg' ) ?>');">
+             style="background-image: url('<?= get_field('banner_image', 'category_' . $category->term_id)['link'] ?: get_theme_file_uri( '/assets/images/banner_01.jpg' ) ?>');">
         <div class="bg-black bg-opacity-60 text-white p-8 md:p-12 lg:p-16 max-w-2xl">
             <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
 	            <?= strtoupper( $category->name ) ?>
