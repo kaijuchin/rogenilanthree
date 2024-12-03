@@ -485,13 +485,13 @@
                         </div>
 
                     </div>
-                    <div class="mx-8 w-[45%]">
+                    <div class="mx-8 w-[50%]">
                         <!-- 3D Image Section -->
                             <img src="<?= get_theme_file_uri( '/assets/images/20241203/Product_Cases-Logo_Design-20241130.jpg' ) ?>"
                                  alt="3D Design" class="w-full max-w-lg rounded-full shadow-lg mx-auto">
                     </div>
                     <!-- Cards Section -->
-                    <div class="grid grid-cols-1 md:grid-cols-1 gap-8 w-[30%] elementor-9698">
+                    <div class="grid grid-cols-1 md:grid-cols-1 gap-8 w-[25%] elementor-9698">
                         <!-- Card 4 -->
                         <div class="border-4 border-sky-100 rounded-lg shadow-md p-6 flex items-start ">
 
