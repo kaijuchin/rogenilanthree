@@ -239,14 +239,15 @@ function footer_contact_form_shortcode(): false|string {
                 method: 'POST',
                 body: formData
             })
+                .then(response => response.json())
                 .then(data => {
                     console.log(data, 'data');
                     if (data.status === 200) {
-                        alert('留言已提交！');
+                        alert(data.message);
                         document.getElementById('footer-contact-form').reset(); // 重置表单
                         document.getElementById('popup-contact-form').style.display = 'none';
                     } else {
-                        alert('提交失败，请重试。');
+                        alert(data.message);
                     }
                 })
                 .catch(error => {
@@ -269,24 +270,34 @@ function handle_contact_form_submission() {
 		$country = sanitize_textarea_field( $_POST['country'] );
 		$message = sanitize_text_field( $_POST['message'] );
 		$ajax    = sanitize_text_field( $_POST['ajax'] ) ?? 0;
+		$user_ip = get_user_ip();
+		global $wpdb;
+		$count = $wpdb->get_var( "SELECT COUNT(*) FROM `{$wpdb->prefix}postmeta` WHERE `meta_key` = 'user_ip' AND `meta_value` = '{$user_ip}'" );
 
-		$contact_data = array(
+		$contact_data = [
 			'post_title'   => 'Message from ' . $email ?? $phone,
 			'post_content' => $message,
 			'post_type'    => 'contact',
 			'post_status'  => 'publish',
-			'meta_input'   => array(
+			'meta_input'   => [
 				'email'   => $email,
 				'phone'   => $phone,
 				'country' => $country,
-				'message' => $message
-			),
-		);
+				'message' => $message,
+				'user_ip' => $user_ip,
+			],
+		];
+		if ( $count > 2 && $ajax ) {
+			wp_send_json([ 'code' => 0, 'message' => 'Too many messages.' ]);
+		}
 		wp_insert_post( $contact_data );
 		if ( $ajax ) {
-			return [ 'code' => 200, 'message' => 'Thank you for your message!' ];
+			wp_send_json([ 'code' => 200, 'message' => 'Thank you for your message!' ]);
 		}
-		wp_redirect( home_url( '/thank-you/' ) );
+
+        if (!$ajax) {
+	        wp_redirect( home_url( '/thank-you/' ) );
+        }
 
 		exit;
 	}
@@ -339,10 +350,15 @@ function show_contact_data_column( $column, $post_id ): void {
 			echo esc_html( $country );
 		}
 	}
+	if ( $column === 'user_ip' ) {
+		$contact_user_ip = get_post_meta( $post_id, 'user_ip', true );
+		if ( $contact_user_ip ) {
+			echo esc_html( $contact_user_ip );
+		}
+	}
 }
 
 add_action( 'manage_contact_posts_custom_column', 'show_contact_data_column', 10, 2 );
-
 
 
 function add_contact_columns( $columns ) {
@@ -350,6 +366,7 @@ function add_contact_columns( $columns ) {
 	$columns['email']   = 'email';
 	$columns['phone']   = 'phone';
 	$columns['country'] = 'country';
+	$columns['user_ip']   = 'user_ip';
 	$date               = $columns['date'];
 	unset( $columns['date'] );
 	$columns['date'] = $date;
@@ -371,10 +388,10 @@ function contact_custom_meta_box() {
 }
 
 function show_contact_meta_box( $post ) {
-	$contact_email       = get_post_meta( $post->ID, 'email', true );
-	$contact_phone       = get_post_meta( $post->ID, 'phone', true );
-	$contact_country     = get_post_meta( $post->ID, 'country', true );
-	$contact_message     = get_post_meta( $post->ID, 'message', true );
+	$contact_email   = get_post_meta( $post->ID, 'email', true );
+	$contact_phone   = get_post_meta( $post->ID, 'phone', true );
+	$contact_country = get_post_meta( $post->ID, 'country', true );
+	$contact_user_ip = get_post_meta( $post->ID, 'user_ip', true );
 	echo '<table class="acf-table">
         <thead>
             <tr>
@@ -386,6 +403,9 @@ function show_contact_meta_box( $post ) {
                 </th>
                 <th class="acf-th">
                     <label>Country</label>
+                </th>
+                <th class="acf-th">
+                    <label>User IP Address</label>
                 </th>
 
             </tr>
@@ -401,61 +421,75 @@ function show_contact_meta_box( $post ) {
                 <td class="acf-field acf-field-text">
                     <input type="text" value="' . esc_attr( $contact_country ) . '" readonly />
                 </td>
+                <td class="acf-field acf-field-text">
+                    <input type="text" value="' . esc_attr( $contact_user_ip ) . '" readonly />
+                </td>
         </tbody>
     </table>';
 }
 
 add_action( 'add_meta_boxes', 'contact_custom_meta_box' );
 
-function autoload_css_assets($css_path = '') {
+function get_user_ip() {
+	if ( ! empty( $_SERVER['HTTP_CLIENT_IP'] ) ) {
+		return $_SERVER['HTTP_CLIENT_IP'];
+	} elseif ( ! empty( $_SERVER['HTTP_X_FORWARDED_FOR'] ) ) {
+		return $_SERVER['HTTP_X_FORWARDED_FOR'];
+	} else {
+		return $_SERVER['REMOTE_ADDR'];
+	}
+}
+
+function autoload_css_assets( $css_path = '' ) {
 	// 获取 CSS 和 JS 文件的路径
-	$css_dir = plugin_dir_path(__FILE__) . $css_path;
+	$css_dir = plugin_dir_path( __FILE__ ) . $css_path;
 
 	// 获取文件夹中的所有 CSS 文件
-	foreach (glob($css_dir . '*.css') as $css_file) {
-		$file_name = basename($css_file); // 获取文件名
+	foreach ( glob( $css_dir . '*.css' ) as $css_file ) {
+		$file_name = basename( $css_file ); // 获取文件名
 		wp_enqueue_style(
 			'custom-css-' . $file_name, // 唯一的 handle 名称
-			plugin_dir_url(__FILE__) . $css_path . $file_name, // 文件 URL
+			plugin_dir_url( __FILE__ ) . $css_path . $file_name, // 文件 URL
 			array(), // 依赖项
-			filemtime($css_file) // 使用文件的修改时间作为版本号，方便缓存控制
+			filemtime( $css_file ) // 使用文件的修改时间作为版本号，方便缓存控制
 		);
 	}
 
 }
 
-function autoload_js_assets($js_path = '') {
+function autoload_js_assets( $js_path = '' ) {
 	// 获取JS 文件的路径
-	$js_dir = plugin_dir_path(__FILE__) . $js_path;
+	$js_dir = plugin_dir_path( __FILE__ ) . $js_path;
 
 	// 获取文件夹中的所有 JS 文件
-	foreach (glob($js_dir . '*.js') as $js_file) {
-		$file_name = basename($js_file); // 获取文件名
+	foreach ( glob( $js_dir . '*.js' ) as $js_file ) {
+		$file_name = basename( $js_file ); // 获取文件名
 		wp_enqueue_script(
 			'custom-js-' . $file_name, // 唯一的 handle 名称
-			plugin_dir_url(__FILE__) . $js_path . $file_name, // 文件 URL
-			array('jquery'), // 依赖项，可根据需要调整
-			filemtime($js_file), // 使用文件的修改时间作为版本号
+			plugin_dir_url( __FILE__ ) . $js_path . $file_name, // 文件 URL
+			array( 'jquery' ), // 依赖项，可根据需要调整
+			filemtime( $js_file ), // 使用文件的修改时间作为版本号
 			true // 是否放在页脚加载
 		);
 	}
 }
 
 function load_custom_assets(): void {
-	autoload_css_assets('elementor/assets/css/');
-	autoload_css_assets('elementor/assets/css/posts/');
-	autoload_css_assets('elementor/assets/css/conditionals');
-	autoload_css_assets('elementor/assets/lib/animations/');
-	autoload_css_assets('elementor/assets/lib/animations/styles/');
-	autoload_css_assets('elementor/assets/lib/e-gallery/css/');
-	autoload_css_assets('elementor/assets/lib/eicons/css/');
-	autoload_css_assets('elementor/assets/lib/font-awesome/css/');
-	autoload_css_assets('elementor/assets/lib/swiper/v8/css/');
+	autoload_css_assets( 'elementor/assets/css/' );
+	autoload_css_assets( 'elementor/assets/css/posts/' );
+	autoload_css_assets( 'elementor/assets/css/conditionals' );
+	autoload_css_assets( 'elementor/assets/lib/animations/' );
+	autoload_css_assets( 'elementor/assets/lib/animations/styles/' );
+	autoload_css_assets( 'elementor/assets/lib/e-gallery/css/' );
+	autoload_css_assets( 'elementor/assets/lib/eicons/css/' );
+	autoload_css_assets( 'elementor/assets/lib/font-awesome/css/' );
+	autoload_css_assets( 'elementor/assets/lib/swiper/v8/css/' );
 
 //	autoload_js_assets('elementor/assets/js/');
-	autoload_css_assets('elementskit-lite/modules/elementskit-icon-pack/assets/css/');
-	autoload_css_assets('elementskit-lite/widgets/init/assets/css/');
+	autoload_css_assets( 'elementskit-lite/modules/elementskit-icon-pack/assets/css/' );
+	autoload_css_assets( 'elementskit-lite/widgets/init/assets/css/' );
 //	autoload_js_assets('elementskit-lite/libs/framework/assets/js/');
 //	autoload_js_assets('elementskit-lite/widgets/init/assets/js/');
 }
-add_action('wp_enqueue_scripts', 'load_custom_assets');
+
+add_action( 'wp_enqueue_scripts', 'load_custom_assets' );

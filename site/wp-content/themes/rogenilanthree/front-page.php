@@ -19,11 +19,13 @@
             <div class="lg:w-3/4 bg-[#8A573B] text-white p-8 rounded-lg">
                 <h2 class="text-3xl font-bold mb-4 text-center lg:text-left">Customized Whole-Home Windows & Doors
                     Your One-Stop Solution</h2>
-                <p class="text-gray-200 mb-6 mt-12 text-left lg:text-left leading-6">We provide a wide range of affordable and customizable building products for architects,
+                <p class="text-gray-200 mb-6 mt-12 text-left lg:text-left leading-6">We provide a wide range of
+                    affordable and customizable building products for architects,
                     designers, individual homeowners, contractors, and distributors, helping you transform a house
                     into the home of your dreams. We believe that your home should reflect your unique style and
                     personality, which is why we offer tailored services to meet each client s distinct needs. Whether
-                    it s quality for architects, innovation for designers, personalization for individuals, efficiency for
+                    it s quality for architects, innovation for designers, personalization for individuals, efficiency
+                    for
                     contractors, or diverse choices for distributors, we are here to bring your dream home to life.</p>
                 <div class="flex justify-center lg:justify-start gap-4">
                     <!-- Images -->
@@ -426,7 +428,13 @@
     <section class="hidden md:block p-16">
         <div class="container mx-auto px-4 py-8">
             <div class="container mx-auto p-6 text-center">
+                <!-- Title Section -->
+                <h1 class="text-4xl font-bold text-gray-800">Your complete window and door <span
+                            class="text-red-600">Solution</span>
+                </h1>
+                <p class="text-lg text-gray-500 mt-2">Enhance space, improve efficiency</p>
                 <div class="flex justify-center items-center">
+
                     <!-- Cards Section -->
                     <div class="grid grid-cols-1 md:grid-cols-1 gap-8 w-[25%] elementor-9698">
                         <!-- Card 1 -->
@@ -492,8 +500,15 @@
                     </div>
                     <div class="mx-8 w-[50%]">
                         <!-- 3D Image Section -->
-                        <img src="<?= get_theme_file_uri( '/assets/images/20241203/Product_Cases-Logo_Design-20241130.jpg' ) ?>"
-                             alt="3D Design" class="w-full max-w-lg rounded-full shadow-lg mx-auto">
+                        <div class="rounded-full shadow-lg mx-auto w-[38rem] h-[38rem]"
+                             style="background-image: url(<?= get_theme_file_uri( '/assets/images/20241203/Product_Cases-Logo_Design-20241130.jpg' ) ?>);
+                                     background-repeat: no-repeat;
+                                     background-position: -48px -32px;
+                                     background-size: 109%;">
+                            <!--                            <img src="-->
+							<?php //= get_theme_file_uri( '/assets/images/20241203/Product_Cases-Logo_Design-20241130.jpg' ) ?><!--"-->
+                            <!--                                 alt="3D Design" class="w-[150%] mx-auto">-->
+                        </div>
                     </div>
                     <!-- Cards Section -->
                     <div class="grid grid-cols-1 md:grid-cols-1 gap-8 w-[25%] elementor-9698">
@@ -563,11 +578,6 @@
 
                     </div>
                 </div>
-                <!-- Title Section -->
-                <!--                <h1 class="text-4xl font-bold text-gray-800">Your Complete Furniture <span-->
-                <!--                            class="text-red-600">Solution</span>-->
-                <!--                </h1>-->
-                <!--                <p class="text-lg text-gray-500 mt-2">Elevating Spaces, Boosting Efficiency</p>-->
 
 
                 <!-- Main Content Section -->
@@ -826,7 +836,8 @@
                         <div class="md:w-1/4 elementor-element elementor-element-61f2d3f5 elementor-view-default">
                             <div class="elementor-icon-wrapper">
                                 <div class="elementor-icon px-6" style="font-size: 4rem;">
-                                    <i aria-hidden="true" class="elementkit-infobox-icon icon icon-customer-service"></i></div>
+                                    <i aria-hidden="true"
+                                       class="elementkit-infobox-icon icon icon-customer-service"></i></div>
                             </div>
                         </div>
                         <div class="md:w-3/4">
