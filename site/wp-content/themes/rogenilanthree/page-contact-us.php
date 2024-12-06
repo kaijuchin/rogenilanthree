@@ -93,8 +93,9 @@
 
 
 	</div>
-	<img src="//sc04.alicdn.com/kf/H553dbd69cb6f41df9a2acd49717ad0eed/222016583/H553dbd69cb6f41df9a2acd49717ad0eed.jpg" alt="">
-	<img src="//sc04.alicdn.com/kf/Ha666f3c081984ea3a218abadfecd110bj/222016583/Ha666f3c081984ea3a218abadfecd110bj.jpg" alt="">
-
+</section>
+<section class="flex flex-col">
+    <img src="//sc04.alicdn.com/kf/H553dbd69cb6f41df9a2acd49717ad0eed/222016583/H553dbd69cb6f41df9a2acd49717ad0eed.jpg" alt="">
+    <img src="//sc04.alicdn.com/kf/Ha666f3c081984ea3a218abadfecd110bj/222016583/Ha666f3c081984ea3a218abadfecd110bj.jpg" alt="">
 </section>
 <?php get_footer() ?>

@@ -33,8 +33,10 @@
 		</div>
 	</div>
 </section>
-<img src="//sc04.alicdn.com/kf/H553dbd69cb6f41df9a2acd49717ad0eed/222016583/H553dbd69cb6f41df9a2acd49717ad0eed.jpg" alt="">
-<img src="//sc04.alicdn.com/kf/Ha666f3c081984ea3a218abadfecd110bj/222016583/Ha666f3c081984ea3a218abadfecd110bj.jpg" alt="">
+<section class="flex flex-col">
+    <img src="//sc04.alicdn.com/kf/H553dbd69cb6f41df9a2acd49717ad0eed/222016583/H553dbd69cb6f41df9a2acd49717ad0eed.jpg" alt="">
+    <img src="//sc04.alicdn.com/kf/Ha666f3c081984ea3a218abadfecd110bj/222016583/Ha666f3c081984ea3a218abadfecd110bj.jpg" alt="">
+</section>
 <section class="px-8 py-16 bg-gray-50">
 	<div class="container mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 		<!-- Contact Information Section -->

@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<section class="bg-gray-50 relative" style="background: url('https://www.richoceanchina.com/wp-content/themes/rogenilantwo/Content/Images/bg-content.jpg') no-repeat center top; background-size: cover; overflow: hidden;">
+<section class="bg-gray-50 relative flex flex-col" style="background: url('https://www.richoceanchina.com/wp-content/themes/rogenilantwo/Content/Images/bg-content.jpg') no-repeat center top; background-size: cover; overflow: hidden;">
     <img src="<?= get_theme_file_uri('/assets/images/why_01.jpg') ?>" alt="">
     <img src="<?= get_theme_file_uri('/assets/images/why_02.jpg') ?>" alt="">
     <div class="hidden md:block user_www_bannerdesign_cn" style="width:990px;height:443px;margin:0px auto;">
