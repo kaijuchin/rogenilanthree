@@ -1,17 +1,29 @@
 <?php
-add_filter('show_admin_bar', '__return_false');
+add_filter( 'show_admin_bar', '__return_false' );
 const WINDOWS_SYSTEMS = [
 	[ 'name' => 'Casement Windows', 'slug' => 'casement-windows', 'nav_image' => '/assets/images/nav/nav_tb_01.png' ],
 	[ 'name' => 'Sliding Windows', 'slug' => 'sliding-windows', 'nav_image' => '/assets/images/nav/nav_tb_02.png' ],
 	[ 'name' => 'Awning Windows', 'slug' => 'awning-windows', 'nav_image' => '/assets/images/nav/nav_tb_07.png' ],
-	[ 'name' => 'Single/Double Hung Windows', 'slug' => 'single-double-hung-windows', 'nav_image' => '/assets/images/nav/nav_tb_03.png' ],
+	[ 'name'      => 'Single/Double Hung Windows',
+	  'slug'      => 'single-double-hung-windows',
+	  'nav_image' => '/assets/images/nav/nav_tb_03.png'
+	],
 	[ 'name' => 'Picture Windows', 'slug' => 'picture-windows', 'nav_image' => '/assets/images/nav/nav_tb_05.png' ],
-	[ 'name' => 'Tilt & Turn Windows', 'slug' => 'tilt-turn-windows', 'nav_image' => '/assets/images/nav/nav_tb_04.png' ],
+	[ 'name'      => 'Tilt & Turn Windows',
+	  'slug'      => 'tilt-turn-windows',
+	  'nav_image' => '/assets/images/nav/nav_tb_04.png'
+	],
 	[ 'name' => 'Folding Windows', 'slug' => 'folding-windows', 'nav_image' => '/assets/images/nav/nav_tb_10.png' ],
 	[ 'name' => 'Bay & Bow Windows', 'slug' => 'bay-bow-windows', 'nav_image' => '/assets/images/nav/nav_tb_09.png' ],
-	[ 'name' => 'Sound-Proof Windows', 'slug' => 'sound-proof-windows', 'nav_image' => '/assets/images/nav/nav_tb_01.png' ],
+	[ 'name'      => 'Sound-Proof Windows',
+	  'slug'      => 'sound-proof-windows',
+	  'nav_image' => '/assets/images/nav/nav_tb_01.png'
+	],
 	[ 'name' => 'Specialty Windows', 'slug' => 'specialty-windows', 'nav_image' => '/assets/images/nav/nav_tb_06.png' ],
-	[ 'name' => 'Intelligent/Electric Windows', 'slug' => 'intelligent-electric-windows', 'nav_image' => '/assets/images/nav/nav_tb_01.png' ],
+	[ 'name'      => 'Intelligent/Electric Windows',
+	  'slug'      => 'intelligent-electric-windows',
+	  'nav_image' => '/assets/images/nav/nav_tb_01.png'
+	],
 	[ 'name' => 'Shutter Windows', 'slug' => 'shutter-windows', 'nav_image' => '/assets/images/nav/nav_tb_01.png' ],
 ];
 
@@ -28,11 +40,14 @@ const MORE_PRODUCTS   = [
 	[ 'name' => 'Garage Door', 'slug' => 'garage-door', 'nav_image' => '/assets/images/nav/nav_more_03.png' ],
 	[ 'name' => 'Skylight', 'slug' => 'skylight', 'nav_image' => '/assets/images/nav/nav_more_01.png' ],
 	[ 'name' => 'Sunroom', 'slug' => 'sunroom', 'nav_image' => '/assets/images/nav/nav_more_02.png' ],
-	[ 'name' => 'Combination Window And Door', 'slug' => 'combination-window-and-door', 'nav_image' => '/assets/images/nav/nav_more_08.png' ],
+	[ 'name'      => 'Combination Window And Door', 'slug'      => 'combination-window-and-door', 'nav_image' => '/assets/images/nav/nav_more_08.png' ],
 	[ 'name' => 'Curtain Wall', 'slug' => 'curtain-wall', 'nav_image' => '/assets/images/nav/nav_more_05.png' ],
 	[ 'name' => 'Glass Railing', 'slug' => 'glass-railing', 'nav_image' => '/assets/images/nav/nav_more_06.png' ],
 ];
 
+const FRIENDLY_LINKS  = [
+	[ 'name' => 'Richocean China', 'slug' => 'richocean-china', 'link' => 'https://www.richoceanchina.com/' ],
+];
 function my_theme_enqueue_styles(): void {
 	wp_deregister_script( 'jquery' );
 	wp_enqueue_script( 'jquery', 'https://code.jquery.com/jquery-3.6.0.min.js', [], '3.6.0' );
@@ -217,10 +232,10 @@ function custom_product_category_template_shortcode( $atts ) {
 	// 开始生成页面内容
 	?>
     <section class="relative py-16 bg-cover bg-center flex items-center justify-center"
-             style="background-image: url('<?= get_field('banner_image', 'category_' . $category->term_id)['link'] ?: get_theme_file_uri( '/assets/images/banner_01.jpg' ) ?>');">
+             style="background-image: url('<?= get_field( 'banner_image', 'category_' . $category->term_id )['link'] ?: get_theme_file_uri( '/assets/images/banner_01.jpg' ) ?>');">
         <div class="bg-black bg-opacity-60 text-white p-8 md:p-12 lg:p-16 max-w-2xl">
             <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
-	            <?= strtoupper( $category->name ) ?>
+				<?= strtoupper( $category->name ) ?>
             </h1>
         </div>
     </section>

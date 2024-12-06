@@ -39,6 +39,19 @@
 			    <?php endforeach; ?>
             </ul>
         </div>
+
+    </div>
+    <div class="max-w-screen-xl mx-auto grid grid-cols-1">
+        <!-- Friendly Links-->
+        <div>
+            <h3 class="text-red-500 mb-4">Friendly Links</h3>
+            <ul class="flex gap-8">
+			    <?php foreach (FRIENDLY_LINKS as $item): ?>
+                    <li><a target="_blank" href="<?= $item['link']; ?>" class="text-gray-400 hover:text-white transition duration-300">
+						    <?= $item['name']; ?></a></li>
+			    <?php endforeach; ?>
+            </ul>
+        </div>
     </div>
     <!-- Footer Bottom -->
     <div class="border-t border-gray-800 mt-8 pt-8 text-center">
