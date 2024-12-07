@@ -4,27 +4,33 @@ const WINDOWS_SYSTEMS = [
 	[ 'name' => 'Casement Windows', 'slug' => 'casement-windows', 'nav_image' => '/assets/images/nav/nav_tb_01.png' ],
 	[ 'name' => 'Sliding Windows', 'slug' => 'sliding-windows', 'nav_image' => '/assets/images/nav/nav_tb_02.png' ],
 	[ 'name' => 'Awning Windows', 'slug' => 'awning-windows', 'nav_image' => '/assets/images/nav/nav_tb_07.png' ],
-	[ 'name'      => 'Single/Double Hung Windows',
-	  'slug'      => 'single-double-hung-windows',
-	  'nav_image' => '/assets/images/nav/nav_tb_03.png'
-	],
 	[ 'name' => 'Picture Windows', 'slug' => 'picture-windows', 'nav_image' => '/assets/images/nav/nav_tb_05.png' ],
-	[ 'name'      => 'Tilt & Turn Windows',
-	  'slug'      => 'tilt-turn-windows',
-	  'nav_image' => '/assets/images/nav/nav_tb_04.png'
+	[
+		'name'      => 'Tilt & Turn Windows',
+		'slug'      => 'tilt-turn-windows',
+		'nav_image' => '/assets/images/nav/nav_tb_04.png'
 	],
 	[ 'name' => 'Folding Windows', 'slug' => 'folding-windows', 'nav_image' => '/assets/images/nav/nav_tb_10.png' ],
 	[ 'name' => 'Bay & Bow Windows', 'slug' => 'bay-bow-windows', 'nav_image' => '/assets/images/nav/nav_tb_09.png' ],
-	[ 'name'      => 'Sound-Proof Windows',
-	  'slug'      => 'sound-proof-windows',
-	  'nav_image' => '/assets/images/nav/nav_tb_01.png'
+	[
+		'name'      => 'Sound-Proof Windows',
+		'slug'      => 'sound-proof-windows',
+		'nav_image' => '/assets/images/nav/nav_tb_01.png'
 	],
 	[ 'name' => 'Specialty Windows', 'slug' => 'specialty-windows', 'nav_image' => '/assets/images/nav/nav_tb_06.png' ],
-	[ 'name'      => 'Intelligent/Electric Windows',
-	  'slug'      => 'intelligent-electric-windows',
-	  'nav_image' => '/assets/images/nav/nav_tb_01.png'
-	],
 	[ 'name' => 'Shutter Windows', 'slug' => 'shutter-windows', 'nav_image' => '/assets/images/nav/nav_tb_01.png' ],
+	[
+		'name'      => 'Single/Double Hung Windows',
+		'slug'      => 'single-double-hung-windows',
+		'nav_image' => '/assets/images/nav/nav_tb_03.png'
+	],
+	[
+		'name'      => 'Intelligent/Electric Windows',
+		'slug'      => 'intelligent-electric-windows',
+		'nav_image' => '/assets/images/nav/nav_tb_01.png'
+	],
+
+
 ];
 
 const DOORS_SYSTEMS   = [
@@ -40,9 +46,13 @@ const MORE_PRODUCTS   = [
 	[ 'name' => 'Garage Door', 'slug' => 'garage-door', 'nav_image' => '/assets/images/nav/nav_more_03.png' ],
 	[ 'name' => 'Skylight', 'slug' => 'skylight', 'nav_image' => '/assets/images/nav/nav_more_01.png' ],
 	[ 'name' => 'Sunroom', 'slug' => 'sunroom', 'nav_image' => '/assets/images/nav/nav_more_02.png' ],
-	[ 'name'      => 'Combination Window And Door', 'slug'      => 'combination-window-and-door', 'nav_image' => '/assets/images/nav/nav_more_08.png' ],
 	[ 'name' => 'Curtain Wall', 'slug' => 'curtain-wall', 'nav_image' => '/assets/images/nav/nav_more_05.png' ],
 	[ 'name' => 'Glass Railing', 'slug' => 'glass-railing', 'nav_image' => '/assets/images/nav/nav_more_06.png' ],
+	[
+		'name'      => 'Combination Window And Door',
+		'slug'      => 'combination-window-and-door',
+		'nav_image' => '/assets/images/nav/nav_more_08.png'
+	],
 ];
 
 const FRIENDLY_LINKS  = [
