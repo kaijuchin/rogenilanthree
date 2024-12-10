@@ -15,6 +15,17 @@ hr {
     margin: 1.4rem 0 !important;
 }
 
+ul.wp-block-list {
+    list-style-type: disc !important;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+    unicode-bidi: isolate;
+}
+
 /* 自定义 Swiper 的导航按钮 */
 .swiper-button-next,
 .swiper-button-prev {
