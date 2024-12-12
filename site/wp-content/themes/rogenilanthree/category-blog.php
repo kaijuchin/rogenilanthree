@@ -38,15 +38,18 @@
             if ($query->have_posts()): while ($query->have_posts()): $query->the_post(); ?>
             <?php
 	            $post_thumbnail_url = get_field('image')['link'] ?: get_theme_file_uri('/assets/images/richocean-logo.png');
+                $post_thumbnail_alt = get_field( 'image' )['alt'] ?: get_the_title();
 	            $post_title         = get_the_title();
 	            $post_excerpt        = get_the_excerpt();
 	            $permalink          = get_permalink();
             ?>
-            <div class="bg-white rounded-lg shadow-lg p-6 flex flex-col items-center">
-                <img src="<?= $post_thumbnail_url  ?>" alt="" class="w-full h-full object-cover mb-4">
-                <h3 class="text-lg font-bold text-gray-800 mb-2"><?= $post_title ?></h3>
-                <p class="text-gray-500 mb-4"><?= wp_trim_words($post_excerpt, 8) ?></p>
-                <a href="<?= $permalink ?>" class="inline-block bg-orange-500 text-white px-6 py-3 rounded-full hover:bg-orange-600 transition duration-300">Read More</a>
+            <div class="bg-white rounded-lg shadow-lg p-6 flex flex-col items-center md:h-[550px]">
+                <a target="_blank" class="w-full h-full" href="<?= $permalink ?>">
+                    <img src="<?= $post_thumbnail_url  ?>" alt="<?= $post_thumbnail_alt ?>" class="w-full md:h-[328px] object-cover mb-4">
+                    <h3 title="<?= $post_title ?>" class="text-lg font-bold text-gray-800 mb-2"><?= $post_title ?></h3>
+                    <p class="text-gray-500 mb-4"><?= wp_trim_words($post_excerpt, 8) ?></p>
+                    <a target="_blank" href="<?= $permalink ?>" class="inline-block bg-red-500 text-white px-6 py-2 rounded-sm hover:bg-red-600 transition duration-300 text-sm">Read More</a>
+                </a>
             </div>
             <?php endwhile; endif; wp_reset_postdata(); ?>
         </div>
