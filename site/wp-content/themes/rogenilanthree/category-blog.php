@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 <section class="p-8 bg-gray-50 relative h-[456px] flex flex-col justify-center" style="background-image: url('<?= get_theme_file_uri( '/assets/images/banner_01.jpg' ) ?>');">
     <div class="bg-black bg-opacity-60 text-white p-8 md:p-12 lg:p-16 max-w-2xl mx-auto">
-        <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
+        <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold">
             BLOG
         </h1>
     </div>
