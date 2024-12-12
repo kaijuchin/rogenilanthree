@@ -1,15 +1,18 @@
 <?php get_header(); ?>
     <section class="relative h-screen bg-cover bg-center flex items-center justify-start"
              style="background-image: url('<?= get_theme_file_uri( '/assets/images/banner_01.jpg' ) ?>');">
-        <div class="bg-black bg-opacity-60 text-white p-8 md:p-12 lg:p-16 max-w-2xl">
-            <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
-                Richocean has quality and innovation at its heart
-            </h1>
-            <p class="mb-6 text-base md:text-lg">
-                Explore our range of aluminum windows and doors, perfect for both refurbishments and new builds.
-                Our systems blend high-performance design with innovative features, providing a comfortable, secure, and
-                low-maintenance solution you can rely on.
-            </p>
+        <div class="container mx-auto">
+            <div class="bg-black bg-opacity-60 text-white p-8 md:p-12 lg:p-16 max-w-2xl">
+                <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
+                    Richocean has quality and innovation at its heart
+                </h1>
+                <p class="mb-6 text-base md:text-lg">
+                    Explore our range of aluminum windows and doors, perfect for both refurbishments and new builds.
+                    Our systems blend high-performance design with innovative features, providing a comfortable, secure,
+                    and
+                    low-maintenance solution you can rely on.
+                </p>
+            </div>
         </div>
     </section>
     <!-- Main Section -->
@@ -233,15 +236,18 @@
 				if ( $query->have_posts() ): while ( $query->have_posts() ): $query->the_post(); ?>
 					<?php
 					$post_image_url = get_field( 'image' )['link'] ?: get_theme_file_uri( '/assets/images/1646980923461464.jpg' );
-					$post_title     = wp_trim_words( get_the_title(), 4 );
+					$post_title     = get_the_title();
 					$post_excerpt   = wp_trim_words( get_the_excerpt(), 8 );
 					$permalink      = get_permalink();
 					?>
                     <div class="bg-white rounded-lg shadow-lg p-6 flex flex-col items-center">
                         <img src="<?= $post_image_url ?>"
                              alt="Meeting Room Furniture" class="w-full h-full object-cover mb-4">
-                        <h3 class="text-lg font-bold text-gray-800 mb-2"><?= $post_title ?></h3>
-                        <p class="text-gray-500 mb-4"><?= $post_excerpt ?></p>
+                        <a href="<?= $permalink ?>">
+                            <h3 class="text-lg font-bold text-gray-800 mb-2"
+                                title="<?= $post_title ?>"><?= wp_trim_words( get_the_title(), 4 ) ?></h3>
+                            <p class="text-gray-500 mb-4"><?= $post_excerpt ?></p>
+                        </a>
                         <a href="<?= $permalink ?>"
                            class="inline-block bg-orange-500 text-white px-6 py-3 rounded-full hover:bg-orange-600 transition duration-300">Read
                             More</a>
@@ -440,8 +446,10 @@
                         <!-- Card 1 -->
                         <div class="border-4 border-sky-100 rounded-lg shadow-md p-6 flex items-start ">
                             <div>
-                                <h3 class="font-semibold text-lg text-gray-800">3D Free Design Consultation</h3>
-                                <p class="text-gray-600 mt-1">Receive expert design guidance tailored to bring your
+                                <h3 class="font-semibold text-lg text-gray-800 text-right">3D Free Design
+                                    Consultation</h3>
+                                <p class="text-gray-600 mt-1 text-right">Receive expert design guidance tailored to
+                                    bring your
                                     vision
                                     to life.</p>
                             </div>
@@ -461,8 +469,10 @@
                         <!-- Card 2 -->
                         <div class="border-4 border-sky-100 rounded-lg shadow-md p-6 flex items-start ">
                             <div>
-                                <h3 class="font-semibold text-lg text-gray-800">Worldwide Delivery & Installation</h3>
-                                <p class="text-gray-600 mt-1">Efficient global shipping and professional installation
+                                <h3 class="font-semibold text-lg text-gray-800 text-right">Worldwide Delivery &
+                                    Installation</h3>
+                                <p class="text-gray-600 mt-1 text-right">Efficient global shipping and professional
+                                    installation
                                     services.</p>
                             </div>
                             <div class="elementor-widget-wrap elementor-element-populated elementor-element elementor-element-61f2d3f5">
@@ -481,8 +491,8 @@
                         <!-- Card 3 -->
                         <div class="border-4 border-sky-100 rounded-lg shadow-md p-6 flex items-start ">
                             <div>
-                                <h3 class="font-semibold text-lg text-gray-800">Global Delivery & Setup</h3>
-                                <p class="text-gray-600 mt-1">Worldwide shipping with professional setup.</p>
+                                <h3 class="font-semibold text-lg text-gray-800 text-right">Global Delivery & Setup</h3>
+                                <p class="text-gray-600 mt-1 text-right">Worldwide shipping with professional setup.</p>
                             </div>
                             <div class="elementor-widget-wrap elementor-element-populated elementor-element elementor-element-61f2d3f5">
                                 <div class="elementor-element elementor-element-61f2d3f5 elementor-widget__width-auto elementor-view-default elementor-widget elementor-widget-icon"
@@ -527,8 +537,10 @@
                                 </div>
                             </div>
                             <div>
-                                <h3 class="font-semibold text-lg text-gray-800">Energy-efficient and eco-friendly</h3>
-                                <p class="text-gray-600 mt-1">providing superior insulation to maintain comfort and
+                                <h3 class="font-semibold text-lg text-gray-800 text-left">Energy-efficient &
+                                    eco-friendly</h3>
+                                <p class="text-gray-600 mt-1 text-left">providing superior insulation to maintain
+                                    comfort and
                                     reduce energy costs.</p>
                             </div>
                         </div>
@@ -548,9 +560,10 @@
                                 </div>
                             </div>
                             <div>
-                                <h3 class="font-semibold text-lg text-gray-800">Showcasing China's Door and
+                                <h3 class="font-semibold text-lg text-gray-800 text-left">Showcasing China's Door and
                                     Window Excellence</h3>
-                                <p class="text-gray-600 mt-1">Certified by CE, AS2047, NFRC, and CSA, ensuring toptier
+                                <p class="text-gray-600 mt-1 text-left">Certified by CE, AS2047, NFRC, and CSA, ensuring
+                                    toptier
                                     performance, durability, and safety standards.</p>
                             </div>
                         </div>
@@ -570,8 +583,9 @@
                                 </div>
                             </div>
                             <div>
-                                <h3 class="font-semibold text-lg text-gray-800">OEM Service</h3>
-                                <p class="text-gray-600 mt-1">Custom manufacturing solutions perfectly aligned with
+                                <h3 class="font-semibold text-lg text-gray-800 text-left">OEM Service</h3>
+                                <p class="text-gray-600 mt-1 text-left">Custom manufacturing solutions perfectly aligned
+                                    with
                                     your brand s needs.</p>
                             </div>
                         </div>
@@ -750,89 +764,95 @@
             <div class="container mx-auto p-4 ">
                 <div class="flex flex-col md:flex-row items-center bg-white px-16 py-8 gap-12">
                     <!-- Text Content -->
-                    <div class="md:w-1/3 w-full flex px-6 py-12 shadow-lg">
+                    <div class="md:w-1/3 w-full flex px-6 py-12 shadow-lg h-[560px]">
                         <div class="md:w-1/4 elementor-element elementor-element-61f2d3f5 elementor-view-default">
                             <div class="elementor-icon-wrapper">
                                 <div class="elementor-icon px-6" style="font-size: 4rem;">
                                     <i aria-hidden="true" class="elementkit-infobox-icon icon icon-agenda"></i></div>
                             </div>
                         </div>
-                        <div class="md:w-3/4">
-                            <h3 class="text-3xl font-bold mb-4">Customized Product Design</h3>
-                            <p class="text-gray-700 mb-6 leading-8">We offer a wide range of customization
-                                options to meet the unique needs of different
-                                clients, including size, style, color, and
-                                functionality. This helps clients attract a
-                                targeted consumer market and enhance their
-                                competitive edge.</p>
+                        <div class="md:w-3/4 justify-between flex flex-col">
+                            <div>
+                                <h3 class="text-3xl font-bold mb-4">Customized Product Design</h3>
+                                <p class="text-gray-700 mb-6 leading-8">We offer a wide range of customization
+                                    options to meet the unique needs of different
+                                    clients, including size, style, color, and
+                                    functionality. This helps clients attract a
+                                    targeted consumer market and enhance their
+                                    competitive edge.</p>
+                            </div>
+
                             <a target="_blank" href="<?= site_url( 'contact-us' ) ?>"
-                               class="bg-red-600 text-white px-6 py-3 inline-block mt-1 hover:bg-red-700 transition">Contact
+                               class="bg-red-600 text-white px-6 py-3 inline-block w-1/2 mt-1 hover:bg-red-700 transition">Contact
                                 Us</a></div>
                     </div>
-                    <div class="md:w-1/3 w-full flex px-6 py-12 shadow-lg">
+                    <div class="md:w-1/3 w-full flex px-6 py-12 shadow-lg h-[560px]">
                         <div class="md:w-1/4 elementor-element elementor-element-61f2d3f5 elementor-view-default">
                             <div class="elementor-icon-wrapper">
                                 <div class="elementor-icon px-6" style="font-size: 4rem;">
                                     <i aria-hidden="true" class="elementkit-infobox-icon icon icon-star2"></i></div>
                             </div>
                         </div>
-                        <div class="md:w-3/4">
-                            <h3 class="text-3xl font-bold mb-4">High-Quality Certifications</h3>
-                            <p class="text-gray-700 mb-6 leading-8">Our doors and windows are certified by
-                                multiple international standards, including CE,
-                                AS2047, NFRC, and CSA, ensuring top-quality
-                                and reliability. Clients can leverage these
-                                certifications to demonstrate high standards
-                                and safety to end consumers, boosting market
-                                trust.</p>
+                        <div class="md:w-3/4 justify-between flex flex-col">
+                            <div>
+                                <h3 class="text-3xl font-bold mb-4">High-Quality Certifications</h3>
+                                <p class="text-gray-700 mb-6 leading-8">Our doors and windows are certified by
+                                    multiple international standards, including CE,
+                                    AS2047, NFRC, and CSA, ensuring top-quality
+                                    and reliability. Clients can leverage these
+                                    certifications to demonstrate high standards
+                                    and safety to end consumers, boosting market
+                                    trust.</p>
+                            </div>
                             <a target="_blank" href="<?= site_url( 'contact-us' ) ?>"
-                               class="bg-red-600 text-white px-6 py-3 inline-block mt-1 hover:bg-red-700 transition">Contact
+                               class="bg-red-600 text-white px-6 py-3 inline-block w-1/2 mt-1 hover:bg-red-700 transition">Contact
                                 Us</a></div>
                     </div>
-                    <div class="md:w-1/3 w-full flex px-6 py-12 shadow-lg">
+                    <div class="md:w-1/3 w-full flex px-6 py-12 shadow-lg h-[560px]">
                         <div class="md:w-1/4 elementor-element elementor-element-61f2d3f5 elementor-view-default">
                             <div class="elementor-icon-wrapper">
                                 <div class="elementor-icon px-6" style="font-size: 4rem;">
                                     <i aria-hidden="true" class="elementkit-infobox-icon icon icon-leaf"></i></div>
                             </div>
                         </div>
-                        <div class="md:w-3/4">
-                            <h3 class="text-3xl font-bold mb-4">Energy-Efficient and EcoFriendly Features</h3>
-                            <p class="text-gray-700 mb-6 leading-8">We use advanced energy-saving technologies
-                                and materials, such as thermal break
-                                aluminum and double-glazed insulated glass,
-                                to promote energy efficiency and
-                                sustainability. This helps clients reduce energy
-                                costs while complying with increasingly
-                                stringent environmental regulations.</p>
+                        <div class="md:w-3/4 justify-between flex flex-col">
+                            <div>
+                                <h3 class="text-3xl font-bold mb-4">Energy-Efficient & EcoFriendly Features</h3>
+                                <p class="text-gray-700 mb-6 leading-8">We utilize advanced energy-saving technologies
+                                    and materials, such as thermal break aluminum and double-glazed insulated glass, to
+                                    improve energy efficiency and sustainability. This helps clients save on energy
+                                    costs while adhering to strict environmental regulations.</p>
+                            </div>
                             <a target="_blank" href="<?= site_url( 'contact-us' ) ?>"
-                               class="bg-red-600 text-white px-6 py-3 inline-block mt-1 hover:bg-red-700 transition">Contact
+                               class="bg-red-600 text-white px-6 py-3 inline-block w-1/2 mt-1 hover:bg-red-700 transition">Contact
                                 Us</a></div>
                     </div>
 
                 </div>
                 <div class="flex flex-col md:flex-row items-center bg-white px-16 pb-16 gap-12">
                     <!-- Text Content -->
-                    <div class="md:w-1/3 w-full flex px-6 py-12 shadow-lg">
+                    <div class="md:w-1/3 w-full flex px-6 py-12 shadow-lg h-[560px]">
                         <div class="md:w-1/4 elementor-element elementor-element-61f2d3f5 elementor-view-default">
                             <div class="elementor-icon-wrapper">
                                 <div class="elementor-icon px-6" style="font-size: 4rem;">
                                     <i aria-hidden="true" class="elementkit-infobox-icon icon icon-cart"></i></div>
                             </div>
                         </div>
-                        <div class="md:w-3/4">
-                            <h3 class="text-3xl font-bold mb-4">Fast Delivery and Efficient
-                                Production</h3>
-                            <p class="text-gray-700 mb-6 leading-8">With modern production equipment and a
-                                well-managed supply chain, we can offer fast
-                                delivery and large-scale manufacturing to
-                                meet market demand on time, helping clients
-                                seize market opportunities quickly.</p>
+                        <div class="md:w-3/4 justify-between flex flex-col">
+                            <div>
+                                <h3 class="text-3xl font-bold mb-4">Fast Delivery & Efficient
+                                    Production</h3>
+                                <p class="text-gray-700 mb-6 leading-8">With modern production equipment and a
+                                    well-managed supply chain, we can offer fast
+                                    delivery and large-scale manufacturing to
+                                    meet market demand on time, helping clients
+                                    seize market opportunities quickly.</p>
+                            </div>
                             <a target="_blank" href="<?= site_url( 'contact-us' ) ?>"
-                               class="bg-red-600 text-white px-6 py-3 inline-block mt-1 hover:bg-red-700 transition">Contact
+                               class="bg-red-600 text-white px-6 py-3 inline-block w-1/2 mt-1 hover:bg-red-700 transition">Contact
                                 Us</a></div>
                     </div>
-                    <div class="md:w-1/3 w-full flex px-6 py-12 shadow-lg">
+                    <div class="md:w-1/3 w-full flex px-6 py-12 shadow-lg h-[560px]">
                         <div class="md:w-1/4 elementor-element elementor-element-61f2d3f5 elementor-view-default">
                             <div class="elementor-icon-wrapper">
                                 <div class="elementor-icon px-6" style="font-size: 4rem;">
@@ -840,34 +860,39 @@
                                        class="elementkit-infobox-icon icon icon-customer-service"></i></div>
                             </div>
                         </div>
-                        <div class="md:w-3/4">
-                            <h3 class="text-3xl font-bold mb-4 text-[24px]">Professional After-Sales Support</h3>
-                            <p class="text-gray-700 mb-6 leading-8">We provide comprehensive technical support
-                                and after-sales services, including installation
-                                guidance, product warranties, and quality
-                                tracking. Our worry-free after-sales services
-                                help strengthen customer loyalty and improve
-                                brand reputation.</p>
+                        <div class="md:w-3/4 justify-between flex flex-col">
+                            <div>
+                                <h3 class="text-3xl font-bold mb-4 text-[24px]">Professional After-Sales Support</h3>
+                                <p class="text-gray-700 mb-6 leading-8">We provide comprehensive technical support
+                                    and after-sales services, including installation
+                                    guidance, product warranties, and quality
+                                    tracking. Our worry-free after-sales services
+                                    help strengthen customer loyalty and improve
+                                    brand reputation.</p>
+                            </div>
                             <a target="_blank" href="<?= site_url( 'contact-us' ) ?>"
-                               class="bg-red-600 text-white px-6 py-3 inline-block mt-1 hover:bg-red-700 transition">Contact
+                               class="bg-red-600 text-white px-6 py-3 inline-block w-1/2 mt-1 hover:bg-red-700 transition">Contact
                                 Us</a></div>
                     </div>
-                    <div class="md:w-1/3 w-full flex px-6 py-12 shadow-lg">
+                    <div class="md:w-1/3 w-full flex px-6 py-12 shadow-lg h-[560px]">
                         <div class="md:w-1/4 elementor-element elementor-element-61f2d3f5 elementor-view-default">
                             <div class="elementor-icon-wrapper">
                                 <div class="elementor-icon px-6" style="font-size: 4rem;">
                                     <i aria-hidden="true" class="icon icon-Design-3"></i></div>
                             </div>
                         </div>
-                        <div class="md:w-3/4">
-                            <h3 class="text-3xl font-bold mb-4">Competitive Pricing and HighQuality Raw Materials</h3>
-                            <p class="text-gray-700 mb-6 leading-8">As a manufacturer, we source raw materials
-                                directly and optimize production processes to
-                                ensure competitive pricing while maintaining
-                                high product quality, helping clients achieve
-                                higher profit margins in the market.</p>
+                        <div class="md:w-3/4 justify-between flex flex-col">
+                            <div>
+                                <h3 class="text-3xl font-bold mb-4">Competitive Pricing & HighQuality Raw
+                                    Materials</h3>
+                                <p class="text-gray-700 mb-6 leading-8">As a manufacturer, we source raw materials
+                                    directly and optimize production processes to
+                                    ensure competitive pricing while maintaining
+                                    high product quality, helping clients achieve
+                                    higher profit margins in the market.</p>
+                            </div>
                             <a target="_blank" href="<?= site_url( 'contact-us' ) ?>"
-                               class="bg-red-600 text-white px-6 py-3 inline-block mt-1 hover:bg-red-700 transition">Contact
+                               class="bg-red-600 text-white px-6 py-3 inline-block w-1/2 mt-1 hover:bg-red-700 transition">Contact
                                 Us</a></div>
                     </div>
 
@@ -1015,7 +1040,7 @@
                                                 </div>
                                             </div>
                                             <div class="box-body">
-                                                <h3 class="elementskit-info-box-title">Manufacturing and Quality
+                                                <h3 class="elementskit-info-box-title">Manufacturing & Quality
                                                     Assurance</h3>
                                                 <p>We carefully craft doors and windows
                                                     using premium materials, with each
@@ -1190,7 +1215,7 @@
                     <section
                             class="elementor-section elementor-inner-section elementor-element elementor-element-3a368f4e elementor-section-boxed elementor-section-height-default elementor-section-height-default"
                             data-id="3a368f4e" data-element_type="section">
-                        <div class="elementor-container elementor-column-gap-default">
+                        <div class="elementor-container elementor-column-gap-default gap-8">
                             <div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-b258043"
                                  data-id="b258043" data-element_type="column"
                                  data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
@@ -1281,7 +1306,7 @@
                     <section
                             class="elementor-section elementor-inner-section elementor-element elementor-element-30e88029 elementor-section-boxed elementor-section-height-default elementor-section-height-default"
                             data-id="30e88029" data-element_type="section">
-                        <div class="elementor-container elementor-column-gap-default">
+                        <div class="elementor-container elementor-column-gap-default gap-8">
                             <div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-2cacd532"
                                  data-id="2cacd532" data-element_type="column"
                                  data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
