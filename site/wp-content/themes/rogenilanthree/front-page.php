@@ -244,7 +244,7 @@
                     <div class="bg-white rounded-lg shadow-lg p-6 flex flex-col items-center md:h-[550px]">
                         <a target="_blank" class="w-full h-full" href="<?= $permalink ?>">
                             <img src="<?= $post_image_url ?>"
-                                 alt="<?= $post_image_alt ?>" class="w-full md:h-[328px] object-cover mb-1">
+                                 alt="<?= $post_image_alt ?>" class="w-full md:h-[328px] object-cover mb-3">
                             <h3 class="text-lg font-bold text-gray-800 mt-2"
                                 title="<?= $post_title ?>"><?= wp_trim_words( get_the_title(), 8 ) ?></h3>
                             <p class="text-gray-500 mb-4"><?= $post_excerpt ?></p>

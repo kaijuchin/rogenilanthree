@@ -45,11 +45,11 @@
             ?>
             <div class="bg-white rounded-lg shadow-lg p-6 flex flex-col items-center md:h-[550px]">
                 <a target="_blank" class="w-full h-full" href="<?= $permalink ?>">
-                    <img src="<?= $post_thumbnail_url  ?>" alt="<?= $post_thumbnail_alt ?>" class="w-full md:h-[328px] object-cover mb-4">
-                    <h3 title="<?= $post_title ?>" class="text-lg font-bold text-gray-800 mb-2"><?= $post_title ?></h3>
-                    <p class="text-gray-500 mb-4"><?= wp_trim_words($post_excerpt, 8) ?></p>
-                    <a target="_blank" href="<?= $permalink ?>" class="inline-block bg-red-500 text-white px-6 py-2 rounded-sm hover:bg-red-600 transition duration-300 text-sm">Read More</a>
+                    <img src="<?= $post_thumbnail_url  ?>" alt="<?= $post_thumbnail_alt ?>" class="w-full md:h-[328px] object-cover mb-3">
+                    <h3 title="<?= $post_title ?>" class="text-lg font-bold text-gray-800 mb-2 text-center"><?= $post_title ?></h3>
+                    <p class="text-gray-500 mb-4 text-center"><?= wp_trim_words($post_excerpt, 8) ?></p>
                 </a>
+                <a target="_blank" href="<?= $permalink ?>" class="inline-block bg-red-500 text-white px-6 py-2 rounded-sm hover:bg-red-600 transition duration-300 text-sm">Read More</a>
             </div>
             <?php endwhile; endif; wp_reset_postdata(); ?>
         </div>
