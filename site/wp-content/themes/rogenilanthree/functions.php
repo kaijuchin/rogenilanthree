@@ -290,23 +290,26 @@ function custom_product_category_template_shortcode( $atts ) {
 					<?php
 					$count              = $count % $default_images_count;
 					$post_thumbnail_url = get_field( 'image' )['link'] ?: ( $urls ? get_theme_file_uri( $urls[ $count ++ ] ) : get_theme_file_uri( '/assets/images/richocean-logo.png' ) );
+                    $post_thumbnail_alt = get_field( 'image' )['alt'] ?: get_the_title();
 					$post_title         = get_the_title();
 					$post_excerpt       = get_the_excerpt();
 					$permalink          = get_permalink();
 					?>
                     <div class="bg-white rounded-lg shadow-lg overflow-hidden border">
+                        <a target="_blank" href="<?= $permalink ?>">
                         <img src="<?= $post_thumbnail_url ?>"
-                             alt="4 Reasons to Choose Casement Windows"
+                             alt="<?= $post_thumbnail_alt ?>"
                              class="w-full h-68 object-cover <?= count( $urls ) == 0 ? 'p-8' : '' ?>">
                         <div class="p-6 flex flex-col justify-between md:h-[220px]">
                             <div>
-                                <a href="<?= $permalink ?>"><h3 class="text-2xl font-bold text-gray-800 mb-4"><?= $post_title ?></h3>
-                                    <p class="text-gray-600 mb-6"><?= wp_trim_words( $post_excerpt, 8 ) ?></p></a>
+                                <h3 class="text-2xl font-bold text-gray-800 mb-4"><?= $post_title ?></h3>
+                                    <p class="text-gray-600 mb-6"><?= wp_trim_words( $post_excerpt, 8 ) ?></p>
                             </div>
-                            <a href="<?= $permalink ?>"
+                            <a target="_blank" href="<?= $permalink ?>"
                                class="text-red-500 font-bold flex items-center hover:text-red-700">MORE INFO
                                 <span class="ml-2">&rarr;</span></a>
                         </div>
+                        </a>
                     </div>
 				<?php endwhile; endif;
 				wp_reset_postdata(); ?>
