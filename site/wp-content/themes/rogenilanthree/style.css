@@ -15,6 +15,7 @@ hr {
     margin: 1.4rem 0 !important;
 }
 
+
 ul.wp-block-list {
     list-style-type: disc !important;
     display: block;
@@ -113,7 +114,7 @@ ul.wp-block-list {
     background-color: #fff;
     border: 1px solid #ccc;
     padding: 1.25rem 2.5rem;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     z-index: 1000;
 }
 
@@ -126,7 +127,7 @@ ul.wp-block-list {
         background-color: #fff;
         border: 1px solid #ccc;
         padding: 1.25rem 2.5rem;
-        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         z-index: 1000;
         width: 326px;
     }
@@ -209,4 +210,63 @@ ul.wp-block-list {
 
 .breadcrumbs a, .breadcrumbs span {
     padding: 0 1rem;
+}
+
+/* Font : Calton */
+@font-face {
+    font-family: 'Calton';
+    font-weight: 400;
+    src: url(/wp-content/themes/rogenilanthree/assets/fonts/Calton/CaltonElegance.ttf) format("truetype"); }
+
+/* Serif Title */
+.special-title {
+    line-height: 26px;
+    font-size: 26px;
+    margin: 30px 0px 60px 0px;
+}
+
+.serif-font {
+    font-family: 'Calton', cursive;
+}
+
+.special-title {
+    margin-bottom: 50px;
+}
+
+.special-title .serif-font {
+    font-family: 'Calton', cursive;
+    font-size: 84px;
+    line-height: 50px;
+    text-transform: none;
+}
+
+.special-title .serif-font.red {
+    color: #e30613;
+}
+
+.special-title .big {
+    font-size: 34px;
+    line-height: 34px;
+}
+
+.special-title.specialborder:before {
+    content: "";
+    left: 0;
+    top: 0px;
+    width: 148px;
+    height: 1px;
+    background: #e30613;
+    position: absolute;
+}
+
+@media (max-width: 776px) {
+    .special-title.specialborder:before {
+        content: "";
+        left: 0;
+        top: -20px;
+        width: 148px;
+        height: 1px;
+        background: #e30613;
+        position: absolute;
+    }
 }

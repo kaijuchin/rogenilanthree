@@ -1,27 +1,23 @@
 <?php get_header(); ?>
-<section class="p-8 bg-gray-50 relative">
-    <div class="absolute top-0 right-0 w-full h-full overflow-hidden">
-        <p class="hidden md:block text-[10rem] font-weight text-gray-200 whitespace-nowrap leading-none opacity-75 translate-x-1/2 translate-y-1/3">
-            Security
-        </p>
-        <p class="text-[2.6rem] hidden md:block absolute bottom-8 right-8 text-3xl font-bold text-red-600">
-            Focus <span class="text-blue-800">on high quality aluminium windows and doors!</span>
-        </p>
-    </div>
-    <div class="bg-black bg-opacity-60 text-white p-8 md:p-12 lg:p-16 max-w-2xl">
+<section class="p-8 bg-gray-50 relative h-[456px] flex flex-col justify-center" style="background-image: url('<?= get_theme_file_uri( '/assets/images/banner_01.jpg' ) ?>');">
+    <div class="bg-black bg-opacity-60 text-white p-8 md:p-12 lg:p-16 max-w-2xl mx-auto">
         <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
-            Aluminium Windows
+            BLOG
         </h1>
-        <p class="mb-6 text-base md:text-lg">
-            Richocean Windows - Customization at Your Fingertips. Window types, colors, usage scenarios, and
-            requirements – everything is customizable. With rich experience and exceptional products, we meet the
-            diverse needs of individual homes, construction companies, decorating firms, and dealers, earning unanimous
-            recognition from our clients.
-        </p>
     </div>
 </section>
 <section class="p-8 mt-8">
     <div class="container mx-auto">
+        <!-- Header Section -->
+        <div class="mb-8">
+            <h2 class="text-4xl font-bold text-gray-800 mb-4">BLOG</h2>
+            <nav class="text-gray-600">
+                <!--                    <a href="#" class="hover:text-red-500">Home</a> &nbsp; &gt; &nbsp; <a href="#"-->
+                <!--                                                                                          class="hover:text-red-500">Windows</a>-->
+                <!--                    &nbsp; &gt; &nbsp; <span class="font-bold text-gray-800">Casement Windows</span>-->
+			    <?php custom_breadcrumbs(); ?>
+            </nav>
+        </div>
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
 			<?php
 			$posts_per_page = get_option( 'posts_per_page' );
