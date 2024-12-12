@@ -236,21 +236,21 @@
 				if ( $query->have_posts() ): while ( $query->have_posts() ): $query->the_post(); ?>
 					<?php
 					$post_image_url = get_field( 'image' )['link'] ?: get_theme_file_uri( '/assets/images/1646980923461464.jpg' );
+                    $post_image_alt = get_field( 'image' )['alt'] ?: get_the_title();
 					$post_title     = get_the_title();
 					$post_excerpt   = wp_trim_words( get_the_excerpt(), 8 );
 					$permalink      = get_permalink();
 					?>
-                    <div class="bg-white rounded-lg shadow-lg p-6 flex flex-col items-center">
-                        <img src="<?= $post_image_url ?>"
-                             alt="Meeting Room Furniture" class="w-full h-full object-cover mb-4">
-                        <a href="<?= $permalink ?>">
-                            <h3 class="text-lg font-bold text-gray-800 mb-2"
-                                title="<?= $post_title ?>"><?= wp_trim_words( get_the_title(), 4 ) ?></h3>
+                    <div class="bg-white rounded-lg shadow-lg p-6 flex flex-col items-center md:h-[550px]">
+                        <a class="w-full h-full" href="<?= $permalink ?>">
+                            <img src="<?= $post_image_url ?>"
+                                 alt="<?= $post_image_alt ?>" class="w-full md:h-[328px] object-cover mb-1">
+                            <h3 class="text-lg font-bold text-gray-800 mt-2"
+                                title="<?= $post_title ?>"><?= wp_trim_words( get_the_title(), 8 ) ?></h3>
                             <p class="text-gray-500 mb-4"><?= $post_excerpt ?></p>
                         </a>
                         <a href="<?= $permalink ?>"
-                           class="inline-block bg-orange-500 text-white px-6 py-3 rounded-full hover:bg-orange-600 transition duration-300">Read
-                            More</a>
+                           class="inline-block bg-red-500 text-white px-6 py-2 rounded-sm hover:bg-red-600 transition duration-300 text-sm">READ MORE</a>
                     </div>
 				<?php endwhile; endif; ?>
             </div>
