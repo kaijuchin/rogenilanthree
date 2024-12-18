@@ -87,7 +87,7 @@ add_shortcode( 'nav_dropdown_items_class', 'nav_dropdown_items_class' );
 
 //底部悬浮联系弹窗 & Back to Top
 
-function add_custom_meta_for_categories() {
+function add_custom_meta_for_categories(): void {
 	$acf_title = get_field( 'title' ) ?? '';
 	if ( is_category() ) {
 		$category      = get_queried_object();
@@ -227,7 +227,7 @@ function add_custom_meta_for_categories() {
 }
 
 
-function custom_product_category_template_shortcode( $atts ) {
+function custom_product_category_template_shortcode( $atts ): false|string|null {
 	// 获取当前查询对象，确保是分类页面
 	if ( ! is_category() ) {
 		return null;
