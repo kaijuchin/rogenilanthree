@@ -255,9 +255,6 @@ function custom_product_category_template_shortcode( $atts ): false|string|null 
             <div class="mb-8">
                 <h2 class="text-4xl font-bold text-gray-800 mb-4"><?= strtoupper( $category->name ) ?></h2>
                 <nav class="text-gray-600">
-                    <!--                    <a href="#" class="hover:text-red-500">Home</a> &nbsp; &gt; &nbsp; <a href="#"-->
-                    <!--                                                                                          class="hover:text-red-500">Windows</a>-->
-                    <!--                    &nbsp; &gt; &nbsp; <span class="font-bold text-gray-800">Casement Windows</span>-->
 					<?php custom_breadcrumbs(); ?>
                 </nav>
             </div>
